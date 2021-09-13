@@ -1,0 +1,11 @@
+# Santino sul binding
+- Se una classe astratta implementa un'interfaccia, qusta non deve fornire un'implementazione dei metodi per forza
+-  Il controllo sulla presenza di metodi avviene prima sul controllo della classe apparente, se questo é presente viene controlla la classe effettiva, altrimenti questa viene ignorata
+ - Il casting cambia il tipo apparente
+ - Nel caso di classi astratte che implementano interfacce,I controlli dei metodi vengono effettuati anche nelle superclassi
+ - Non si possono istanziare oggetti astratti o interfacce
+ - Il tipo apparente puó essere una classe astratta o pure un'interfaccia
+ - Tipo esatto e Apparente devono avre una qualche correlazione(Estensione o implementazione, anche a catena)
+ - Negli argomenti di un metodo, se é possibile viene effettuato un casting automatico che non permane(temporaneo), osservando il tipo apparente
+ - This fa riferimento al tipo apparente
+ - Object é l'oggetto generico padre
