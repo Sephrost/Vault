@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 21-09.md",
+            "file": "Lezioni/Lezione 22-09.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 21-09.md",
+            "file": "Lezioni/Lezione 22-09.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 21-09.md",
+                "file": "Lezioni/Lezione 22-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,9 @@
   },
   "active": "05383986bf998f52",
   "lastOpenFiles": [
-    "Lezione 21-09.md",
-    "Untitled.md"
+    "Lezioni/Lezione 22-09.md",
+    "Lezioni/Lezione 21-09.md",
+    "Untitled.md",
+    "Lezione 21-09.md"
   ]
 }

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 21-09.md",
+            "file": "Lezione 21,22-09.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 21-09.md",
+            "file": "Lezione 21,22-09.md",
             "mode": "preview"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 21-09.md",
+                "file": "Lezione 21,22-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,6 +102,7 @@
   },
   "active": "20aee0d5594e7853",
   "lastOpenFiles": [
+    "Lezione 21,22-09.md",
     "Lezione 21-09.md",
     "Sistema operativo.md",
     "Untitled.md"
