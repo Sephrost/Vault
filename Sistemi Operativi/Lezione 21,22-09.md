@@ -118,3 +118,8 @@ Esistono 5 tipi di system call:
 - comunicazione
 
 [copiare whatever ha spiegato negli ultimi 20 min]
+
+PCB
+- Identita' del processo
+- Program counter
+- 
