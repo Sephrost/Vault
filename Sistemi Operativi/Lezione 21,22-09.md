@@ -61,6 +61,13 @@ Per interagire con i device si usano:
 Essi sono visti come risorse dalla cpu, che gli assegna.
 
 ### Archittettura
+In origine il sistema operativo veniva scritto per una specifica architettura.
+
+Si passo' poi ad un linguaggio compilato a strati, per permettere l'implementazione del SO su piu' architettura 
+
+[aggiungere grafico]
+
+
 Noi lavoreremo con 1 sola cpu, cio' non preclude l'esistenza di archietetture multiprocessurali, che sfruttano il principio di parallelismo reale, affiancando quello virtuale.
 
 L' architettura multiprocessurale ha il problema della lettura dalla memoria, che rappresenta il suo collo di bottiglia.
