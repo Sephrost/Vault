@@ -67,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "abb4c387ff21e557",
@@ -101,7 +102,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "05383986bf998f52",
+  "active": "ce9b7653c0ea1d1f",
   "lastOpenFiles": [
     "Lezioni/Lezione 28-09.md",
     "Lezioni/Lezione 22-09.md",
