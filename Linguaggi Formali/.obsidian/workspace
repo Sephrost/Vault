@@ -6,28 +6,26 @@
       {
         "id": "05383986bf998f52",
         "type": "leaf",
-        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezioni/Lezione 28-09.md",
+            "file": "Lezioni/Lezione 5-10.md",
             "mode": "source"
           }
         },
-        "group": "577ed403a4f4540f"
+        "group": "a13805d4d88be7d2"
       },
       {
-        "id": "ce9b7653c0ea1d1f",
+        "id": "a8fa0c8071c922f7",
         "type": "leaf",
-        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezioni/Lezione 28-09.md",
+            "file": "Lezioni/Lezione 5-10.md",
             "mode": "preview"
           }
         },
-        "group": "577ed403a4f4540f"
+        "group": "a13805d4d88be7d2"
       }
     ],
     "direction": "vertical"
@@ -67,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 159,
     "collapsed": true
   },
   "right": {
@@ -84,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezioni/Lezione 28-09.md",
+                "file": "Lezioni/Lezione 5-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,12 +100,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ce9b7653c0ea1d1f",
+  "active": "a8fa0c8071c922f7",
   "lastOpenFiles": [
+    "Lezioni/Lezione 5-10.md",
     "Lezioni/Lezione 28-09.md",
-    "Lezioni/Lezione 22-09.md",
     "Lezioni/Lezione 21-09.md",
-    "Untitled.md",
-    "Lezione 21-09.md"
+    "pngs/2021-10-06--1633513037_411x112_scrot.png",
+    "pngs/2021-10-06--1633512920_376x175_scrot.png",
+    "pngs/2021-10-06--1633512759_171x60_scrot.png",
+    "pngs/2021-10-06--1633512568_645x538_scrot.png",
+    "pngs/2021-10-06--1633512145_199x67_scrot.png",
+    "pngs/2021-10-06--1633512590_185x64_scrot.png",
+    "Lezione 5-10.md"
   ]
 }
