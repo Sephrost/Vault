@@ -9,23 +9,10 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezioni/Lezione 5-10.md",
+            "file": "Lezione 19-10.md",
             "mode": "source"
           }
-        },
-        "group": "a13805d4d88be7d2"
-      },
-      {
-        "id": "a8fa0c8071c922f7",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Lezioni/Lezione 5-10.md",
-            "mode": "preview"
-          }
-        },
-        "group": "a13805d4d88be7d2"
+        }
       }
     ],
     "direction": "vertical"
@@ -65,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 159,
+    "width": 228,
     "collapsed": true
   },
   "right": {
@@ -82,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezioni/Lezione 5-10.md",
+                "file": "Lezione 19-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a8fa0c8071c922f7",
+  "active": "05383986bf998f52",
   "lastOpenFiles": [
+    "Lezione 19-10.md",
+    "Lezioni/Lezione 12,13-10.md",
     "Lezioni/Lezione 5-10.md",
+    "Untitled.md",
+    "Lezione 12,13-10.md",
+    "LEzione 12-10.md",
     "Lezioni/Lezione 28-09.md",
     "Lezioni/Lezione 21-09.md",
     "pngs/2021-10-06--1633513037_411x112_scrot.png",
-    "pngs/2021-10-06--1633512920_376x175_scrot.png",
-    "pngs/2021-10-06--1633512759_171x60_scrot.png",
-    "pngs/2021-10-06--1633512568_645x538_scrot.png",
-    "pngs/2021-10-06--1633512145_199x67_scrot.png",
-    "pngs/2021-10-06--1633512590_185x64_scrot.png",
-    "Lezione 5-10.md"
+    "pngs/2021-10-06--1633512920_376x175_scrot.png"
   ]
 }

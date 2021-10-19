@@ -6,11 +6,11 @@
       {
         "id": "20aee0d5594e7853",
         "type": "leaf",
-        "dimension": 49.79253112033195,
+        "dimension": 51.037344398340245,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 5,6-10.md",
+            "file": "Lezione 19-10.md",
             "mode": "source"
           }
         },
@@ -19,11 +19,11 @@
       {
         "id": "18a77464c973094d",
         "type": "leaf",
-        "dimension": 50.20746887966805,
+        "dimension": 48.96265560165975,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 5,6-10.md",
+            "file": "Lezione 19-10.md",
             "mode": "preview"
           }
         },
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 5,6-10.md",
+                "file": "Lezione 19-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,11 +104,13 @@
   },
   "active": "20aee0d5594e7853",
   "lastOpenFiles": [
+    "Lezione 19-10.md",
+    "Untitled.md",
+    "Lezione 5,6,12-10.md",
     "Lezione 5,6-10.md",
     "Lezione 5-10.md",
     "Lezione 21,22-09.md",
     "Lezione 28-09.md",
-    "Untitled.md",
     "Lezione 21-09.md",
     "Sistema operativo.md"
   ]

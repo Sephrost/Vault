@@ -89,7 +89,9 @@ Si analizzano gli automi singolarmente, per ottenere un automa che parte dallo s
 - stringhe di 0 e 1 con un numero pari di 0
 	$(1^{*}01^{*}0)^{*}1^{*}$
 - stringhe di a, b e c che non contengono la sottostringa ab
+	$(a^{*}c+b)^{*}a^{*}$
 - costanti numeriche binarie pari senza 0 inutili a sinistra (es. 0, 10, ma non 010 o 11)
+	$0+1(0+1)^{*}0$
 - costanti numeriche decimali con virgola facoltativa (es. 42, .5, 12.3, 12. ma non .)
 ## Chiusura dei linguaggi regolari
 ### Unione e concatenazione
