@@ -94,12 +94,79 @@ $T'\to *FT'|\epsilon$
 $F\to (E)|id$
 allora
 $\$\in FOLLOW(E)$
-$FIRST(E')\subseteq FOLLOW(T)$
+$FIRST(E')\subseteq FOLLOW(T)$||$+\in FOLLOW(T)$
 $FOLLOW(E)\subseteq FOLLOW(T)$
 $FOLLOW(E)\subseteq FOLLOW(E')$
 $FOLLOW(E')\subseteq FOLLOW(T)$
-$FIRST(T')\subseteq FOLLOW(F)$
+$FIRST(T')\subseteq FOLLOW(F)$||$*\in FOLLOW(F)$
 $FOLLOW(T)\subseteq FOLLOW(F)$
 $FOLLOW(T)\subseteq FOLLOW(T')$
 $FOLLOW(T')\subseteq FOLLOW(F)$
 $)\in FOLLOW(E)$
+
+da cui possiamo calcolare
+
+Var|Follow
+--|--
+E|$,)
+E'|$,)
+T|$,+,)
+T'|$,+,)
+F|$,+,*,)
+
+Prendendo in cosiderazione innanzitutto i simboli di appartenenza, e propagandolo in base ai follow seguendo i versi delle inclusioni(*left to right*).
+
+#### Insiemi guida
+Data una grammatica qualsiasi e una produzione di questa grammatica($A\to \alpha$), definiamo insieme guida di una produzione l'insieme:
+
+$GUIDA(A\to \alpha)=\{^{FIRS(\alpha)\cup FOLLOW(A) se NULL(\alpha)}_{FIRST(\alpha) altrimenti}$
+
+Ci permettono di intuire la riscrittura giusta che il parser deve effettuare al fine di riconoscere al fine del riconoscimento di una stringa, attraverso il controllo del prossimo carattere e controllando a quale insieme guida appartiene.
+
+Nel caso gli insiemi guida non sono disguinti il parser va' in errore
+
+#### Grammatica LL(1)
+Un grammatica e' definita LL(!) se per ogni coppia di produzioni distinte per la stessa variabile($A\to \alpha$ e $A\to \beta$) gli insiemi guida hanno intersezione vuota,ovvero sono disgiunti
+
+$Guida(A\to \alpha)\cap GUIDA(A\to \beta)=0$
+
+##### Esempi
+Calcoliamo gli insiemi guida
+$A\to BC|D$
+$B\to \epsilon|a$
+$C\to b|cCc$
+$D\to \epsilon|CD$
+I simboli annullabili sono
+$NULL(B)$
+$NULL(D)$
+$NULL(A)$
+I first sono
+$FIRST(A)=FIRST(BC)\cup FIRST(D)=FIRST(B)\cup FIRST(C)\cup FIRST(D)=\{a,b,c\}$
+$FIRST(B)=FIRST(\epsilon)\cup FIRST(A)=\{a\}$
+$FIRST(C)=\{b,c\}$
+$FIRST(D)=\{b,c\}$
+I follow sono:
+$\$\in FOLLOW(A)$
+$b.c\in FOLLOW(C)$
+$FOLLOW\subseteq FOLLOW(C)$
+$FOLLOW(A)\subseteq FOLLOW(D)$
+$c\in FOLLOW(C)$
+$b,c\in FOLLOW(C)$
+$FOLLOW(D)\subseteq FOLLOW(C)$
+generiamo quindi la seguente tabella
+
+Var|Follow
+--|--
+A|$
+B|b,c
+C|$,b,c
+D|$
+
+Calcoliamo alcuni insiemi guida
+$GUIDA(A\to BC)=FIRST(BC)=FIRST(B)\cup FIRST(C)=\{a,b,c\}$
+poiche' $BC$ non e' annullabile
+$GUIDA(A\to D)=FIRST(D)\cup FOLLOW(A)=\{\$,b,c\}$
+Possiamo quindi concludere che non e' una grammatica LL(1) poiche' gli insiemi guida sopra citati non sono disgiunti
+
+$GUIDA(B\to \epsilon)=FIRST(\epsilon)\cup FOLLOW(B)=\{b,c\}$
+$GUIDA(B\to a)=\{a\}$
