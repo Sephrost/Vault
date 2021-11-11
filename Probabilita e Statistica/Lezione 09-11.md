@@ -67,3 +67,10 @@ $E(x)=n\times \frac{S}{N}$
 Data una coppia di variabili aleatorie $X$ ed $Y$, definisco come pmf congiunta la seguente funzione 
 
 $P_{XY}\times^{Imm(X)\times Imm(y)\to R}_{(xy)\to P_{x,y=P(\{X=x\}\cap\{Y=y\})}}$
+
+Usando la PMF congiunta posso calcolare le PMF marginali(delle singole variabili aleatorie)
+$Px(x)=p(X=x)=P(\{X=x\}\cap\Omega)=P(\{X=x\}\cap\cup\{Y=y\})=P(\displaystyle \bigcup_{y\in Imm(y)}\{X=x\}\cap\{Y=y\})=\displaystyle \sum_{y\in Imm(y)}P_{x,y}(x,y)$
+
+La P(X=x) e' uguale alla probabilita' che X=x e Y=y per uno qualunque dei valori nella sua PMF
+
+La PMF congiunta e' il prodotto delle marginali

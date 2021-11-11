@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Lezioni/Lezione 09,10-11.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228,
-    "collapsed": true
+    "width": 228
   },
   "right": {
     "id": "abb4c387ff21e557",
