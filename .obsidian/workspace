@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "7842c69ebb8c2e6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c665cd07fedd588",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Sistemi Operativi/Riassunti/DeadLock.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9be57c9b2edd9e49",
+    "type": "split",
+    "children": [
+      {
+        "id": "19ae3ab41b0c1915",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e419b860af0c9d65",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a4126c77027a6dca",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "6707e463b6d65b8d",
+    "type": "split",
+    "children": [
+      {
+        "id": "0b57d4f14692c191",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c73bd239f608d591",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Sistemi Operativi/Riassunti/DeadLock.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2c665cd07fedd588",
+  "lastOpenFiles": [
+    "Sistemi Operativi/Riassunti/DeadLock.md",
+    "Sistemi Operativi/Lezione 26-10,02-11.md",
+    "Sistemi Operativi/Lezione 28-09.md",
+    "Sistemi Operativi/Lezione 09-22.md",
+    "Sistemi Operativi/Pngs/Pasted image 20211108165721.png",
+    "README.md",
+    "Sistemi Operativi/Lezione 19-10.md",
+    "Sistemi Operativi/Lezione 5,6,12-10.md",
+    "Sistemi Operativi/Lezione 03-11.md",
+    "Pasted image 20211108165721.png.md"
+  ]
+}
