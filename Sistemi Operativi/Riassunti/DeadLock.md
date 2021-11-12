@@ -132,8 +132,10 @@ Per implementare l'algoritmo del banchiereabbiamo bisogno di diverse strutture d
 - **Necessarie[n][m]**
 	- Indica quante risorse di ciascun tipo ancora mancano ai vari processi
 
-
+##### Nota
 Dati due vettori di uguale lunghezza X e Y si indica con X < Y il fatto che per ogni indice i X[i] < Y[i], si indica con X ≤ Y il fatto che per ogni indice i X[i] ≤ Y[i] e si indica con Z = X + Y il fatto che per ogni indice i Z[i] = X[i] + Y[i]
+
+L'algoritmo é diviso in 2 parti
 
 ##### Algoritmo di verifica della sicurezza
 ```text
@@ -141,12 +143,49 @@ Lavoro[m]
 Disponibili[n]
 Lavoro = Disponibili && Fine[i] = falso, per ogni i∈[1,n]
 Find index in(i∈[1,n]):
+	//Controllo se il processo non é terminato e se le risorse disponibili sono minori alle disponibili 
 	if(Fine[i]==false && Necessarie[i]≤Lavoro){
+		//Assegno le risorse ed incremento lavoro poiché le risorse del processo al suo termine saranno nuovamente disponibili
 		Lavoro = Lavoro + Assegnate[i]
 		Fine[i] = true
 	}
 if(per ogni i∈[1,N], Fine[i]==true){
+	//se ogni processo ha terminato il proprio lavoro lo stato é sicuro
 	stato=sicuro
 }
 ```
 L'algoritmo ha complessitá $m\times n^2$
+
+##### Algoritmo di allocazione delle risorse
+```text
+int Lavoro[M];
+boolean Fine[N]; 
+
+/* inizializzazione */
+Lavoro = Disponibili;
+for (i in [1,N])
+	if (Assegnate[1] == {0, 0, ..., 0}) 
+		// Se un processo non ha risorse assegnate(finite[i]==0) é finito
+		Fine[i] = true; 
+	else 
+		Fine[i] = false; 
+		
+/* calcolo */
+while (esiste un indice i | Fine[i] == false && Richieste[i]<= Lavoro) 
+	Lavoro = Lavoro + Assegnate[i]
+	Fine[i] = true 
+
+/* test: c'è deadlock? */ 
+for (i in [1,N]) 
+	if (Fine[i] == false) << c'è deadlock >>
+```
+
+```text
+if(Richieste[i]<=Necessarie[i])//Se la richiesta é soddisfacibile
+	if(Richieste[i]<=Disponibili)
+		Disponibili=Disponibili-Richieste[i]
+		Assegnate[i]=Assegnate[i]+Richieste[i]
+		Necessarie[i]=Necessarie[i]-Richieste[i]
+	else
+		wait()
+```

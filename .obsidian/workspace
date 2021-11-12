@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sistemi Operativi/Riassunti/DeadLock.md",
-            "mode": "source"
+            "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6707e463b6d65b8d",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/Riassunti/DeadLock.md",
+                "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +88,7 @@
   },
   "active": "2c665cd07fedd588",
   "lastOpenFiles": [
+    "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
     "Sistemi Operativi/Riassunti/DeadLock.md",
     "Sistemi Operativi/Lezione 26-10,02-11.md",
     "Sistemi Operativi/Lezione 28-09.md",
@@ -97,7 +97,6 @@
     "README.md",
     "Sistemi Operativi/Lezione 19-10.md",
     "Sistemi Operativi/Lezione 5,6,12-10.md",
-    "Sistemi Operativi/Lezione 03-11.md",
-    "Pasted image 20211108165721.png.md"
+    "Sistemi Operativi/Lezione 03-11.md"
   ]
 }
