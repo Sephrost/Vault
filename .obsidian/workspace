@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linguaggi Formali/Lezioni/Lezione 28-09.md",
-            "mode": "preview"
+            "file": "README.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linguaggi Formali/Lezioni/Lezione 28-09.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "492683b1ea390d73",
   "lastOpenFiles": [
+    "README.md",
+    "Sistemi Operativi/Riassunti/Memoria.md",
     "Linguaggi Formali/Lezioni/Lezione 28-09.md",
     "Linguaggi Formali/Lezioni/Lezione 26-10,02,03-11.md",
     "Linguaggi Formali/Lezioni/Lezione 22-09.md",
@@ -95,8 +97,6 @@
     "Linguaggi Formali/Lezioni/Lezione 19-10.md",
     "Linguaggi Formali/Lezioni/Lezione 12,13-10.md",
     "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
-    "Linguaggi Formali/Lezioni/Lezione 5-10.md",
-    "Sistemi Operativi/Riassunti/Memoria.md",
-    "Sistemi Operativi/Riassunti/DeadLock.md"
+    "Linguaggi Formali/Lezioni/Lezione 5-10.md"
   ]
 }
