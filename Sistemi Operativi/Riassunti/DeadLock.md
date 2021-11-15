@@ -11,9 +11,9 @@ Si verifica il DeadLock se:
 	- Solo un processo alla volta puó usare una risorsa
 - Le risorse sono in **possesso e attesa**:
 	- Se detengono il possesso di alcune risorse e ne attendono altre
-- La presenza di un'**attesa circolare**
+- É presente un'**attesa circolare**
 	- Un processo attende una risorsa, occupata da un'altro che attende un'altra risorsa, e cosí via
-- Assenza di **prelazione**(il SO non puo' sottrarre risorse per riassegnarle)
+- Non c'é **prelazione**(il SO non puo' sottrarre risorse per riassegnarle)
 
 Basta che **una** delle **condizioni** sopra citate non si verifichí per **evitare** il deadlock.
 
@@ -158,34 +158,16 @@ L'algoritmo ha complessitá $m\times n^2$
 
 ##### Algoritmo di allocazione delle risorse
 ```text
-int Lavoro[M];
-boolean Fine[N]; 
-
-/* inizializzazione */
-Lavoro = Disponibili;
-for (i in [1,N])
-	if (Assegnate[1] == {0, 0, ..., 0}) 
-		// Se un processo non ha risorse assegnate(finite[i]==0) é finito
-		Fine[i] = true; 
-	else 
-		Fine[i] = false; 
-		
-/* calcolo */
-while (esiste un indice i | Fine[i] == false && Richieste[i]<= Lavoro) 
-	Lavoro = Lavoro + Assegnate[i]
-	Fine[i] = true 
-
-/* test: c'è deadlock? */ 
-for (i in [1,N]) 
-	if (Fine[i] == false) << c'è deadlock >>
-```
-
-```text
 if(Richieste[i]<=Necessarie[i])//Se la richiesta é soddisfacibile
 	if(Richieste[i]<=Disponibili)
+		//Fingiamo di allocare le risorse
 		Disponibili=Disponibili-Richieste[i]
 		Assegnate[i]=Assegnate[i]+Richieste[i]
 		Necessarie[i]=Necessarie[i]-Richieste[i]
+		if(stato==sicuro)
+			//Alloco veramente le risorse
+		else
+			wait()
 	else
 		wait()
 ```
