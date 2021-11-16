@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Riassunti/DeadLock.md",
+            "file": "Lezione 16-11.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Riassunti/DeadLock.md",
+            "file": "Lezione 16-11.md",
             "mode": "preview"
           }
         },
@@ -67,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "69a809ab2df2aa7d",
@@ -83,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Riassunti/DeadLock.md",
+                "file": "Lezione 16-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,6 +104,8 @@
   },
   "active": "20aee0d5594e7853",
   "lastOpenFiles": [
+    "Lezione 16-11.md",
+    "Riassunti/Memoria.md",
     "Riassunti/DeadLock.md",
     "Lezione 09-22.md",
     "Lezione 03-11.md",
@@ -110,8 +113,6 @@
     "Lezione 19-10.md",
     "Lezione 5,6,12-10.md",
     "Lezione 5,6-10.md",
-    "Lezione 5-10.md",
-    "Lezione 21,22-09.md",
-    "Lezione 28-09.md"
+    "Lezione 5-10.md"
   ]
 }

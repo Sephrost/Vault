@@ -119,14 +119,14 @@ Prendendo in cosiderazione innanzitutto i simboli di appartenenza, e propagandol
 #### Insiemi guida
 Data una grammatica qualsiasi e una produzione di questa grammatica($A\to \alpha$), definiamo insieme guida di una produzione l'insieme:
 
-$GUIDA(A\to \alpha)=\{^{FIRS(\alpha)\cup FOLLOW(A) se NULL(\alpha)}_{FIRST(\alpha) altrimenti}$
+$GUIDA(A\to \alpha)=\displaystyle \{^{FIRS(\alpha)\cup FOLLOW(A) se NULL(\alpha)}_{FIRST(\alpha) altrimenti}$
 
 Ci permettono di intuire la riscrittura giusta che il parser deve effettuare al fine di riconoscere al fine del riconoscimento di una stringa, attraverso il controllo del prossimo carattere e controllando a quale insieme guida appartiene.
 
 Nel caso gli insiemi guida non sono disguinti il parser va' in errore
 
 #### Grammatica LL(1)
-Un grammatica e' definita LL(!) se per ogni coppia di produzioni distinte per la stessa variabile($A\to \alpha$ e $A\to \beta$) gli insiemi guida hanno intersezione vuota,ovvero sono disgiunti
+Un grammatica e' definita LL(1) se per ogni coppia di produzioni distinte per la stessa variabile($A\to \alpha$ e $A\to \beta$) gli insiemi guida hanno intersezione vuota,ovvero sono disgiunti
 
 $Guida(A\to \alpha)\cap GUIDA(A\to \beta)=0$
 
