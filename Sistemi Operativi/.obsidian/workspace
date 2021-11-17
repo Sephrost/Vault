@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 16-11.md",
+            "file": "Riassunti/Memoria.md",
             "mode": "source"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 16-11.md",
+            "file": "Riassunti/Memoria.md",
             "mode": "preview"
           }
         },
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 16-11.md",
+                "file": "Riassunti/Memoria.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,8 +104,8 @@
   },
   "active": "20aee0d5594e7853",
   "lastOpenFiles": [
-    "Lezione 16-11.md",
     "Riassunti/Memoria.md",
+    "Lezione 16-11.md",
     "Riassunti/DeadLock.md",
     "Lezione 09-22.md",
     "Lezione 03-11.md",

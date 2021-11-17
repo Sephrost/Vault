@@ -143,4 +143,35 @@ e' detta immediatamente ricorsiva a sinistra in quanto la produzione $A\to A\alp
 
 Possiamo risolvere il problema introducendo una variable per spostare la ricorsione da sinistra a destra:
 
-$A\to \beta A'$ e $A'\to \epsilon|\alpha A'$
+$A\to \beta A'$  se la dervazione non era in origine ricorsiva
+
+$A'\to \epsilon|\alpha A'$ se la derivazione era ricorsiva
+
+Una produzione di questo tipo **elimina l'ambiguita'**, ma rende **meno chiaro** il **linguaggio** che va' a generare.
+
+L'eliminzazione della ricorsione **non** grantisce di ottenere una grammatica LL(1), oltre al rendere difficile la realizzazione di un parser ricorsivo discendente.
+
+#### Ricorsioni indirette
+Alcune ricorsioni sono dette indirette, per esempio la grammatica
+
+$S\to Aa|b$
+$A\to Ac|Sd|\epsilon$
+
+presenta una ricorsione diretta a sinistra che riguarda la variabile $A$, oltre ad una ricorsione indiretta.
+
+$A\to Sd \to Aad$
+
+Tentando di eliminare quella ricorsione otteniamo 
+
+$S\to Aa|b$
+$A\to SdA'|A'$
+$A'\to \epsilon|cA'$
+
+Per eliminare la ricorsione indiretta utilizziamo invece il seguente algoritmo :
+1. Imponiamo un **ordine** arbitrario alle **variabili** della grammatica
+2. Consideriamo ogni variabile, seguendo l' ordine, ed eliminiamo la ricorsione immediata per quella variabile  e riscriviamo le occorrenze della stessa che compaiono nei corpi delle produzioni delle variabili seguenti.
+
+![[/pngs/2021-11-17--1637145673_550x99_scrot.png]]
+
+%%Non dovrebbe capitare nella prova scritta.%%
+

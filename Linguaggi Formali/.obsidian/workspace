@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezioni/Lezione 16-11.md",
-            "mode": "preview"
+            "file": "Lezioni/Lezione 17-11.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezioni/Lezione 16-11.md",
+                "file": "Lezioni/Lezione 17-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "7a6ce9304790dc24",
   "lastOpenFiles": [
+    "Lezioni/Lezione 17-11.md",
     "Lezioni/Lezione 16-11.md",
     "Lezioni/Lezione 09,10-11.md",
     "Lezioni/Lezione 26-10,02,03-11.md",
@@ -97,7 +98,6 @@
     "Lezioni/Lezione 22-09.md",
     "Lezioni/Lezione 28-09.md",
     "Lezioni/Lezione 19-10.md",
-    "Lezioni/Lezione 5-10.md",
-    "Lezione 12,13-10.md"
+    "Lezioni/Lezione 5-10.md"
   ]
 }
