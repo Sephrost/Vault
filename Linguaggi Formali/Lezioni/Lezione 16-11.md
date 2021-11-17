@@ -33,9 +33,41 @@ $C\to B$
 $D\to Eb$
 $E\to aA$
 
-Calcoliamo first e follow di ogni variabile 
+Calcoliamo gli insiemi guida
 
-#### Esercizio
+$NULL(A)$
+$FIRST(E)=\{a\}$
+$FIRST(D)=\{a\}$
+$FIRST(C)=\{a\}$
+$FIRST(B)=\{a\}$
+$FIRST(A)=\{d\}$
+
+$\$\in FOLLOW(D)$
+$b\in FOLLOW(E)$
+$d\in FOLLOW(A)$
+$FOLLOW(A)\subseteq FOLLOW(C)$
+$FIRST(A)\subseteq FOLLOW(D)$
+$FOLLOW(B)\subseteq FOLLOW(A)$
+$FOLLOW(C)\subseteq FOLLOW(B)$
+$FOLLOW(B)\subseteq FOLLOW(D)$
+$FOLLOW(E)\subseteq FOLLOW(A)$
+
+Var|Follow
+--|--
+A|$b,d$
+B|$b,d$
+C|$b,d$
+D|$\$,d,b$
+E|$b$
+
+$GUIDA(A\to \epsilon)=\{b,d\}$
+$GUIDA(A\to AdC)=\{d\}$
+$GUIDA(B\to DA)=\{a\}$
+$GUIDA(C\to B)=\{a\}$
+$GUIDA(D\to Eb)=\{a\}$
+$GUIDA(E\to aA)=\{a\}$
+
+#### Esercizio 
 
 Il simbolo iniziale e' C
 $B\to \epsilon|EaE$
@@ -43,16 +75,67 @@ $C\to BD$
 $D\to acd$
 $E\to \epsilon$
 
-#### Esercizio
+$Null(B),Null(E)$
+$First(B)=\{a\}$
+$First(C)=\{a\}$
+$First(D)=\{a\}$
+$First(E)=\{\}$
+
+$\$\in Follow(C)$
+$a\in Follow(E)$
+$Follow(B)\subseteq Follow(E)$
+$a\in Follow(B)$
+$Follow(C)\subseteq Follow(D)$
+
+Var|Follow
+--|--
+B|$a$
+C|$\$$
+D|$\$$
+E|$a$
+
+$Guida(B\to \epsilon)=\{a\}$
+$Guida(B\to EaE)=\{a\}$
+$Guida(C\to BD)=\{a\}$
+$Guida(D\to acd)=\{a\}$
+$Guida(E\to \epsilon)=\{a\}$
+
+#### Esercizio 
 
 Il simbolo iniziale e' D
-$A\to Ab|\epsilon$
+$A\to Ab|a$
 $C\to Eab$
 $D\to C|\epsilon$
 $E\to Aa$
 
-#### Esercizio
-LA gramamtica delle stringhe della forma $a^nb^nc^m$
+$Null(D)$
+$First(A)=\{a\}$
+$First(C)=\{a\}$
+$First(D)=\{a\}$
+$First(E)=\{a\}$
+
+$\$\in Follow(D)$
+$a\in Follow(A)$
+$a\in Follow(E)$
+$b\in Follow(A)$
+$Follow(D)\subseteq Follow(C)$
+
+Var|Follow
+--|--
+A|$a,b$
+C|$\$$
+D|$\$$
+E|$a$
+
+$Guida(A\to Ab)=\{b\}$
+$Guida(A\to \epsilon)=\{a,b\}$
+$Guida(C\to Eab)=\{a\}$
+$Guida(D\to C)=\{a\}$
+$Guida(D\to \epsilon)=\{\$\}$
+$Guida(E\to Aa)=\{b\}$
+
+#### Esercizio  
+La gramamtica delle stringhe della forma $a^nb^nc^m$
 - $S\to XC$
 - $X\to \epsilon|aXb$
 - $C\to \epsilon|cC$

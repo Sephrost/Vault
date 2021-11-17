@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Linguaggi Formali/Lezioni/Lezione 16-11.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "68bee5399c48ed42"
+      },
+      {
+        "id": "967ee467f9e21ef0",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Linguaggi Formali/Lezioni/Lezione 16-11.md",
+            "mode": "preview"
+          }
+        },
+        "group": "68bee5399c48ed42"
       }
     ],
     "direction": "vertical"
@@ -52,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "6707e463b6d65b8d",
@@ -68,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Linguaggi Formali/Lezioni/Lezione 16-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,8 +100,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "492683b1ea390d73",
+  "active": "967ee467f9e21ef0",
   "lastOpenFiles": [
+    "Linguaggi Formali/Lezioni/Lezione 16-11.md",
+    "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
     "README.md",
     "Sistemi Operativi/Riassunti/Memoria.md",
     "Linguaggi Formali/Lezioni/Lezione 28-09.md",
@@ -95,8 +111,6 @@
     "Linguaggi Formali/Lezioni/Lezione 22-09.md",
     "Linguaggi Formali/Lezioni/Lezione 21-09.md",
     "Linguaggi Formali/Lezioni/Lezione 19-10.md",
-    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md",
-    "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
-    "Linguaggi Formali/Lezioni/Lezione 5-10.md"
+    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md"
   ]
 }
