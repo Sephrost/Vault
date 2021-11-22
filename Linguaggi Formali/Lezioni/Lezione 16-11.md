@@ -254,7 +254,7 @@ Per eliminare la ricorsione indiretta utilizziamo invece il seguente algoritmo :
 1. Imponiamo un **ordine** arbitrario alle **variabili** della grammatica
 2. Consideriamo ogni variabile, seguendo l' ordine, ed eliminiamo la ricorsione immediata per quella variabile  e riscriviamo le occorrenze della stessa che compaiono nei corpi delle produzioni delle variabili seguenti.
 
-![[/pngs/2021-11-17--1637145673_550x99_scrot.png]]
+![[pngs/2021-11-17--1637145673_550x99_scrot.png]]
 
 %%Non dovrebbe capitare nella prova scritta.%%
 

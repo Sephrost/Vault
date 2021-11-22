@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "492683b1ea390d73",
+        "id": "44266e0f9addd860",
         "type": "leaf",
+        "dimension": 59.46299934512115,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linguaggi Formali/Lezioni/Lezione 16-11.md",
-            "mode": "source"
-          }
-        },
-        "group": "68bee5399c48ed42"
-      },
-      {
-        "id": "967ee467f9e21ef0",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Linguaggi Formali/Lezioni/Lezione 16-11.md",
+            "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
             "mode": "preview"
           }
-        },
-        "group": "68bee5399c48ed42"
+        }
+      },
+      {
+        "id": "ddab796f5adca152",
+        "type": "leaf",
+        "dimension": 40.537000654878845,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
+            "mode": "preview"
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linguaggi Formali/Lezioni/Lezione 16-11.md",
+                "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,17 +100,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "967ee467f9e21ef0",
+  "active": "ddab796f5adca152",
   "lastOpenFiles": [
-    "Linguaggi Formali/Lezioni/Lezione 16-11.md",
     "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
-    "README.md",
-    "Sistemi Operativi/Riassunti/Memoria.md",
-    "Linguaggi Formali/Lezioni/Lezione 28-09.md",
-    "Linguaggi Formali/Lezioni/Lezione 26-10,02,03-11.md",
+    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md",
+    "Linguaggi Formali/Lezioni/Lezione 16-11.md",
     "Linguaggi Formali/Lezioni/Lezione 22-09.md",
-    "Linguaggi Formali/Lezioni/Lezione 21-09.md",
-    "Linguaggi Formali/Lezioni/Lezione 19-10.md",
-    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md"
+    "Probabilita e Statistica/Formulario EPS 2nd ed.md",
+    "Linguaggi Formali/Lezioni/Lezione 26-10,02,03-11.md",
+    "Probabilita e Statistica/Lezione 21,22-09.md",
+    "Probabilita e Statistica/Lezione 28-10.md",
+    "Probabilita e Statistica/Lezione 16-11.md",
+    "Probabilita e Statistica/Lezione 02,04-11.md"
   ]
 }

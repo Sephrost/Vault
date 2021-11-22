@@ -1,6 +1,6 @@
 ### Ancora media e varianza di variabili aleatorie discrete
 #### Momenti di ordine K
-Definiamo momenti di ordine K della variabile aleatoria discreta $x$ la media di $x^k$ cosi' calcolata:
+Definiamo momenti di ordine K della variabile aleatoria discreta $x$ la media di $X^k$ cosi' calcolata:
 
 $E(x^k)=\displaystyle \sum_{x \in imm(x)} x^k\times px(k)$
 #### Varianza
@@ -36,7 +36,7 @@ $Var(y)=\displaystyle \sum_{y \in Imm(y)}(y-E(y))^2 \times P(Y=y)= (100-0)^2\tim
 	- La media di combinazioni linerari e' uguali alla combianzione lineare di medie
 	- La media e' un'operatore lineare
 	- $E(10Y)=1-\times E(y)$
-	- $E(X+)$
+	- $E(X+Y)=E(X)+E(Y)$
 - $Var(X)=E(x^2)-E^2(x)$
 	- Possiamo riscrivere la varianza come momento secondo meno quadrato della media
 - La varianza non e' lineare: $Var(aX+b)=a^2\times Var(x)$

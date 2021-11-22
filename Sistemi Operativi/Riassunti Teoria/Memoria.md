@@ -102,3 +102,36 @@ Sia le strategie di First che di Best fit soffrono di **frammentazione esterna**
 
 Per ridurre la frammentazione esterna si applicano di tanto in tanto politiche di compattamento, unendo tutta la memoria libera in un'unico blocco.
 Ció é possibile solo a tempo di esecuzione.
+
+# Swapping
+
+Per eseguire un processo questo deve trovarsi nella memoria centrale. 
+
+Un processo, tuttavia, può essere **temporaneamente spostato** in una memoria ausiliaria (backing store) e in seguito riportato in memoria per continuare l’esecuzione, attraverso un procedimento chiamato **avvicendamento dei processi in memoria** o **swapping**.
+
+Questo avviene quando non cé abbastanza posto sulla RAM per caricare un processo che deve essere eseguito.
+
+Il **backing store** deve inoltre essere abbastanza ampia da contenere le copie di tutte le immagini di memoria di tutti i processi utenti.
+
+![[Pasted image 20211119154047.png]]
+
+Lo swapping é composto da **2 fasi**:
+- Una fase di **swap in**, dove si carica l'immagine del processo dalla memoria secondaria alla principale.
+- Una fase di **swap out**, dove si carica l'immagine del processo di cui si interrompe l'esecuzione nella memoria secondaria.
+
+Il tempo necessario al completamento dello swapping è dato dal 
+
+**tempo di swap-out + tempo di swap-in**
+
+quindi dipende dalle **dimensioni** delle immagini dei processi e dal **tempo** di trasferimento. Usiamo inoltre i **millisecondi**(*ms*) come unitá di misura.
+
+La collocazione dipende dal quando viene effettuato il binding delle variabili: 
+- se il codice **non è rilocabile** allora l'immagine del processo dovrà rioccupare la **stessa sezione** di RAM 
+- se è **rilocabile** (in particolare, se il binding è dinamico) questo non è necessario
+
+Per poter effettuare lo swapping il processo deve essere **completamente inattivo**(soprattutto riguardo le operazioni di I/O).
+
+# Paginazione
+La paginazione (paging) è un altro schema di gestione della memoria che permette la gestione dello spazio degli indirizzi fisici di un processo che non sia contiguo.
+
+Per implementare la paginazione si suddivide la memoria fisica in frame di lunghezza fissata, e la memoria logica in blocchi di pari dimensione detti pagine.

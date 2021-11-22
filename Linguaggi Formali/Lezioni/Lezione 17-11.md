@@ -3,7 +3,7 @@
 
 Vogliamo produrre informazioni aggiuntive al riconoscimento, per far cio' associamo ad ogni nodo dell'albero associamo degli attributi che ci permettano di capire il valore delle sottoespressioni corrispondente ad un certo sottoalbero.
 
-![[/pngs/2021-11-17--1637146792_386x307_scrot.png]]
+![[pngs/2021-11-17--1637146792_386x307_scrot.png]]
 
 Una **Definizione Diretta dalla Sintassi ** (o SDD, da
 *Syntax-Directed Definition*) è una grammatica le
@@ -12,7 +12,7 @@ semantiche** che specificano come calcolare il
 valore degli attributi associati ai nodi degli alberi
 sintattici della grammatica.
 
-![[/pngs/2021-11-17--1637148207_206x149_scrot.png]]
+![[pngs/2021-11-17--1637148207_206x149_scrot.png]]
 
 dove $n.v$ e' il valore del numero, e $E.v|T.v|F.v$ e' il valore di $E|T|F$.
 

@@ -23,6 +23,13 @@ $\int^{+\infty}_{-\infty}f_x(t)=P(-\infty\le X \le +\infty)=P(\Omega)=1$
 
 [mi sono distratto]
 
+##### X~uniforme[a,b]
+É una variabile aleatoria continua con densitá 
+$fx(t)=\displaystyle\{^{0 se %%aggiungere spazio%% t!\in[a,b]}_{\frac{1}{b-a} se t\in [a,b]}$
+
+##### X~Esponenziale($\lambda$)
+É una variabile aleatoria continua con densitá 
+$fx(t)=\displaystyle\{^{\lambda e^{-\lambda t} se t\ge 0}_{0 se t<0}$
 ### Media e varianza di variabili aleatorie continue 
 Diciamo media di $x$ la seguente quantita':
 
