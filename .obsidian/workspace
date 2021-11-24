@@ -6,26 +6,28 @@
       {
         "id": "44266e0f9addd860",
         "type": "leaf",
-        "dimension": 59.46299934512115,
+        "dimension": 49.836280288146696,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
-            "mode": "preview"
+            "file": "Probabilita e Statistica/Esercizi/Variabili aleatorie discrete.md",
+            "mode": "source"
           }
-        }
+        },
+        "group": "78173057517174c4"
       },
       {
-        "id": "ddab796f5adca152",
+        "id": "50b3bb5fddd02503",
         "type": "leaf",
-        "dimension": 40.537000654878845,
+        "dimension": 50.163719711853304,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
+            "file": "Probabilita e Statistica/Esercizi/Variabili aleatorie discrete.md",
             "mode": "preview"
           }
-        }
+        },
+        "group": "78173057517174c4"
       }
     ],
     "direction": "vertical"
@@ -65,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "6707e463b6d65b8d",
@@ -82,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
+                "file": "Probabilita e Statistica/Esercizi/Variabili aleatorie discrete.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,17 +101,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ddab796f5adca152",
+  "active": "50b3bb5fddd02503",
   "lastOpenFiles": [
-    "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
-    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md",
-    "Linguaggi Formali/Lezioni/Lezione 16-11.md",
-    "Linguaggi Formali/Lezioni/Lezione 22-09.md",
+    "Probabilita e Statistica/Esercizi/Variabili aleatorie discrete.md",
+    "Probabilita e Statistica/Esercizi/README.md",
+    "Probabilita e Statistica/Continuazione.md",
+    "Probabilita e Statistica/pngs/Pasted image 20211123192027.png",
     "Probabilita e Statistica/Formulario EPS 2nd ed.md",
-    "Linguaggi Formali/Lezioni/Lezione 26-10,02,03-11.md",
-    "Probabilita e Statistica/Lezione 21,22-09.md",
-    "Probabilita e Statistica/Lezione 28-10.md",
-    "Probabilita e Statistica/Lezione 16-11.md",
-    "Probabilita e Statistica/Lezione 02,04-11.md"
+    "Sistemi Operativi/Riassunti Teoria/Memoria.md",
+    "Sistemi Operativi/Riassunti Teoria/DeadLock.md",
+    "Linguaggi Formali/Lezioni/Lezione 17-11.md",
+    "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
+    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md"
   ]
 }

@@ -31,3 +31,8 @@ Il valore di un attributo sintetizzato per da un nodo $N$ e' determinato da una 
 
 Anche gli attributi possono essere sintetizzati.
 
+#### Attributi ereditati
+Un attributo di un nodo $N$ in un albero annotato si dice **ereditato** se il suo valore dipende da quello degli attributi del padre e dei fratelli.
+
+
+

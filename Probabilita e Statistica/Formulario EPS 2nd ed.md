@@ -59,6 +59,7 @@ X conta il numero di successi che si verificano in una finestra di osservazione
 - $Px(k)=P(X=k)=\frac{\lambda^k}{k!}\times e^{-\lambda}$
 
 dove $\lambda$ é il parametro di intensitá.
+con $e=2,718$
 ###### Proprietá 
 Se $X~Poisson(\lambda)$ su una finestra di osservazione, se dilatiamo la finestra con una parametro $k$, se:
 - $k>1\to allarghiamo$
@@ -142,7 +143,7 @@ $fx(t)=\displaystyle\{^{0 se %%aggiungere spazio%% t!\in[a,b]}_{\frac{1}{b-a} se
 
 ##### X~Esponenziale($\lambda$)
 É una variabile aleatoria continua con densitá 
-$fx(t)=\displaystyle\{^{\lambda e^{-\lambda t} se t\ge 0}_{0 se t<0}$
+$fx(t)=\displaystyle\{^{\lambda e^{-\lambda t} se t\ge 0}_{0 \set<0}$
 
 ### Media e varianza di variabili aleatorie continue 
 Diciamo media di $x$ la seguente quantita':
