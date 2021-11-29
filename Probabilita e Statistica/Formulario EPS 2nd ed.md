@@ -33,6 +33,15 @@ Px:
 - $x\to Px(x)=P(X=x)$
  
 $Px(K) = P(X=K)=\binom{n}{k}\times p^k(1-p)^{n-k}$
+
+dove
+- $p$ indica la probabilitá di successo
+- $n$ indica l'higher end $k$ il lower end del range di oggetti di interesse
+In R scriviamo 
+```R
+dbinom(k,n,p)
+```
+
 ##### V.A. geometriche
 ###### Esperimento Probabilistico di riferimento
 Svolgiamo prove ripetute di tipo bernulliano fino a quando non otteniamo il primo successo
@@ -49,7 +58,10 @@ $Px(k)=(1-p)^{k-1}\times p$
 dove 
 - $k-1$ rappresenta le prove effettua meno il successo
 - $p$ é il successo, dove $p=1$
-
+In R scriviamo
+```R
+dgeom(k-1,p)
+```
 ##### V.A. di Poisson
 ###### Esperimento Probabilistico di riferimento
 X conta il numero di successi che si verificano in una finestra di osservazione
@@ -57,9 +69,15 @@ X conta il numero di successi che si verificano in una finestra di osservazione
 ###### PMF
 - $Im(X)=\{0,1,2,3,...\}$
 - $Px(k)=P(X=k)=\frac{\lambda^k}{k!}\times e^{-\lambda}$
-
-dove $\lambda$ é il parametro di intensitá.
-con $e=2,718$
+ 
+o in R
+```R
+dpois(x,lambda)
+```
+dove 
+- $\lambda$ é il parametro di intensitá, ovvero quante volte di solito si verifica un determinato evento
+- $e=2,718$ é una costante
+- $x$ indica il numero di eventi di interesse
 ###### Proprietá 
 Se $X~Poisson(\lambda)$ su una finestra di osservazione, se dilatiamo la finestra con una parametro $k$, se:
 - $k>1\to allarghiamo$
@@ -72,7 +90,16 @@ Estraiamo senza reimbussolamento $n$ oggetto da una scatola che ne contiene $N$ 
 ###### PMF
 - $Im(X)=\{0,1,2,...,min(n,C)\}$
 - $Px(k)=P(X=k)=\frac{\binom{C}{k}\times \binom{N-C}{n-k}}{\binom{N}{n}}$
+dove:
+- $k$ rappresentano gli oggetti con la caratteristica di interesse, su una percentuale
+- $n$ sono gli oggetti totali sulla percentuale
+- $C$ sono gli oggetti con una caratteristica di interesse sull'estrazione
+- $N$ sono gli oggetti totali su cui si basa l'estrazione
 
+In R scriviamo
+```R
+dhyper(k,C,N-C,n)
+```
 #### Media
 Definiamo momenti di ordine K della variabile aleatoria discreta $x$ la media di $X^k$ cosi' calcolata:
 
@@ -88,6 +115,7 @@ La radice quadrata della varianza e' definita **deviazione standard**
 
 $\sqrt{Var(x)}=StDev(x)$
 
+Le deviazioni standard non si possono sommare.
 ##### Proprietá di media e varianza
 - $E(aX+bY)=aE(X)+bE(Y)$
 	- $E(10Y)=1-\times E(y)$
@@ -138,29 +166,46 @@ Quindi di conseguenza
 $\int^{+\infty}_{-\infty}f_x(t)=P(-\infty\le X \le +\infty)=P(\Omega)=1$
 
 ##### X~uniforme[a,b]
-É una variabile aleatoria continua con densitá 
-$fx(t)=\displaystyle\{^{0 se %%aggiungere spazio%% t!\in[a,b]}_{\frac{1}{b-a} se t\in [a,b]}$
+Rappresenta la probabilitá che un evento si verifichi in un'intervallo.
 
+É una variabile aleatoria continua con densitá 
+$fx(t)=\displaystyle\{^{0\_se\_ t!\in[a,b]}_{\frac{1}{b-a}\_if\_t\in [a,b]}$
+
+$P(a<X<b)=\frac{b-a}{\beta-\alpha}$, con intervallo $[\alpha,\beta]$
+
+###### Media di un un'uniforme
+$E[X]=\frac{\alpha+\beta}{2}$
+###### Varianza di un un'uniforme
+$Var[X]=\frac{(\alpha-\beta)^2}{12}$
+$Var[X^2]=\frac{\beta^2+\alpha \beta+\alpha^2}{3}$
 ##### X~Esponenziale($\lambda$)
+Dato $P(x\ge y)$
 É una variabile aleatoria continua con densitá 
-$fx(t)=\displaystyle\{^{\lambda e^{-\lambda t} se t\ge 0}_{0 \set<0}$
-
-### Media e varianza di variabili aleatorie continue 
-Diciamo media di $x$ la seguente quantita':
-
-$E(x)=\int^{+\infty}_{-\infty}x\times f_x(x)dx$
-
-Diciamo come varianza di $x$ la quantita':
-
-$Var(x)=\int^{+\infty}_{-\infty}=(x-E(x))^2\times f_x(x)dx$
-
-ovvero lo scarto quadratico medio.
-
-### $x~Normale(\mu,\sigma^2)$
-$f_x(x)=\frac{1}{\sqrt{2\pi \sigma^2}} exp[-\frac{(x-y)^2}{2\sigma^2}]$
-
+$fx(t)=\displaystyle\{^{\lambda e^{-\lambda t}\_se\_t\ge 0}_{0\_if\_t<0}$
+in R scriviamo
+```R
+pexp(y,lambda)
+```
+###### Media di un esponenziale
+$E[X]=\frac{1}{\lambda}$
+###### Varianza di un esponenziale
+$Var(x)=\frac{1}{\lambda^2}$
+###### Assenza di memoria
+$a$
+### x~$Normale(\mu,\sigma^2)$
+$f_x(x)=\frac{1}{\sqrt{2\pi \sigma^2}} exp[-\frac{(x-\mu)^2}{2\sigma^2}]$
+dove:
+- $\mu$ é la distribuzione normale di media
+- $\sigma$ é la deviazione standard
+Su R scriviamo
+```R
+pnorm(y,mu,sigma)
+```
 La normale del tipo $y~NORMALE(0,1)$ e' detta standard. 
-
+#### Media della normale
+$E[x]=\mu$
+#### Varianza della normale
+$Var(X)=\sigma^2$
 #### Proprieta'
 La normalita' e' preservata per trasformazioni lineari.
 
@@ -183,7 +228,11 @@ Data una coppia di variabili aleatorie $X$ ed $Y$, definisco come pmf congiunta 
 $P_{XY}\times^{Imm(X)\times Imm(y)\to R}_{(xy)\to P_{x,y=P(\{X=x\}\cap\{Y=y\})}}$
 
 Usando la PMF congiunta posso calcolare le PMF marginali(delle singole variabili aleatorie)
-$Px(x)=p(X=x)=P(\{X=x\}\cap\Omega)=P(\{X=x\}\cap\cup\{Y=y\})=P(\displaystyle \bigcup_{y\in Imm(y)}\{X=x\}\cap\{Y=y\})=\displaystyle \sum_{y\in Imm(y)}P_{x,y}(x,y)$
+$$
+\begin{gather}
+Px(x)=p(X=x)=P(\{X=x\}\cap\Omega)=P(\{X=x\}\cap\cup\{Y=y\})=\\ P(\displaystyle \bigcup_{y\in Imm(y)}\{X=x\}\cap\{Y=y\})=\displaystyle \sum_{y\in Imm(y)}P_{x,y}(x,y)
+\end{gather}
+$$
 
 La P(X=x) e' uguale alla probabilita' che X=x e Y=y per uno qualunque dei valori nella sua PMF
 
@@ -194,3 +243,5 @@ $A$ e $B$ sono indipendenti se:
 - $P(A|B)=P(A)$
 - $P(B|A)=P(B)$
 - $P(A\cap B)=P(A)\times P(B)$
+
+
