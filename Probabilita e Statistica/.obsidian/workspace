@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 16-11.md",
-            "mode": "preview"
+            "file": "Untitled.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 16-11.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "8e5da6b94ac87d6e",
   "lastOpenFiles": [
+    "Untitled.md",
     "Lezione 16-11.md",
     "Lezione 09-11.md",
     "Lezione 21,22-09.md",
