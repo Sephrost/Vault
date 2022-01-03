@@ -6,28 +6,13 @@
       {
         "id": "20aee0d5594e7853",
         "type": "leaf",
-        "dimension": 50,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Riassunti/Memoria.md",
+            "file": "Lezione 30-11.md",
             "mode": "source"
           }
-        },
-        "group": "8cdbce89967ae4cc"
-      },
-      {
-        "id": "18a77464c973094d",
-        "type": "leaf",
-        "dimension": 50,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Riassunti/Memoria.md",
-            "mode": "preview"
-          }
-        },
-        "group": "8cdbce89967ae4cc"
+        }
       }
     ],
     "direction": "vertical"
@@ -84,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Riassunti/Memoria.md",
+                "file": "Lezione 30-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,15 +89,15 @@
   },
   "active": "20aee0d5594e7853",
   "lastOpenFiles": [
+    "Lezione 30-11.md",
+    "Lezione 16,17.md",
     "Riassunti/Memoria.md",
-    "Lezione 16-11.md",
     "Riassunti/DeadLock.md",
     "Lezione 09-22.md",
     "Lezione 03-11.md",
     "Lezione 26-10,02-11.md",
     "Lezione 19-10.md",
     "Lezione 5,6,12-10.md",
-    "Lezione 5,6-10.md",
-    "Lezione 5-10.md"
+    "Lezione 5,6-10.md"
   ]
 }
