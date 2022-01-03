@@ -1,8 +1,8 @@
 # Espressioni regolari 
-Rispetto ad un alfabeto $\sum$ di riferimento, le espressioni regolari sono definite come segue:
-- $0$ r $\epsilon$ nono espressioni regolari 
-- se $a \in \sum$, allora $a$ e' un'espressione regolare
-- se E ed F sono espressioni regolari, E+F ed EF sono espressioni regolari 
+Rispetto ad un alfabeto $\Sigma$ di riferimento, le espressioni regolari sono definite come segue:
+- $0$ ed $\epsilon$ sono espressioni regolari 
+- se $a \in \Sigma$, allora $a$ e' un'espressione regolare
+- se $E$ ed $F$ sono espressioni regolari, $E+F$ ed $EF$ sono espressioni regolari 
 - se $E$ e' un'espressione regolare, **$E^{*}$** e' un'espresione regolare
 
 ## Convenzioni
@@ -34,23 +34,23 @@ $(L(a)L(b))^{*}$
 {$ab$}$^{*}$
 {$\epsilon,ab,abab,abababa,...$}
 
-## Proprieta' 
-### Unione
+### Proprieta' 
+#### Unione
 Proprieta'|Esempio
 -|-
-Commutativita'|$E+F=F+E$
-Associativita'|$E+(F+G)=(E+F)+G$
+Commutativitá|$E+F=F+E$
+Associativitá|$E+(F+G)=(E+F)+G$
 Idempotenza|$E+E=E$
-Identita'|$E+0=0+E=E$
-### Concatenazione
+Identitá|$E+0=0+E=E$
+#### Concatenazione
 Proprieta'|Esempio
 -|-
-Associativita'|$E(FG)=(EF)G$
-Identita'|$E\epsilon=\epsilon E=E$
+Associativitá|$E(FG)=(EF)G$
+Identitá|$E\epsilon=\epsilon E=E$
 Assorbimento|$E0=0E=0$
-Distributivita' sinistra|$E(F+G)=EF+EG$
-Distributivita' destra|$(E+F)G=EG+FG$
-### chiusura di Klenee
+Distributivitá sinistra|$E(F+G)=EF+EG$
+Distributivitá destra|$(E+F)G=EG+FG$
+#### chiusura di Klenee
 Proprieta'|Esempio
 -|-
 Idempotenza|$(E^{*})^{*}=E^{*}$
@@ -58,27 +58,27 @@ Casi banali|$\epsilon=0^{*}=\epsilon$
 
 ## Espressione regolare -> $\epsilon-NFA$
 Data un'espressione regolare $E$, esiste un $\epsilon$-NFA $A$ tale che $L(A)=L(E)$, con esattamente uno stato finale.
-### Caso 0(Linguaggio vuoto)
+#### Caso 0(Linguaggio vuoto)
 In questo caso lo stato finale e quello inizale non sono cllegati in alcun modo
 
 ![[2021-10-06--1633512145_199x67_scrot.png]]
-### Caso $\epsilon$(Solo stringa vuota)
+#### Caso $\epsilon$(Solo stringa vuota)
 L'unisca transizione e' rappresentata dalla sola stringa vuota
 
 ![[2021-10-06--1633512590_185x64_scrot.png]]
-### Caso a(Linguaggio che contiene solo a)
+#### Caso a(Linguaggio che contiene solo a)
 L'unica transizione e' rappresentata dalla sola stringa "a".
 
 ![[2021-10-06--1633512759_171x60_scrot.png]]
-### Caso unione 
+#### Caso unione 
 In questo casi si analizzano gli automi singolarmente, per poi ottenere un automa che riconosce il linguaggio generato dall'unione dei linguaggi.
 
 ![[2021-10-06--1633512920_376x175_scrot.png]]
-### Caso concatenzione
+#### Caso concatenzione
 Si analizzano gli automi singolarmente, per ottenere un automa che parte dallo stato inizale del primo automa per arrivare allo stato finale del secondo automa, riconoscendo tutte le concatenazioni possibili.
 
 ![[2021-10-06--1633513037_411x112_scrot.png]]
-### Chiusura di Kleene
+#### Chiusura di Kleene
 ![[2021-10-06--1633513055_387x126_scrot.png]]
 
 ## Esempi
@@ -92,7 +92,6 @@ Si analizzano gli automi singolarmente, per ottenere un automa che parte dallo s
 	$(a^{*}c+b)^{*}a^{*}$
 - costanti numeriche binarie pari senza 0 inutili a sinistra (es. 0, 10, ma non 010 o 11)
 	$0+1(0+1)^{*}0$
-- costanti numeriche decimali con virgola facoltativa (es. 42, .5, 12.3, 12. ma non .)
 ## Chiusura dei linguaggi regolari
 ### Unione e concatenazione
 Dati due linguaggi regolari $L_{1}$ e $L_{2}$, essi ono chiusi rispetto all'unione e alla concatenzazione.

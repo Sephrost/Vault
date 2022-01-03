@@ -1,9 +1,3 @@
-# Casistica
-Caso|Risultato
--|-
-Stringa/0|0
-L{$\epsilon$}|L
-
 # Automi riconoscitori
 L'automa riconoscitore analizza il codice come una sequenza di caratteri, ricercando i **token** (costanti, operatori,simboli...) e produce a sua volta una sequenza di token da fornire al compilatore.
 
@@ -21,19 +15,21 @@ Una macchina che riconosce stringhe con **memoria limitata.** Esso legge la stri
 
 In generale possono esserci 0 o piu' stati finali.
 
-E' indicato con la quintupla A=($Q,\Sigma,\delta, q_0,F$), dove:
+## Automi a stati finiti deterministici
 
-- Q e' un insieme finito di **stati**
+Un'automa a stati finiti deterministico é indicato con la quintupla A=($Q,\Sigma,\delta, q_0,F$), dove:
+
+- $Q$ e' un insieme finito di **stati**
 - $\sum$ e' l'**alfabeto** riconosciuto dall'automa 
 - $\delta:Q\times \Sigma$ e' la **funzione di transizione** 
 - $q_{0}\in Q$ e' lo stato **iniziale** 
 - $F \subseteq Q$ é l'isieme degli **stati finali**
 
-### Funzione di transizione 
-Una funzione di transizione e' la funzione $\hat{\delta}:Q\times \Sigma^*\to Q$ definita per induzione sul suo secondo argomento che segue:
+### Funzione di transizione estesa
+Una funzione di transizione estesa e' la funzione $\hat{\delta}:Q\times \Sigma^*\to Q$ definita per induzione sul suo secondo argomento che segue:
 
-$\hat{\delta}(q,\epsilon)=q$
-$\hat{\delta}(q,wa)=\delta(\hat{\delta}(q,w),a)$
+- $\hat{\delta}(q,\epsilon)=q$
+- $\hat{\delta}(q,wa)=\delta(\hat{\delta}(q,w),a)$
 
 La funzione restitusce lo stato in cui si trova l'automa dopo il riconoscimento della stringa $arg[1]$ partendo dallo stato $arg[0]$.
 
@@ -48,7 +44,7 @@ Ovvero l'insieme delle stringhe che portano l' automa dal suo stato iniziale ad 
 Il linguaggio **L** si dice regolare se esiste un automa a stati finiti deterministico che lo riconosce, appartenente alla famiglia dei linguaggi regolari.
 
 ### Tabella di transizione
-Un dfa di puó rappresntare in forma tabellare, come segue 
+Un DFA di puó rappresentare in forma tabellare, come segue:  
 
 Stato|b
 --|--
@@ -60,6 +56,4 @@ dove:
 - Le colonne corrispondono ai simboli dell'alfabeto dell'automa
 - Lo stato iniziale é marcato con $\to$
 - Ogni stato finale é marcato con *
-
-
 

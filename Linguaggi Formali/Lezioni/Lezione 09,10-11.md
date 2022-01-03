@@ -20,7 +20,7 @@ Ci sono due casi da considerare:
 	- Se abbiamo invece $A\to aA|b|C$ sobbiamo anche controllare le produzioni con $C$ poiche' potrebbe generare $a$.
 	- Se abbiamo produzioni distinte che generano un prefisso comune non siamo invece di determinare qual'e' la produzione giusta da utilizzare(Es:$A\to aB|aC$)
 ### Stringa annullabile 
-Una stringa $\alpha$(terminale o non) e' annullabile($NULL(\alpha)$) se e solo se puo' essere riscritta nelal stringa vuota
+Una stringa $\alpha$(terminale o non) e' annullabile($NULL(\alpha)$) se e solo se puo' essere riscritta nella stringa vuota
 
 Per determinarle l'annullabilita' utilizziamo un algoritmo:
 - Se $Null(X_1),...,Null(X_n)$ allora la stringa e' annullabile

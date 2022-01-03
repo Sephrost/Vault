@@ -6,5 +6,5 @@ TODO:
 	- [ ] Lezione del 10/11
 	- [ ] Tutto ció che é prima del deadlock
 	- [ ] Fare riassunto lezione 16 Novembre
-- [ ] Rendere utili gli appunti di EPS
+- [x] Rendere utili gli appunti di EPS
  

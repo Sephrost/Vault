@@ -57,10 +57,3 @@ Concatenzazione|$L_1L_2=\{uv\| u\in L_1,v\in L_2\}$
 Potenza|$L^0=\{\epsilon\}$ e $L^{n+1}=LL^n$
 Chiusura di Kleene(Arbitrarie)|$L^*=L^0\cup L^1\cup L^2 \cup ...$ 
 Chiusura transitiva(non la stringa vuota)|$L^+=L^1\cup L^2 \cup ...$
-
-
-
-
-
-
-
