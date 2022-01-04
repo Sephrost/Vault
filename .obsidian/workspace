@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linguaggi Formali/Riassunti/07 - Minimizzazione di un DFA.md",
-            "mode": "preview"
+            "file": "Linguaggi Formali/Riassunti/10 - Automi a pila.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linguaggi Formali/Riassunti/07 - Minimizzazione di un DFA.md",
+                "file": "Linguaggi Formali/Riassunti/10 - Automi a pila.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "98721f7ee7bdda70",
   "lastOpenFiles": [
-    "Linguaggi Formali/Riassunti/07 - Minimizzazione di un DFA.md",
-    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md",
-    "Probabilita e Statistica/Formulario EPS 2nd ed.md",
+    "Linguaggi Formali/Riassunti/10 - Automi a pila.md",
+    "Linguaggi Formali/Lezioni/Lezione 19,20,26,27-10,02,03-11.md",
     "Linguaggi Formali/Riassunti/01 - Automi riconoscitori e DFA.md",
-    "Linguaggi Formali/Riassunti/06 - Linguaggi non regolari e Pumpling Lemma.md",
-    "Linguaggi Formali/Riassunti/05 - Proprietà di chiusura dei linguaggi regolari.md",
-    "Linguaggi Formali/Lezioni/Lezione 5,6-10.md",
+    "Linguaggi Formali/Riassunti/09 - Alberi sintattici.md",
+    "Linguaggi Formali/Riassunti/08 - Grammatiche libere.md",
+    "Linguaggi Formali/Lezioni/Lezione 19-10.md",
+    "Linguaggi Formali/Lezioni/Lezione 21-09.md",
+    "Linguaggi Formali/Lezioni/Lezione 12,13-10.md",
     "Linguaggi Formali/Lezioni/Lezione 09,10-11.md",
-    "Linguaggi Formali/Riassunti/03 - Automi con ε-transizioni.md",
-    "Linguaggi Formali/Riassunti/04 - Espressioni regolari.md"
+    "Linguaggi Formali/Lezioni/Lezione 5,6-10.md"
   ]
 }
