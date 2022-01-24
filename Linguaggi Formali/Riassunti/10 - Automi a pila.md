@@ -6,7 +6,7 @@ Un' **automa a pila**(o **PDA**) e' una settupla del tipo $A=(Q,\Sigma,\Gamma,\d
 - $\delta: Q\times(\Sigma\cup\{\epsilon\})\times\Gamma\to p(Q \times\Gamma^*)$
 - $q_0\in Q$ e' lo **stato iniziale**
 - $Z_0\in \Gamma$ e' il **simbolo iniziale** presente sulla pila, e quindi in terminatore
-- $F\subset Q$e' l'insieme degli **stati finali**
+- $F\subset Q$ e' l'insieme degli **stati finali**
 
 Generalmente $\Sigma$ e $\Gamma$ sono distinte, poiché il terminatore $Z_0\in \Gamma$, anche se in moltio casi $\Sigma \subset \Gamma$.
 
