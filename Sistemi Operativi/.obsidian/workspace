@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 30-11.md",
+            "file": "Lezione 30,1-11,12.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 30-11.md",
+                "file": "Lezione 30,1-11,12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,7 +89,7 @@
   },
   "active": "20aee0d5594e7853",
   "lastOpenFiles": [
-    "Lezione 30-11.md",
+    "Lezione 30,1-11,12.md",
     "Lezione 16,17.md",
     "Riassunti/Memoria.md",
     "Riassunti/DeadLock.md",
