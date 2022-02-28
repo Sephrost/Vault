@@ -1,17 +1,17 @@
 {
   "main": {
-    "id": "15127fc24e796977",
+    "id": "6405c92677a129ac",
     "type": "split",
     "children": [
       {
-        "id": "7a6ce9304790dc24",
+        "id": "baf5380c2a5402d7",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Riassunti/all.md",
-            "mode": "preview",
-            "source": false
+            "file": "Lezioni Laboratorio/Lezione 28-11.md",
+            "mode": "source",
+            "source": true
           }
         }
       }
@@ -19,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "bd890d7b3ec11cf3",
+    "id": "c62d4948e472ee84",
     "type": "split",
     "children": [
       {
-        "id": "eccbf40b527f1ae2",
+        "id": "8481dbc96ba9ac32",
         "type": "tabs",
         "children": [
           {
-            "id": "a4b72c301e45d462",
+            "id": "b13508a58892fdc6",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +35,7 @@
             }
           },
           {
-            "id": "fc5dbd76059ab24f",
+            "id": "921a450b72355c63",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -53,23 +53,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 228
+    "width": 217.01218795776367,
+    "collapsed": true
   },
   "right": {
-    "id": "abb4c387ff21e557",
+    "id": "25b2e8f2749a98b1",
     "type": "split",
     "children": [
       {
-        "id": "fdcae08831ed8442",
+        "id": "c808508df27d5618",
         "type": "tabs",
         "children": [
           {
-            "id": "277ffd4bf9dbc86a",
+            "id": "a0047ff4dff2ab4c",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Riassunti/all.md",
+                "file": "Lezioni Laboratorio/Lezione 28-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +88,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7a6ce9304790dc24",
+  "active": "baf5380c2a5402d7",
   "lastOpenFiles": [
-    "Riassunti/all.md",
-    "Lezioni/Lezione 01,7-12.md",
-    "Lezioni/Lezione 30-11.md",
-    "Lezioni/Lezione 17-11.md",
-    "Lezioni/Lezione 16-11.md",
-    "Lezioni/Lezione 09,10-11.md",
-    "Lezioni/Lezione 26-10,02,03-11.md",
-    "Lezioni/Lezione 21-09.md",
-    "Lezioni/Lezione 12,13-10.md",
-    "Lezioni/Lezione 22-09.md"
+    "Lezioni Laboratorio/Lezione 28-11.md",
+    "Lezioni Teoria/Lezione 28-11.md"
   ]
 }
