@@ -7,8 +7,11 @@
         "id": "0354d8b2a8a0855a",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Lezione 1-03.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -49,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 181
+    "width": 181,
+    "collapsed": true
   },
   "right": {
     "id": "58785e6cae6c4a30",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Lezione 1-03.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,6 +89,7 @@
   },
   "active": "0354d8b2a8a0855a",
   "lastOpenFiles": [
+    "Lezione 1-03.md",
     "Lezioni Laboratorio/Lezione 28-11.md"
   ]
 }
