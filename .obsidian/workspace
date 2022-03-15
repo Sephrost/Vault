@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "98721f7ee7bdda70",
+        "id": "7f1622e19081e2c7",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Linguaggi Formali/Riassunti/all.md",
-            "mode": "preview"
+            "file": "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+            "mode": "source"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linguaggi Formali/Riassunti/all.md",
+                "file": "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "98721f7ee7bdda70",
+  "active": "7f1622e19081e2c7",
   "lastOpenFiles": [
-    "Linguaggi Formali/Riassunti/all.md",
-    "Insiemi Guida.md",
-    "Insiemi Guida 4.md",
-    "Untitled.md",
-    "Linguaggi Formali/Riassunti/00 - Introduzione, alfabeti e linguaggi.md",
-    "Linguaggi Formali/Riassunti/01 - Automi riconoscitori e DFA.md",
-    "Linguaggi Formali/Riassunti/18 - Codice intermedio.md",
-    "Linguaggi Formali/Riassunti/13 - Parsing Top Down e Grammatiche LL(1).md",
-    "Linguaggi Formali/Riassunti/07 - Minimizzazione di un DFA.md",
-    "Linguaggi Formali/Riassunti/17 - Schemi di traduzione.md"
+    "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+    "Algoritmi/Riassunti/01 - Correttezza e Terminazione.md",
+    "Algoritmi/Riassunti/00 - Introduzione.md",
+    "Algoritmi/Lezioni Teoria/Lezione 2-03.md",
+    "Algoritmi/Lezioni Teoria/Lezione 1-03.md",
+    "Fisica/Lezioni preliminari/Vettori.md",
+    "Fisica/Lezione 3-3.md",
+    "Sistemi Operativi/Riassunti Laboratorio/Processi.md",
+    "Analisi/Integrali.md",
+    "Analisi/Definizioni random.md"
   ]
 }

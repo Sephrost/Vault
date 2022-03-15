@@ -1,5 +1,5 @@
 ## Problemi computazionali
-Un **problema computazionale** e' una **collezione** di **domande** simili tra loro, dette **istanze** o casi particolari, per cui sia stabilito un **criterio** astratto per riconoscere le **risposte corrette**.
+Un **problema computazionale** é una **collezione** di **domande** simili tra loro, dette **istanze** o casi particolari, per cui sia stabilito un **criterio** astratto per riconoscere le **risposte corrette**.
 
 ###### Esempi
 - Moltiplicazione
@@ -8,12 +8,12 @@ Un **problema computazionale** e' una **collezione** di **domande** simili tra l
 - Shortest path
 
 
-Un **problema** e' una relazione **binaria** istanza/risposta, valida se la relazione individua una possibile risposta.La relazione e' sempre univoca a meno di permutazioni tra istanze.
+Un **problema** é una relazione **binaria** istanza/risposta, valida se la relazione individua una possibile risposta.La relazione e' sempre univoca a meno di permutazioni tra istanze.
 
 ### Algoritmo
-Un algoritmo e' un metodo meccanico per risolvere un problema computazionale
+Un **algoritmo** e' un **metodo meccanico** per risolvere un problema computazionale
 
- E' una procedura che termina per ogni ingresso ammissibile e n un tempo finito producono una risposta.
+ É una procedura che termina per ogni ingresso ammissibile e n un tempo finito producono una risposta.
 
 #### Procedura
 Una procedura e' una sequenza finita di operazioni meccanicamente eseguibili per produrre univocamente un'uscita a partire da certi ingressi.
