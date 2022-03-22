@@ -9,10 +9,23 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+            "file": "Fisica/Riassunti/02 - Le Leggi di Newton.md",
             "mode": "source"
           }
-        }
+        },
+        "group": "7df5f613022a6c59"
+      },
+      {
+        "id": "b5ed0c9695ce85bb",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Fisica/Riassunti/02 - Le Leggi di Newton.md",
+            "mode": "preview"
+          }
+        },
+        "group": "7df5f613022a6c59"
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+                "file": "Fisica/Riassunti/02 - Le Leggi di Newton.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +100,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7f1622e19081e2c7",
+  "active": "b5ed0c9695ce85bb",
   "lastOpenFiles": [
+    "Fisica/Riassunti/02 - Le Leggi di Newton.md",
     "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+    "Fisica/Riassunti/01 - Velocitá e Accellerazione.md",
+    "Fisica/Riassunti/00 - Vettori.md",
+    "Fisica/Lezioni preliminari/Vettori.md",
     "Algoritmi/Riassunti/01 - Correttezza e Terminazione.md",
     "Algoritmi/Riassunti/00 - Introduzione.md",
     "Algoritmi/Lezioni Teoria/Lezione 2-03.md",
     "Algoritmi/Lezioni Teoria/Lezione 1-03.md",
-    "Fisica/Lezioni preliminari/Vettori.md",
-    "Fisica/Lezione 3-3.md",
-    "Sistemi Operativi/Riassunti Laboratorio/Processi.md",
-    "Analisi/Integrali.md",
-    "Analisi/Definizioni random.md"
+    "Fisica/Lezioni/Lezione 3-3.md"
   ]
 }
