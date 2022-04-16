@@ -1,4 +1,4 @@
-#### Sematica did Codd del valore nullo
+#### Sematica di Codd del valore nullo
 Il valore nullo indica che per una tupla non e' possibile associare valori diversi da quello nullo.
 
 E' un vero e proprio valore che appartiene a tutti i domini
