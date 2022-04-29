@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+            "file": "Economia e diritto/Economia/01 - Business Model Canvas.md",
             "mode": "source",
             "source": false
           }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293,
-    "collapsed": true
+    "width": 293
   },
   "right": {
     "id": "6707e463b6d65b8d",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
+                "file": "Economia e diritto/Economia/01 - Business Model Canvas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,6 +89,7 @@
   },
   "active": "8c543d693e0d9b8e",
   "lastOpenFiles": [
+    "Economia e diritto/Economia/01 - Business Model Canvas.md",
     "Algoritmi/Riassunti/02 - Algoritmi quadratici di ordinamento.md",
     "Algoritmi/Riassunti/04 - Relazioni di Ricorrenza.md",
     "Algoritmi/Riassunti/03 - Complessitá asintotica.md",
@@ -98,7 +98,6 @@
     "Basi di Dati/Lezioni Teoria/Lezione 21-03.md",
     "Basi di Dati/Lezioni Laboratorio/Lezione 23-03.md",
     "Basi di Dati/Lezioni Laboratorio/Lezione 21-03.md",
-    "Basi di Dati/Lezioni Laboratorio/Lezione 14-03.md",
-    "Basi di Dati/Lezioni Laboratorio/Lezione 7-03.md"
+    "Basi di Dati/Lezioni Laboratorio/Lezione 14-03.md"
   ]
 }

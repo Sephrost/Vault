@@ -1,7 +1,9 @@
 # Business Model Canvas
 Il business model canvas e' un modello di gestione strategica usata per rendere piu' facile lo sviluppo di una nuova idea, imprenditoriale o non, e per capire quanto questa e' realizzabile.
 
-I nove blocchi che lo compongono 
+I nove blocchi che lo compongono sono indicati nella foto seguente 
+
+![[Pasted image 20220429192433.png]]
 
 Un business model descritto attraverso un business model canvas sara' sostenibile solo se tutti e nove i blocchi che lo compongono sono a loro volta coordinati, sostenibili e tecnicamente omogenei.
 
