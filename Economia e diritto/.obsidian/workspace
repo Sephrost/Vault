@@ -7,8 +7,11 @@
         "id": "e00f8b236ed0031a",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Economia/01 - Business Model Canvas.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -49,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8f7dad599acb3608",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Economia/01 - Business Model Canvas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,5 +88,8 @@
     "collapsed": true
   },
   "active": "e00f8b236ed0031a",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Economia/01 - Business Model Canvas.md",
+    "Economia/1.5 - Value proposition.md"
+  ]
 }
