@@ -286,4 +286,37 @@ I business model possono essere descritti anche in base al fatto che siano guida
 - Value-driven
 	- Si basano sull'impiego di una value proposition  premium e su un'alto grado di personalizzazione piuttosto che sull'ottimizzazione dei costi.
 
-### Break even point analysis
+### Break even analysis
+La break even analysis è uno strumento utile per compiere scelte aziendali in relazione all’assetto produttivo e alle politiche di mercato dell’impresa.
+
+L'analisi del punto di equilibrio consente di:
+-  determinare i ricavi che l’azienda deve conseguire per ottenere profitti
+- analizzare la redditività globale o di singole produzioni 
+
+Il punto di equilibrio individua due aree: 
+- l’**area di perdita**
+	- $Ricavi < costi$
+-  l’**area di utile**
+	- $Ricavi > costi$
+
+Nel punto di equilibrio i costi e i ricavi coincidono si raggiunge il pareggio economico.
+
+> La costruzione del diagramma di redditivitá presuspone che i costi variabili e i ricavi totali abbiamo andamento lineare(costante) e che tutta la merce prodotta sia venduta
+> 
+> Nella realtá i costi e ricavi non hanno sempre un andamento lineare
+
+![[Pasted image 20220501130209.png]]
+
+Sapendo che 
+- $Ricavi \; Totali=prezzo\times quantitá$
+- $Costi Totali=Costi\, fissi+Costi\; Variabili\times quantitá$
+
+determiniamo la **quantitá di pareggio**
+$$q=\frac{Costi fissi}{Prezzo\, di\, vendita-costi \; variabili}$$
+
+La differenza tra il prezzo di vendita e il costo variabile unitario costituisce il **margine di contribuzione unitario**, che rappresenta il contributo di ogni unità prodotta e venduta alla copertura dei costi fissi.
+
+In presenza di un’impresa che realizza prodotti diversi  il punto di equilibrio è calcolato in termini di quantità monetarie (fatturato).
+
+$$Fe=\frac{Costi \,Fissi}{(1-(Costi \; Variabili/Ricavi\; Totali))}$$
+Il denominatore rappresenta il margine di contribuzione unitario, e il rapporto tra i CV e i RT rappresenta il costo variabile di ogni euro venduto.
