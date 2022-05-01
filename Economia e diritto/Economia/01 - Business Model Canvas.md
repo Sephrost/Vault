@@ -234,3 +234,56 @@ Ogni attivita' e' caratterizzata da risorse chiavi differenti, che possono esser
 	- Personale
 - Finanziarie
 	- Contanti, linee di credito,...
+
+## Key Activities
+Il segento Key Activities descrive le attivita' strategiche che devono essere attuate per creare e sostenere la value proposition, raggiungere i clienti,mantenere le relazioni con essi e generare utile.
+
+Le attivia' chiave variano in base al business model.
+
+### Tipi di Key Activities
+Le attivita' chiave possono essere di 3 tipi:
+- **Produttive**
+	- Tipiche delle aziende manifatturiere
+	- consistono nella creazione del bene 
+- **di Problem Solving**
+	- consistono nella soluzione dei problemi dei singoli clienti.
+- **di mantenimento e/o sviluppo di piattaforme/reti**
+
+## Key Partnerships
+Il blocco dei Partner chiave definisce la rete di fornitori e i partner necessari al funzionamento del proprio modello di business.
+
+> Le aziende non sono autosufficienti, per realizzare il proprio business model devono fare affidamento su attori strategici esterni per aumentare le probabilita' di successo sul mercato 
+
+Un'azienda puo' aver bisogno di un determinato partner per diversi motivi:
+- Ottimizzare le risorse e l'economia di scala
+
+> Con economia di scala intendiamo la relazione per per la quale ad un'aumento della produzione consegue una diminuizione del costo unitario del prodotto.
+
+- ridurre i rischi della concorrenza
+- competere in un mercato piu' vasto
+- acquisire particolari risorse o attivita'
+#### Tipi di partnerships
+Possiamo distingue fondamentalmente 4 tipi di partnership chiave:
+- Alleanze strategiche fra aziende non concorrenti
+	- Alleanze con i fornitori
+- Alleanze strategiche fra concorrenti
+- Join ventures
+>Accordo di collaborzione tra due o piu' imprese per il raggiungimento di un determianto scopo 
+
+## Cost structure 
+Il segmento dells struttura dei costi definisce i costi che l'impresa deve sostenere per far funzionare il proprio modello di business.
+
+Un modello di business puo' avere:
+- **Costi fissi**
+	- Costi che non variano al variare delal quantita' prodotta, entro certi limiti
+- **Costi variabili**
+	- Costi che variano al variare del volume di produzione
+- **Economie di scala**
+
+I business model possono essere descritti anche in base al fatto che siano guidati dai costi o dal valore:
+- Cost-driven
+	- Si basano sulla minimizzazione dei costi per mantenere una struttura di costo snella.
+- Value-driven
+	- Si basano sull'impiego di una value proposition  premium e su un'alto grado di personalizzazione piuttosto che sull'ottimizzazione dei costi.
+
+### Break even point analysis
