@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 12-10.md",
+            "file": "Lezione 17-10.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 12-10.md",
+                "file": "Lezione 17-10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "72ea5e837eb20b41",
+  "active": "391a43c7937d9163",
   "lastOpenFiles": [
     "Lezione 10-10.md",
     "riassunti/00 - Macchine di Turing.md",
