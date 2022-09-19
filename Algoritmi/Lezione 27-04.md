@@ -49,3 +49,7 @@ Un'albero ordinato si dice posizionale se:
 
 Si utilizza quindi il concetto di sottoalbero sinistro e destro.
 
+#### Visite
+La visita (completa) di un albero consiste in un’ispezione dei nodi dell’albero in cui ciascun nodo sia “visitato” (ispezionato) esattamente una volta.
+
+##### Visita in profondita
