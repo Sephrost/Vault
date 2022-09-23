@@ -11,7 +11,7 @@
           "state": {
             "file": "Lezione 19-07.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -90,6 +90,7 @@
   },
   "active": "391a43c7937d9163",
   "lastOpenFiles": [
+    "Lezione 21-07.md",
     "Lezione 19-07.md"
   ]
 }

@@ -9,9 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 19-07.md",
+            "file": "Lezione 20-07.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8838415df41214e4",
@@ -77,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 19-07.md",
+                "file": "Lezione 20-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lezione 19-07.md",
+                "file": "Lezione 20-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lezione 19-07.md"
+                "file": "Lezione 20-07.md"
               }
             }
           }
@@ -129,5 +130,8 @@
     "collapsed": true
   },
   "active": "199407dd1630f67d",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Lezione 19-07.md",
+    "Lezione 20-07.md"
+  ]
 }

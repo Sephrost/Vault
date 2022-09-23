@@ -1,17 +1,17 @@
 {
   "main": {
-    "id": "3d023fcb2af23521",
+    "id": "92a02798db3a3982",
     "type": "split",
     "children": [
       {
-        "id": "ca660984f2874980",
+        "id": "be07d78558d47e2b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 22-07.md",
+            "file": "Lezione 20-07.md",
             "mode": "source",
-            "source": false
+            "source": true
           }
         }
       }
@@ -19,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d5d2f03e215cec07",
+    "id": "1596832fb451b650",
     "type": "split",
     "children": [
       {
-        "id": "3b97f4df5a12efce",
+        "id": "ce149cac6f586019",
         "type": "tabs",
         "children": [
           {
-            "id": "82531501d8287a2c",
+            "id": "93361977e354b3ba",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +35,7 @@
             }
           },
           {
-            "id": "d7063be965b936c0",
+            "id": "fba18b906d6ee736",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -50,7 +50,7 @@
             }
           },
           {
-            "id": "1e5213363757413e",
+            "id": "42e405794c8e9534",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -65,20 +65,20 @@
     "collapsed": true
   },
   "right": {
-    "id": "e644c2394fa1c4c1",
+    "id": "c14a78e268efbaea",
     "type": "split",
     "children": [
       {
-        "id": "4f4fe4b98299e86e",
+        "id": "cf9c97cf981010b2",
         "type": "tabs",
         "children": [
           {
-            "id": "13bddfe3efdde088",
+            "id": "9a73ad1a7d3660f0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 22-07.md",
+                "file": "Lezione 20-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,19 +90,19 @@
             }
           },
           {
-            "id": "1d87c54549747015",
+            "id": "2b7ce0b1fc6178eb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lezione 22-07.md",
+                "file": "Lezione 20-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "ade244aec257cfb5",
+            "id": "be47aed2fba849ec",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -113,12 +113,12 @@
             }
           },
           {
-            "id": "cde8631e25eea543",
+            "id": "616f1a9501afa889",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lezione 22-07.md"
+                "file": "Lezione 20-07.md"
               }
             }
           }
@@ -129,10 +129,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "ca660984f2874980",
+  "active": "be07d78558d47e2b",
   "lastOpenFiles": [
-    "pngs/Pasted image 20220921143940.png",
-    "Lezione 21-07.md",
-    "Lezione 19-07.md"
+    "2022-09-20.md",
+    "Lezione 20-07.md"
   ]
 }
