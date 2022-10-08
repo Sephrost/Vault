@@ -7,8 +7,12 @@
         "id": "038bc27d3546744d",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Riassunti/05 - Legge di Gauss.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "8316284f442b4632",
@@ -65,6 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Riassunti/05 - Legge di Gauss.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,13 +88,13 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e6c5d6344997af38",
+  "active": "038bc27d3546744d",
   "lastOpenFiles": [
-    "Riassunti/00 - Vettori.md",
-    "Riassunti/03 - Legge di Coulumb.md",
     "Riassunti/04 - Campo elettrico e Dipolo elettrico.md",
     "Riassunti/05 - Legge di Gauss.md",
     "Riassunti/06 - Lavoro, energia cinetica ed energia potenziale.md",
+    "Riassunti/00 - Vettori.md",
+    "Riassunti/03 - Legge di Coulumb.md",
     "Riassunti/02 - Le Leggi di Newton.md",
     "Riassunti/01 - Velocitá e Accellerazione.md",
     "Lezioni/Lezione 3-3.md",

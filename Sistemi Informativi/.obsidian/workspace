@@ -10,7 +10,11 @@
         "state": {
           "type": "markdown",
           "state": {
+<<<<<<< HEAD
             "file": "Riassunti/00 - Sistema Informativo, Viste e Modelli.md",
+=======
+            "file": "Lezione 28-07.md",
+>>>>>>> 335df788fb052b0c2f07635129c43e90e280cd51
             "mode": "source",
             "source": false
           }
@@ -92,7 +96,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "Riassunti/00 - Sistema Informativo, Viste e Modelli.md",
+=======
+                "file": "Lezione 28-07.md",
+>>>>>>> 335df788fb052b0c2f07635129c43e90e280cd51
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +117,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "Riassunti/00 - Sistema Informativo, Viste e Modelli.md",
+=======
+                "file": "Lezione 28-07.md",
+>>>>>>> 335df788fb052b0c2f07635129c43e90e280cd51
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,7 +144,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "Riassunti/00 - Sistema Informativo, Viste e Modelli.md"
+=======
+                "file": "Lezione 28-07.md"
+>>>>>>> 335df788fb052b0c2f07635129c43e90e280cd51
               }
             }
           }
@@ -145,11 +161,19 @@
   },
   "active": "5fd29a1833be14c5",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "Lezione 19-07.md",
     "Riassunti/00 - Sistema Informativo, Viste e Modelli.md",
     "Pasted image 20220927162204.pn.md",
     "Lezione 21-07.md",
     "Lezione 22-07.md",
     "pngs/Pasted image 20220921143940.png"
+=======
+    "Untitled.md",
+    "Lezione 28-07.md",
+    "Lezione 21-07.md",
+    "pngs/Pasted image 20220921143940.png",
+    "Lezione 19-07.md"
+>>>>>>> 335df788fb052b0c2f07635129c43e90e280cd51
   ]
 }
