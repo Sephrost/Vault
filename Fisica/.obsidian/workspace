@@ -7,11 +7,8 @@
         "id": "038bc27d3546744d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Lezioni/Lezione 1-3.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezioni/Lezione 1-3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,8 +82,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "038bc27d3546744d",
+  "active": "e6c5d6344997af38",
   "lastOpenFiles": [
+    "Riassunti/00 - Vettori.md",
+    "Riassunti/03 - Legge di Coulumb.md",
+    "Riassunti/04 - Campo elettrico e Dipolo elettrico.md",
+    "Riassunti/05 - Legge di Gauss.md",
+    "Riassunti/06 - Lavoro, energia cinetica ed energia potenziale.md",
+    "Riassunti/02 - Le Leggi di Newton.md",
+    "Riassunti/01 - Velocitá e Accellerazione.md",
+    "Lezioni/Lezione 3-3.md",
     "Lezioni/Lezione 1-3.md",
     "Lezione 3-3.md"
   ]

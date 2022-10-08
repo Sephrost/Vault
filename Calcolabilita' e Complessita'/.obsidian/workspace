@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "391a43c7937d9163",
+        "id": "005d18ab93f53d83",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 19-07.md",
+            "file": "Lezione 21-07.md",
             "mode": "source",
-            "source": true
+            "source": false
           }
         }
       }
@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5730aca2f424bcf6",
@@ -70,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 19-07.md",
+                "file": "Lezione 21-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +87,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "391a43c7937d9163",
+  "active": "005d18ab93f53d83",
   "lastOpenFiles": [
-    "Lezione 21-07.md",
-    "Lezione 19-07.md"
+    "Lezione 19-07.md",
+    "Sipser M. - Introduction to the Theory of Computation (2012, Cengage) - libgen.lc.pdf",
+    "Lezione 21-07.md"
   ]
 }
