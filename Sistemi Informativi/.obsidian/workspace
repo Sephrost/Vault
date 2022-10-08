@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 22-07.md",
+            "file": "Lezione 28-07.md",
             "mode": "source",
             "source": false
           }
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 22-07.md",
+                "file": "Lezione 28-07.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lezione 22-07.md",
+                "file": "Lezione 28-07.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lezione 22-07.md"
+                "file": "Lezione 28-07.md"
               }
             }
           }
@@ -131,8 +131,10 @@
   },
   "active": "ca660984f2874980",
   "lastOpenFiles": [
-    "pngs/Pasted image 20220921143940.png",
+    "Untitled.md",
+    "Lezione 28-07.md",
     "Lezione 21-07.md",
+    "pngs/Pasted image 20220921143940.png",
     "Lezione 19-07.md"
   ]
 }
