@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lezione 19-07.md",
+            "file": "riassunti/01 - Varianti delle Macchine di Turing.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lezione 19-07.md",
+                "file": "riassunti/01 - Varianti delle Macchine di Turing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,9 +89,12 @@
   },
   "active": "005d18ab93f53d83",
   "lastOpenFiles": [
-    "Lezione 05-10.md",
-    "Lezione 19-07.md",
+    "riassunti/00 - Macchine di Turing.md",
+    "riassunti/01 - Varianti delle Macchine di Turing.md",
     "Lezione 21-07.md",
+    "Lezione 28-09.md",
+    "Lezione 19-07.md",
+    "Lezione 05-10.md",
     "Sipser M. - Introduction to the Theory of Computation (2012, Cengage) - libgen.lc.pdf"
   ]
 }
