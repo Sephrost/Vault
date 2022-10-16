@@ -47,8 +47,11 @@ Se $w\notin L$ e $M$ riconosce $L$ allora $M$ rifiuta $w$ oppure $M$ non termina
 
 ## Linguaggi Decidibili
 Poiché alcuni riconoscitori possono son terminare mai, rendendo difficile distinguere una macchina che sta elaborando da una in loop, introducioamo la nozione di *decisori*.
+
 > Un linguaggio é detto **Decidibile** (Turing-Decidable) se esiste una macchina di Turing che termina su ogni input $\in L(M)$ 
 
 Ogni Linguaggio Decidibile é anche riconoscibile, ma non il contrario.
+
+> Diciamo inoltre che un linguaggio e' **Decidibile** se e' sia positivamente che negativamente decidibile
 
 [[01 - Varianti delle Macchine di Turing]]
