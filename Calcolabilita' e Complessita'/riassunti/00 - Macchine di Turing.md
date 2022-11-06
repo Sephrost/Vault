@@ -54,4 +54,12 @@ Ogni Linguaggio Decidibile é anche riconoscibile, ma non il contrario.
 
 > Diciamo inoltre che un linguaggio e' **Decidibile** se e' sia positivamente che negativamente decidibile
 
+### Legenda per i Linguaggi
+Per ogni $w^*\in L$
+|Inglese|Italiano|Accettazione($w\in L$)|Rifiuto($w\notin L$)|
+|:--:|:--:|:--:|:--:|
+|Decidibile|Turing Recongnizable|$M$ accetta $w$|$M$ rifiuta $w$|
+|Decidibile Positivamente|Turing Decidable|$M$ accetta $w$|$M$ rifiuta $w\;\lor\;M$ non termina su $w$ |
+|Decidibile negativamente|-|$M$ accetta $w\;\lor\;M$ non termina su $w$ |$M$ rifiuta $w$|
+
 [[01 - Varianti delle Macchine di Turing]]
