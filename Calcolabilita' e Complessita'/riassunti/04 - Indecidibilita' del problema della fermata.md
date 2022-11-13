@@ -1,5 +1,5 @@
 Sia
-$$HALT_{TM}=\{<M,w>|\,M\;e'\;una\;TM\;e\;M\;terminq\;con\;input\;w\}$$
+$$HALT_{TM}=\{<M,w>|\,M\;e'\;una\;TM\;e\;M\;termina\;con\;input\;w\}$$
 dimostriamo che e' indecidibile.
 
 Assumiamo per **assurdo** che $HALT_{TM}$ sia decidibile, di conseguenza anche $A_{TM}$ e' decidibile.
