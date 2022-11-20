@@ -27,7 +27,7 @@ Una macchina di Turing riceve in input una stringa $w=w_1w_2\dots w_n\in\Gamma^*
 #### Convenzione per la lettura di una configurazione
 Una **configurazione** é una combinazione di *stato corrente*, *contenuto del nastro corrente* e *posizione della testina attuale*.
 
-Diciamo che una configurazione $C_1$ **produce** una configurazione $C_2$ se la $M.T$ puó  legalmente passare dal primo al secondo in un singolo passaggio.
+Diciamo che una configurazione $C_1$ **produce** una configurazione $C_2$ se la $M.T$ puó  legalmente passare dal primo stato al secondo stato in un singolo passaggio.
 
 Come convenzione per la lettura di una configurazione usiamo la seguente dicitura, scrivendo il nastro e inserendo lo stato del controllo prima del'ultimo carattere letto
 $$0100q_71100$$
@@ -46,7 +46,7 @@ Se $w\notin L$ e $M$ riconosce $L$ allora $M$ rifiuta $w$ oppure $M$ non termina
 > Un linguaggio é detto **Decidibile Positivamente** (*Turing-Recognizable*) se una qualche macchina di Turing lo riconosce
 
 ## Linguaggi Decidibili
-Poiché alcuni riconoscitori possono son terminare mai, rendendo difficile distinguere una macchina che sta elaborando da una in loop, introducioamo la nozione di *decisori*.
+Poiché alcuni riconoscitori possono non terminare mai, rendendo difficile distinguere una macchina che sta elaborando da una in loop, introducioamo la nozione di *decisori*.
 
 > Un linguaggio é detto **Decidibile** (Turing-Decidable) se esiste una macchina di Turing che termina su ogni input $\in L(M)$ 
 
@@ -56,7 +56,7 @@ Ogni Linguaggio Decidibile é anche riconoscibile, ma non il contrario.
 
 ### Legenda per i Linguaggi
 Per ogni $w^*\in L$
-|Inglese|Italiano|Accettazione($w\in L$)|Rifiuto($w\notin L$)|
+|Italiano|Inglese|Accettazione($w\in L$)|Rifiuto($w\notin L$)|
 |:--:|:--:|:--:|:--:|
 |Decidibile|Turing Recongnizable|$M$ accetta $w$|$M$ rifiuta $w$|
 |Decidibile Positivamente|Turing Decidable|$M$ accetta $w$|$M$ rifiuta $w\;\lor\;M$ non termina su $w$ |
