@@ -1,29 +1,3 @@
-#### Esempio di problema NP
-Sia 
-$$SUBSET-SUM=\{<S,t>|S=\{x_1,\dots,x_k\}\;e\;per\;qualche \;sottotineme\;di\;S\;\Sigma y=t\}$$
-dimostriamo che il problema e' NP.
-
-> Quindi il problema e' la massimizzazione 
-> Un esempio e' $<\{4,11,21,27\},25>\in SUBSET-SUM$ poiche' $4+21=25$ e $t=25$
-
-Costruiamo quindi il verificatore $V$ per $SUBSET-SUM$
-Su input $<<S,t>,c>$
-1. Controlliamo se $c$ e' un'insieme di numeri la cui somma sia $t$
-2. Controlliamo se $S$ contiene tutti i nuemri in $c$
-3. Se entrambi $1$ e $2$ sono verificati, $accetto$, altrimenti $rifiuto$
-> Il certificato sara' quindi il sottoinsieme stesso.
-> Inoltre il problema e' NP poiche dati $k$ elementi in $S$, abbiamo $2^k$ possibilita'
-
-### $P$ vs $NP$
-Per quanto abbiamo presentato che i problemi $P$ e $NP$ abbiano definizioni diverse, non e' stato ancora possibile provare che esisste un singolo linguaggio $NP$ che non sia $P$.
-
-Se le due classi fossero uguali allora ogni problema polinomialmente verificabile sarebbe quindi polinomialmente decidibile.
-
-> La maggior parte dei ricercatori credono che le due classi non sino equivalenti.
-
-Rimangono quidni due possibilita'
-![[Pasted image 20221114092559.png]]
-
 ### NP-Complettezza
 Abbiamo mostrato prima che se fosse possibile dimostrare che un'agoritmo polinomiale esiste per un qualche problema di classe $NP$, allora tutti i problemi $NP$ sarebbero essere decidibili in tempo polinomiale.
 
