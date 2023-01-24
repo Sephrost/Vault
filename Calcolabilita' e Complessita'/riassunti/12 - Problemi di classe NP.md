@@ -28,8 +28,10 @@ Un certificato per la stringa $<G,s,t>\in HAMPATH$ e' un cammino di hamillton da
 ### Definizione
 **NP** e' la classe di linguaggi che hanno un verificatore di tempo polinomiale
 
+Un linguaggio $A\in NP$ se e solo se é deciso da una *TM* polinomiale non deterministica.
+
 ##### Esempio di problema NP - Clique
-> Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni due nodi sono connessi
+> Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni due nodi sono connessi da un'arco
 
 Il problema e' determinare se un grafo contiene una *clique* di una certa dimensione
 $$CLIQUE=\{<G,k>|\,G\;e'\;un\;grafo\;indiretto\;con\;una\;k-clique\}$$
@@ -42,6 +44,8 @@ Su input $<<G,k>,c>$
 1. Vetrifichiamo che $c$ sia un sottografo di $G$ con $k$ nodi
 2. Verifichiamo che $G$ contiene tutti gli archi che collegano tutti i nodi di $c$
 3. Se $1$ e $2$ sono verificati, $accetto$, atrimenti $rifiuto$
+
+Ogni passo viene ripetuto una volta sola, e sono tutte operazioni tempo polinomiali. $V$ è termina in tmepo polinomiale, quindi $CLIQUE\in NP$.
 
 #### Esempio di problema NP
 Sia 
@@ -58,3 +62,5 @@ Su input $<<S,t>,c>$
 3. Se entrambi $1$ e $2$ sono verificati, $accetto$, altrimenti $rifiuto$
 > Il certificato sara' quindi il sottoinsieme stesso.
 > Inoltre il problema e' NP poiche dati $k$ elementi in $S$, abbiamo $2^k$ possibilita'
+
+Ogni passo viene ripetuto una volta sola, e sono tutte operazioni tempo polinomiali. $V$ è termina in tmepo polinomiale, quindi $SUBSET-SUM\in NP$.

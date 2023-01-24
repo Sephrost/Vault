@@ -1,5 +1,5 @@
 ### Decimo Problema di Hilbert
-Informalmente, il decimo problema di Hilbert é la ricerca di un'algoritmo in grado di testae se un polinomio ha radici intere.
+Informalmente, il decimo problema di Hilbert é la ricerca di un'algoritmo in grado di testare se un polinomio ha radici intere.
 
 Ancora oggi non esiste un tale algoritmo, ma provare che un problema é irrisolvibile era futile al tempo, quindi la dimostrazione arrivó solo negli anni 70, dopo l'introduzione del concetto di algoritmo.
 

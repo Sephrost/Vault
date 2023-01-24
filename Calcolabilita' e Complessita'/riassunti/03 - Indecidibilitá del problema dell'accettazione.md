@@ -75,11 +75,11 @@ Costuiamo quindi una tabella che ha come righe le *MT*, e le loro descrizioni su
 
 ![[Pasted image 20221109112101.png]]
 
-Poiche' $H$ e' una *TM*, e quindi lo e' anche $D$, questa deve essere presemte nella lista di tutte le *TM*. 
+Poiche' $H$ e' una *TM*, e quindi lo e' anche $D$, questa deve essere presente nella lista di tutte le *TM*. 
 
 ![[Pasted image 20221109142326.png]]
 
-Notiamo pero' che nella entry $Matr[D][<D>]$ si presenta una contradfdizione, poiche' D dovrebbe accettare $<D>$ (e quindi presentare il risultato opposto come da definizione), ma una macchian deve avvettare se' stessa, e quindi ne' $D$ ne $H$ possono esistere.
+Notiamo pero' che nella entry $Matr[D][<D>]$ si presenta una contradfdizione, poiche' D dovrebbe accettare $<D>$ (e quindi presentare il risultato opposto come da definizione), ma una macchiana deve poter accettare se' stessa, e quindi ne' $D$ ne $H$ possono esistere.
 
 ##### Pattern di dimostrazione dell'indecidibilita'
 Una strategia per poter dimostrare che un problema e' indecidibile e' la riconduzione del problema stesso ad $A_{TM}$.

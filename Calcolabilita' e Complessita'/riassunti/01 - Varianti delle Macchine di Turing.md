@@ -1,5 +1,5 @@
 ## Macchina di Turing multi-registro
-Una **macchina di Turing multi-registro** e' una macchina di Turing con diversi nastri, ognuno dei quali ha una propria testina, e puo' essere letto e scritto.
+Una **macchina di Turing multi-registro** é una macchina di Turing con diversi nastri, ognuno dei quali ha una propria testina, e puo' essere letto e scritto.
 
 ### Funzione di Transizione
 La funzione di transizione diventa la seguente
@@ -7,7 +7,7 @@ $$δ: Q\times Γ^k\to Q\times Γ^k\times\{L,R,S\}^k$$
 dove $k$ é il numero di nastri.
 
 ### Equivalenza con le Macchine di Turing a nastro singolo
-É possibile dimostrare che una macchina a piu' registri ne ha una a singolo equivalente.
+É possibile dimostrare che una macchina a piú registri ne ha una a singolo equivalente.
 
 > Due macchine sono equivalenti se riconoscono lo stesso linguaggio
 
@@ -23,7 +23,7 @@ Avremo quindi una posizione iniziale del tipo
 
 > Gli asterischi indicano il valore attuale del segmento di nastro(memoria)
 
-> Le macchine a singolo nastro sono molte piu' lente poiche per accedere alle diverse aree di memoria dovremo spostare l'intero nastro, questo pero' non intocca la decidibilita' della macchina.
+> Le macchine a singolo nastro sono molte piú lente poiche per accedere alle diverse aree di memoria dovremo spostare l'intero nastro, questo pero' non intocca la decidibilitá della macchina.
 
 ## Macchine di Turing non deterministiche
 
@@ -42,7 +42,7 @@ Se un ramo porta allo stato di accettazione, la macchina accetta l'input.
 ### Equivalenza con le Macchine di Turing deterministiche
 É possibile simulare ogni TM non deterministica $N$ con una TM  deterministica $D$, facendo provare a $D$ tutti i **possibili cammini** generati da $N$, e supponendo che ogni nodo sia una configurazione, dove la radice é il nodo di partenza. 
 
-Andiamo quindo a cercare uno sttato di accetazione con una $BFS$(*breadth-first search*), garantendo quindi che $D$ esplori l'intero albero finché non trova uno stato di accettazione.
+Andiamo quindo a cercare uno stato di accetazione con una $BFS$(*breadth-first search*), garantendo quindi che $D$ esplori l'intero albero finché non trova uno stato di accettazione.
 
 ###### Dimostrazione
 Supponiamo che $D$ abbia 3 nastri:
@@ -66,7 +66,7 @@ $D$ di comporta quindi nella seguente maniera:
 
 
 ## Enumeratori
-Un'**enumeratore** e' una macchina di Turing a singolo nastro collegata ad una stampante(che rappresentai il secondo nastro) che puo' usare per stampare delle stringhe.
+Un'**enumeratore** é una macchina di Turing a singolo nastro collegata ad una stampante(che rappresentai il secondo nastro) che puo' usare per stampare delle stringhe.
 
 ![[Pasted image 20220928090856.png]]
 

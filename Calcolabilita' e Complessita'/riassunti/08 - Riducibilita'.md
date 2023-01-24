@@ -15,14 +15,14 @@ La riducibilita' ci permette di convertire il problema dell'appartenenza ad un l
 
 > Per verificare che $w\in A$, usiamo la riduzione per mappare $w$ a $f(w)$ e verificare se $f(w)\in B$. 
 
-#### Decidibilita' attraverso la riduzione
+#### Decidibilitá attraverso la riduzione
 Se $A\le_m B$ e $B$ e' decidibile, allora $A$ e' decidibile.
 
-Sia $M$ un decisore per $B$ e $f$ una rifuzione da $A$ ad $B$,
+Sia $M$ un decisore per $B$ e $f$ una riduzione da $A$ ad $B$,
 Allora esiste un decisore $N$ per $A$:
 Per input $w$:
 1. Computa $f(w)$ 
 2. Esegue $M$ con $f(w)$ e restituice cosa restituisce $M$
 
-Se $w\in A$, allora $f(w)\in B$ poiche' la riduzione e' valida.
+Se $w\in A$, allora $f(w)\in B$ poiché $f$ é una riduzione da $A$ a $B$, di conseguenza $M$ accetta $f(w)$ quando $w\in A$. La riduzione é quindi valida
 

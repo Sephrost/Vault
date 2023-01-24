@@ -4,12 +4,12 @@ Anche se un problema é decidibile potrebbe non essere risolvibile in quanto imp
 Sia $M$ una **TM** non deterministica che termina su tutti gli input.
 La **complessitá temporale**, o *running time*, di $M$ é quindi la funzione $f:N\to N$, dove $f(n)$ é il massimo numero di passi usati da $M$ su ogni input di linghezza $n$. 
 
-Questa definizione usatilizza il concetto di **analisi nel caso peggiore**, imponendo quindi un limite asintotico a $f(n)$. 
+Questa definizione utilizza il concetto di **analisi nel caso peggiore**, imponendo quindi un limite asintotico a $f(n)$. 
 
 Diciamo inoltre che $M$ termina in tempo $f(n)$, e che quindi é una TM di tempo $f(n)$.
 
 ### La notazione di O-grande
-Dato che non é sempre possibile stimare con certezza il tempo di esecuzione di unálgoritmo, ricorriamo all'*analisi asintotica* per studiare il suo comportamento per input molto larghi.
+Dato che non é sempre possibile stimare con certezza il tempo di esecuzione di un algoritmo, ricorriamo all'*analisi asintotica* per studiare il suo comportamento per input molto larghi.
 
 La notazione **O-grande** ci permette quindi di descrivere la crescita di un'algoritmo per input finito, ignorando costanti moltiplicative e solo in funzione dell'ordine maggiore dell'espressione.
 
@@ -45,9 +45,9 @@ Ogni TM multinastro $M$ ha una TM a singolo nastro equivalente $S$ di tempo $O(t
 Inizialmente $S$ copia il contenuto dei nastri di $M$ in un formato a lui leggibile, e poi prosegue con la simulazione di $M$.
 
 Per ogni passo di $M$, $S$ deve fare due passaggi sulla porzione attiva del nastro: il primo per ottenere le informazioni necessarie a determinare il prossimo passo e il secondo per eseguirlo.
-Inoltre per detrminare il costo di ogni passo é necessario sapere la lunghezza del nastro di $S$, che é uguale alla somma delle porzioni attive di tutti i $k$ nastri di $M$. 
+Inoltre per determinare il costo di ogni passo é necessario sapere la lunghezza del nastro di $S$, che é uguale alla somma delle porzioni attive di tutti i $k$ nastri di $M$. 
 
-Ogni porzione attiva dei nastri di $M$ ha lunghezza al massimo $t(n)$, in quanto in $t(n)$ mosse potrebbe usare t(n) celle se si muovesse sempre a destra. Di conseguenza una scansione del nastro attivo di $S$ ha costo $O(t(n))$, che é uguale al costo di ogni operazione di $S$.
+Ogni porzione attiva dei nastri di $M$ ha lunghezza al massimo $t(n)$, in quanto in $t(n)$ mosse potrebbe usare $t(n)$ celle se si muovesse sempre a destra. Di conseguenza una scansione del nastro attivo di $S$ ha costo $O(t(n))$, che é uguale al costo di ogni operazione di $S$.
 
 Quindi per l'inizializzazione e l'esecuzione impiega $O(n)+t(n)\times O(t(n))=O(t^2(n))$ passi.
 
@@ -55,7 +55,7 @@ Quindi per l'inizializzazione e l'esecuzione impiega $O(n)+t(n)\times O(t(n))=O(
 Sia $t(n)$ una funzione, con $t(n)\ge n$.
 Ogni TM a singolo nastro non-deterministica $N$ ha una TM deterministica a singolo nastro $D$ di tempo $2^{O(t(n))}$.
 ##### Dimostrazione
-Su un'imput di lunghezza $n$, ogni ramo di $N$ ha lunghezza $t(n)$ al massimo, e ogni nodo puó avere al massimo $b$, in quanto $b$ sono le scelte legali prodotte dalla funzione di transizione di $N$.
+Su un'imput di lunghezza $n$, ogni ramo di $N$ ha lunghezza $t(n)$ al massimo, e ogni nodo puó avere al massimo lunghezza $b$, in quanto $b$ sono le scelte legali prodotte dalla funzione di transizione di $N$.
 
 Quindi il numero **massimo** di foglie nell'albero prodotto da $N$ é $b^{t(n)}$.
 

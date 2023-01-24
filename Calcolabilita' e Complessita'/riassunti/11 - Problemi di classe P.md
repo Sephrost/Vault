@@ -5,10 +5,10 @@
 
 $$P=\bigcup\limits_{k}TIME(n^k)$$
 Notiamo inoltre che:
-- **P** é un'invariante per tutti i modelli computazionali polinomialmente equivalente ad una *TM* deterministica a singolo nastro, ed àe quindi una **classe** matematica **robusta**, non condizionata dalle particolarità dei singoli modelli
-- **P** corrisponde alla classe di problemi risolvibili realisticamente da un computer, e quindi esite un modo di risolverlo in tempo $n^k$ per qualche costante $k$ 
+- **P** é un'invariante per tutti i modelli computazionali polinomialmente equivalente ad una *TM* deterministica a singolo nastro, ed é quindi una **classe** matematica **robusta**, non condizionata dalle particolarità dei singoli modelli
+- **P** corrisponde alla classe di problemi risolvibili realisticamente da un calcolatore, e quindi esite un modo di risolverlo in tempo al piú polinomiale. 
 
-#### Esempio di problema di classe P
+#### Esempio di problema di classe P - PATH
 Voglio controllare che l' esistenza di un cammino in un grafo sia polinomiale -> $Path\in P$
 
 Dato un gtafo $G$ controlliamo tutti i possibili cammini da due vertici $s$ e $t$. Un cammino possibile e' una sequenza di nodi di $G$, con lunghezza al massimo $m$(il numero di vertici). Ma il numero di possibili cammini e' $m^m$, che e' esponenziale.

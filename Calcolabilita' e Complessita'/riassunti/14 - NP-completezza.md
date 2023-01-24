@@ -3,6 +3,8 @@ Abbiamo mostrato prima che se fosse possibile dimostrare che un'agoritmo polinom
 
 I problemi **NP-completi** sono tutti problemi decidibili in tempo polinomiale.
 
+
+
 #### Esempio di problema NP-Completo: SAT
 > E' il primo problema NP-completo trovato
 
@@ -16,14 +18,18 @@ $$SAT=\{<\phi>|\phi\;e'\;una\;formula\;booleana\;soddisfacibile\}$$
 ###### Teorema di Cook-Levin
 $SAT\in P \iff P=NP$
 
+Il teorema di Cook afferma che $SAT$ é **NP-completo**.
+> Le definizioni aggiuntive utili all'esame sono l'enunciato di *SAT* e della *np-completezza*
+
+Grazie a questo teorema é possibile dimostrare come ogni problema **NP** puó essere ridotto a $SAT$. Grazie a questo se fosse possibile trovare una soluzione di tempo polinomiale per una *TM* deterministica a singolo nastro allora $P=NP$.
 #### Riducibilita' in tempo polinomiale
 > Una funzione e' detta polinomialmente computabile se una qualche *TM* $M$ termina per $f(w)$ 
 
 Un linguaggio $A$ e' **riducibile in tempo polinomiale** rispetto ad un linguaggio $B$ se esiste una funzione polinomiale $f:\Sigma^*\to\Sigma^*$ e per ogni $w$
 $$w\in A \iff f(w)\in B$$
-Quindi un lignuaggio e' $NP-completo$ se 
-1. il linguaggio e' $NP$
-2. ogni linguaggio $NP$ e' polinomialmente riducibile a $B$
+Quindi un linguaggio e' $NP-completo$ se 
+1. il linguaggio e' in $NP$
+2. ogni linguaggio $NP$ e' polinomialmente riducibile ad esso
 ###### La riducibilita' polinomiale preserva l'ordine polinomiale
 Se $A\le_p B$ e $B\in B$, allora $A\in P$
 Supponiamo che $f$ riduca polinomialmente $A$ a $B$, descriviamo l'agoritmo  di tempo polinomaiale $N$ che decide $A$ come segue:
