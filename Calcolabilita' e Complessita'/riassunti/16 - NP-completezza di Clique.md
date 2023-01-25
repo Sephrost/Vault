@@ -1,3 +1,4 @@
+### Clique
 > Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni due nodi sono connessi da un'arco
 
 Il problema e' determinare se un grafo contiene una *clique* di una certa dimensione é cosí definito

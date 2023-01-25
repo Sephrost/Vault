@@ -1,3 +1,4 @@
+### Indecidibilitá dell'eguaglianza tra linguaggi
 Sia 
 $$EQ_{TM}=\{<M_1,M_2>|M_1\;e\;M_2\;sono\;TM\;e\;L(M_1)=L(M_2)\}$$
 dimostriamo che $EQ_{TM}$ e' indecidibile.
@@ -16,3 +17,7 @@ Per dimostrare che non é positivamente decidibile riduciamo il complementare di
 
 Per input $<M,w>$, dove $M$ é una *TM* e $w$ una stringa, costruisco $M_1$ che rifiuta ogni input ed $M_2$ che esegue $M$ su ogni input e accetta se $M$ accetta. $M$ ritornerá $<M_1,M_2>$.
 
+Quindi se $M$ accetta $w$, allora $M_2$ accetterá ogni stringa, ma poiché $M_1$ non accetta mai le due macchine non sono equivalenti.
+Viceversa, se $M$ non accetta $w$, allora neanche $M_2$ accetterá, ma in questo caso $M_1$ e $M_2$ sarebbero equivalenti. quindi $f$ riduce $A_{TM}$ a $\overline{EQ_{TM}}$. 
+
+Per dimostrare che il complemento di $EQ_{TM}$ non é decidibile positivamente mostriamo che esiste una riduzione per il complemento del problema appena citato a $A_{TM}$, ma il complemento del complemento é il linguaggio stesso

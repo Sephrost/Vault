@@ -1,9 +1,7 @@
-### NP-Complettezza
+## NP-Complettezza
 Abbiamo mostrato prima che se fosse possibile dimostrare che un'agoritmo polinomiale esiste per un qualche problema di classe $NP$, allora tutti i problemi $NP$ sarebbero essere decidibili in tempo polinomiale.
 
 I problemi **NP-completi** sono tutti problemi decidibili in tempo polinomiale.
-
-
 
 #### Esempio di problema NP-Completo: SAT
 > E' il primo problema NP-completo trovato
@@ -30,6 +28,8 @@ $$w\in A \iff f(w)\in B$$
 Quindi un linguaggio e' $NP-completo$ se 
 1. il linguaggio e' in $NP$
 2. ogni linguaggio $NP$ e' polinomialmente riducibile ad esso
+#### Ruolo nella classificazione dei problemi
+Giocano un ruolo fondamentale nella risoluzione del problema $P=NP$, poiché se si scoprisse un algoritmo polinomiale per risolverne uno, tutti i problemi in NP potrebbero essere risolti in tempo polinomiale attraverso l’algoritmo di riduzione.
 ###### La riducibilita' polinomiale preserva l'ordine polinomiale
 Se $A\le_p B$ e $B\in B$, allora $A\in P$
 Supponiamo che $f$ riduca polinomialmente $A$ a $B$, descriviamo l'agoritmo  di tempo polinomaiale $N$ che decide $A$ come segue:

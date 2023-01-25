@@ -1,3 +1,4 @@
+## Problema della corrispondenza di Post (PCP) per stringhe non vuote
 ### Il problema
 E' possibile descrivere il problema della **corrispondenza di Post** o **PCB** come una sorta di puzzle formati da diversi domino della forma 
 

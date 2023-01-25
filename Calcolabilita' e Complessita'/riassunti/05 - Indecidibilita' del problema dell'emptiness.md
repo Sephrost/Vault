@@ -1,3 +1,4 @@
+### Indecidibilita' del problema dell'emptiness
 Sia 
 $$E_{TM}=\{<M>|\,M\;e'\;una\;TM\;e\;L(M)=\emptyset\}$$
 dimostriamo che $E_{TM}$ e' indecidibile.

@@ -1,3 +1,4 @@
+### Indecidibilità del problema della fermata
 Sia
 $$HALT_{TM}=\{<M,w>|\,M\;e'\;una\;TM\;e\;M\;termina\;con\;input\;w\}$$
 dimostriamo che e' indecidibile.

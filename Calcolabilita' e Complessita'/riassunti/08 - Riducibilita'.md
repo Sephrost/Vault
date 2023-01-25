@@ -1,3 +1,4 @@
+## Riducibilitá
 Con riducibilita' intendiamo la possibilita' di ridurre un problema $A$ ad un problema $B$ mostrando che esiste una funzione computabile che converte le istanze del primo problema ad instanze del secondo.
 
 > Se tale conversione e' possibile diciamo che esiste una *riduzione*.

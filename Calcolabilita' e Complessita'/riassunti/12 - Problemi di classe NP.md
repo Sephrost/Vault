@@ -1,4 +1,4 @@
-### Problemi di classe NP
+## Problemi di classe NP
 #### Esempio: la traiettoia Hamiltoniana
 $$HAMPATH=\{<G,s,t>|G\;e'\;diretto\; con\;un\;cammino\;\;hamiltoniano\;tra\;se\;t\}$$
 Un cammino hamiltoniano e' un cammino che tocca tutti i punti di un grafo una sola volta.
@@ -18,7 +18,7 @@ $$A=\{w\,|\,V\;accetta\;<w,c>\;per\;qualche\;stringa\;c\}$$
 Misuriamo il tempo di verifica per i soli termini di lunghezza $w$, quindi un **verificatore di tempo polinomiale** termina in tempo polinomiale per una lunghezza $w$.
 $c$ rappresenta quindi una sorta di certificato, che rappresenta le condizioni aggiuntive per appartenere ad $A$.
 
-L'algoritmo espolara inoltre $w$ un passo alla volta, come le *TM*.
+L'algoritmo esplora inoltre $w$ un passo alla volta, come le *TM*.
 
 > Un linguaggio $A$ e' quindi **polinomialmente verificabile** se esiste un verificatore polinomiale
 

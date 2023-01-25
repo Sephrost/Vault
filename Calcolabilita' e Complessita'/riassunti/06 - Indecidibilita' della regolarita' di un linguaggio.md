@@ -1,3 +1,4 @@
+### Indecidibilità della regolarità di un linguaggio
 Definiamo il problema di determinare se una *TM* ha un'automa a stati finiti equivalente.
 
 Sia 

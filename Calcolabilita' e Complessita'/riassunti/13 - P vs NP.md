@@ -1,4 +1,4 @@
-### $P$ vs $NP$
+## $P$ vs $NP$
 **P** é la classe di linguaggi decidibili in tempo polinomiale in una TM a singolo nastro deterministica, mentre **NP** é la classe di linguaggi verificabili in tempo polinomiale.
 
 Per quanto i problemi $P$ e $NP$ abbiano definizioni diverse, non e' stato ancora possibile provare che esiste un singolo linguaggio $NP$ che non sia $P$.
