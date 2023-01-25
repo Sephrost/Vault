@@ -228,7 +228,23 @@ Poiche' $H$ e' una *TM*, e quindi lo e' anche $D$, questa deve essere presente n
 Notiamo pero' che nella entry $Matr[D][<D>]$ si presenta una contradfdizione, poiche' D dovrebbe accettare $<D>$ (e quindi presentare il risultato opposto come da definizione), ma una macchiana deve poter accettare se' stessa, e quindi ne' $D$ ne $H$ possono esistere.
 
 ##### Pattern di dimostrazione dell'indecidibilita'
-Una strategia per poter dimostrare che un problema e' indecidibile e' la riconduzione del problema stesso ad $A_{TM}$.### Indecidibilità del problema della fermata
+Una strategia per poter dimostrare che un problema e' indecidibile e' la riconduzione del problema stesso ad $A_{TM}$.
+### Teorema di Post
+Il teorema di Post enuncia che 
+un linguaggio é **decidibile** se é sia **Decidibile Positivamente** che **Decidibile negativamente**.
+
+## Dimostrazione
+Se un **linguaggio** $A$ fosse **decidibile**, possiamo osservare che sia il linguaggio stesso che il suo complemento sono *riconoscibili*, poiché ogni linguaggio decidibile é anche riconoscibile, e il complemento di un linguaggio decidibile é a sua volta decidibile.
+
+Se invece sia $A$ che il suo complemento $\overline A$ sono *turing-recognizable*, definiamo allora un riconoscitore $M_1$ per $A$ e un'altro $M_2$ per $\overline A$. 
+Definiamo allora un decisore per $M$ per $A$, che su input $w$:
+1. Simula sia $M_1$ che $M_2$ su $w$ in parallelo
+2. Se $M_1$ accetta, *accetta*, se $M_2$ rifiuta, *rifiuta*
+
+$M$ ha quindi due nastri per poter simulare $M_1$ e $M_2$ in parallelo, e per far ció alterna le esecuzioni, un passo ciascuno fino all'accettazione.
+
+Poiché ogni stringa é in $A$ oppure nel suo complemento, $w$ deve essere accettata da $M_1$ o $M_2$, e $M$ termina quando una delle due *TM* termina, allora é un decisore per $A$, poiché termina sempre ed é in grado di decidere se $w\in A$.
+### Indecidibilità del problema della fermata
 Sia
 $$HALT_{TM}=\{<M,w>|\,M\;e'\;una\;TM\;e\;M\;termina\;con\;input\;w\}$$
 dimostriamo che e' indecidibile.
@@ -309,7 +325,8 @@ Per input $<M,w>$, dove $M$ é una *TM* e $w$ una stringa, costruisco $M_1$ che 
 Quindi se $M$ accetta $w$, allora $M_2$ accetterá ogni stringa, ma poiché $M_1$ non accetta mai le due macchine non sono equivalenti.
 Viceversa, se $M$ non accetta $w$, allora neanche $M_2$ accetterá, ma in questo caso $M_1$ e $M_2$ sarebbero equivalenti. quindi $f$ riduce $A_{TM}$ a $\overline{EQ_{TM}}$. 
 
-Per dimostrare che il complemento di $EQ_{TM}$ non é decidibile positivamente mostriamo che esiste una riduzione per il complemento del problema appena citato a $A_{TM}$, ma il complemento del complemento é il linguaggio stesso## Riducibilitá
+Per dimostrare che il complemento di $EQ_{TM}$ non é decidibile positivamente mostriamo che esiste una riduzione per il complemento del problema appena citato a $A_{TM}$, ma il complemento del complemento é il linguaggio stesso
+## Riducibilitá
 Con riducibilita' intendiamo la possibilita' di ridurre un problema $A$ ad un problema $B$ mostrando che esiste una funzione computabile che converte le istanze del primo problema ad instanze del secondo.
 
 > Se tale conversione e' possibile diciamo che esiste una *riduzione*.
@@ -697,7 +714,8 @@ dove una formula é della forma normale congiuntiva se ogni clausola é connessa
 > Se l'assegnamento é soddisfatto almeno un letterale per clausola deve essere vero.
 
 ## Dimostrazione
-$3SAT\in NP$ poiché una *TM* non determinisca polinomiale puó generare un'assegnamento per una formula booleana $\phi$ e accettare se lo soddisfa.###### 1. Dare una definizione precisa di una Macchina di Turing
+$3SAT\in NP$ poiché una *TM* non determinisca polinomiale puó generare un'assegnamento per una formula booleana $\phi$ e accettare se lo soddisfa.# Domande di ripasso
+###### 1. Dare una definizione precisa di una Macchina di Turing
 Una macchina di turing é una settupla composta da:
 1. Un'insieme di stati della macchina
 2. Un'alfabeto della macchina
@@ -798,17 +816,3 @@ Prendiamo in considerazione quindi **un letterale vero** per **clausola**, i nod
 
 Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ e $CLIQUE$ é riducibile a $3SAT$, che é **NP-completo**.
 
-Il teorema di Post enuncia che 
-un linguaggio é **decidibile** se é sia **Decidibile Positivamente** che **Decidibile negativamente**.
-
-## Dimostrazione
-Se un **linguaggio** $A$ fosse **decidibile**, possiamo osservare che sia il linguaggio stesso che il suo complemento sono *riconoscibili*, poiché ogni linguaggio decidibile é anche riconoscibile, e il complemento di un linguaggio decidibile é a sua volta decidibile.
-
-Se invece sia $A$ che il suo complemento $\overline A$ sono *turing-recognizable*, definiamo allora un riconoscitore $M_1$ per $A$ e un'altro $M_2$ per $\overline A$. 
-Definiamo allora un decisore per $M$ per $A$, che su input $w$:
-1. Simula sia $M_1$ che $M_2$ su $w$ in parallelo
-2. Se $M_1$ accetta, *accetta*, se $M_2$ rifiuta, *rifiuta*
-
-$M$ ha quindi due nastri per poter simulare $M_1$ e $M_2$ in parallelo, e per far ció alterna le esecuzioni, un passo ciascuno fino all'accettazione.
-
-Poiché ogni stringa é in $A$ oppure nel suo complemento, $w$ deve essere accettata da $M_1$ o $M_2$, e $M$ termina quando una delle due *TM* termina, allora é un decisore per $A$, poiché termina sempre ed é in grado di decidere se $w\in A$.
