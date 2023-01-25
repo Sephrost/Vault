@@ -46,7 +46,7 @@ Se $w\notin L$ e $M$ riconosce $L$ allora $M$ rifiuta $w$ oppure $M$ non termina
 > Un linguaggio é detto **Decidibile Positivamente** (*Turing-Recognizable*) se una qualche macchina di Turing lo riconosce
 
 ## Linguaggi Decidibili
-Poiché alcuni riconoscitori possono non terminare mai, rendendo difficile distinguere una macchina che sta elaborando da una in loop, introducioamo la nozione di *decisori*.
+Poiché alcuni riconoscitori possono non terminare mai, rendendo difficile distinguere una macchina che sta elaborando da una in loop, introduciamo la nozione di *decisori*.
 
 > Un linguaggio é detto **Decidibile** (Turing-Decidable) se esiste una macchina di Turing che termina su ogni input $\in L(M)$ 
 
@@ -56,13 +56,13 @@ Ogni Linguaggio Decidibile é anche riconoscibile, ma non il contrario.
 
 ### Legenda per i Linguaggi
 Per ogni $w^*\in L$
-|         Italiano         |        Inglese         |           Accettazione($w\in L$)            |            Rifiuto($w\notin L$)             |
-| :----------------------: | :--------------------: | :-----------------------------------------: | :-----------------------------------------: |
-|        Decidibile        |  Turing Recognizable   |               $M$ accetta $w$               |               $M$ rifiuta $w$               |
-| Decidibile Positivamente |    Turing Decidable    |               $M$ accetta $w$               | $M$ rifiuta $w\;\lor\;M$ non termina su $w$ |
-| Decidibile negativamente | Co-Turing Recognizable | $M$ accetta $w\;\lor\;M$ non termina su $w$ |               $M$ rifiuta $w$               |
+|Italiano|Inglese|Accettazione($w\in L$)|Rifiuto($w\notin L$)|
+|:--:|:--:|:--:|:--:|
+|Decidibile|Turing Recognizable|$M$ accetta $w$|$M$ rifiuta $w$|
+|Decidibile Positivamente|Turing Decidable|$M$ accetta $w$|$M$ rifiuta $w\;\lor\;M$ non termina su $w$ |
+|Decidibile negativamente|Co-Turing Recognizable|$M$ accetta $w\;\lor\;M$ non termina su $w$ |$M$ rifiuta $w$|
 
-## Macchina di Turing multi-registro
+[[01 - Varianti delle Macchine di Turing]]## Macchina di Turing multi-registro
 Una **macchina di Turing multi-registro** é una macchina di Turing con diversi nastri, ognuno dei quali ha una propria testina, e puo' essere letto e scritto.
 
 ### Funzione di Transizione
@@ -144,9 +144,7 @@ Informalmente, il decimo problema di Hilbert é la ricerca di un'algoritmo in gr
 Ancora oggi non esiste un tale algoritmo, ma provare che un problema é irrisolvibile era futile al tempo, quindi la dimostrazione arrivó solo negli anni 70, dopo l'introduzione del concetto di algoritmo.
 
 ### Tesi di Church-Turing
-Nel 1936 Turing e Church pubblicarono un paper nel quale veniva usata la notazione $\lambda$-calcolo per definire un'algoritmo. Turing provó inoltre che un'algoritmo, inteso come sequenza di instruzioni volte a eseguire un compito era **equivalente** al concetto di algoritmo per le *TM*. 
-
-### Indecidibilitá
+Nel 1936 Turing e Church pubblicarono un paper nel quale veniva usata la notazione $\lambda$-calcolo per definire un'algoritmo. Turing provó inoltre che un'algoritmo, inteso come sequenza di instruzioni volte a eseguire un compito era **equivalente** al concetto di algoritmo per le *TM*. ### Indecidibilitá
 Ci sono alcune categorie di problemi irrisolvibili da un computer, per esempio verifica di un software.
 
 Il primo problema che andiamo ad osservare é il problema dell'accettazione per le *TM*.
@@ -230,25 +228,7 @@ Poiche' $H$ e' una *TM*, e quindi lo e' anche $D$, questa deve essere presente n
 Notiamo pero' che nella entry $Matr[D][<D>]$ si presenta una contradfdizione, poiche' D dovrebbe accettare $<D>$ (e quindi presentare il risultato opposto come da definizione), ma una macchiana deve poter accettare se' stessa, e quindi ne' $D$ ne $H$ possono esistere.
 
 ##### Pattern di dimostrazione dell'indecidibilita'
-Una strategia per poter dimostrare che un problema e' indecidibile e' la riconduzione del problema stesso ad $A_{TM}$.
-
-### Teorema di Post
-Il teorema di Post enuncia che 
-un linguaggio é **decidibile** se é sia **Decidibile Positivamente** che **Decidibile negativamente**.
-
-## Dimostrazione
-Se un **linguaggio** $A$ fosse **decidibile**, possiamo osservare che sia il linguaggio stesso che il suo complemento sono *riconoscibili*, poiché ogni linguaggio decidibile é anche riconoscibile, e il complemento di un linguaggio decidibile é a sua volta decidibile.
-
-Se invece sia $A$ che il suo complemento $\overline A$ sono *turing-recognizable*, definiamo allora un riconoscitore $M_1$ per $A$ e un'altro $M_2$ per $\overline A$. 
-Definiamo allora un decisore per $M$ per $A$, che su input $w$:
-1. Simula sia $M_1$ che $M_2$ su $w$ in parallelo
-2. Se $M_1$ accetta, *accetta*, se $M_2$ rifiuta, *rifiuta*
-
-$M$ ha quindi due nastri per poter simulare $M_1$ e $M_2$ in parallelo, e per far ció alterna le esecuzioni, un passo ciascuno fino all'accettazione.
-
-Poiché ogni stringa é in $A$ oppure nel suo complemento, $w$ deve essere accettata da $M_1$ o $M_2$, e $M$ termina quando una delle due *TM* termina, allora é un decisore per $A$, poiché termina sempre ed é in grado di decidere se $w\in A$.
-
-### Indecidibilità del problema della fermata
+Una strategia per poter dimostrare che un problema e' indecidibile e' la riconduzione del problema stesso ad $A_{TM}$.### Indecidibilità del problema della fermata
 Sia
 $$HALT_{TM}=\{<M,w>|\,M\;e'\;una\;TM\;e\;M\;termina\;con\;input\;w\}$$
 dimostriamo che e' indecidibile.
@@ -264,7 +244,6 @@ Dati in input $<M,w>$, con $M$ descrizione di una *TM* e $S$ stringa:
 4. Se $M$ accetta, $accetto$, altrimenti $rifiuto$
 
 Quindi se $R$ decide $HALT_{TM}$, allora $S$ decide $A_{TM}$, ma poiche' $A_{TM}$ e' indecidibile, lo e' anche $HALT_{TM}$.
-
 ### Indecidibilita' del problema dell'emptiness
 Sia 
 $$E_{TM}=\{<M>|\,M\;e'\;una\;TM\;e\;L(M)=\emptyset\}$$
@@ -284,9 +263,7 @@ $S$ = Dati in input $<M,w>$
 
 > $S$ e' in gradi di costruire $M_1$ perche' deve solo aggiungere stati aggiuntivi per implementare l'eguaglianza fra stringhe
 
-Quindi se $R$ potesse decidere $E_{TM}$, allora $S$ dovrebbe poter decidere $A_{TM}$, ma un decisore per $A_{TM}$ non puo' esistere quindi neanche $R$ puo' esistere
-
-### Indecidibilità della regolarità di un linguaggio
+Quindi se $R$ potesse decidere $E_{TM}$, allora $S$ dovrebbe poter decidere $A_{TM}$, ma un decisore per $A_{TM}$ non puo' esistere quindi neanche $R$ puo' esistere### Indecidibilità della regolarità di un linguaggio
 Definiamo il problema di determinare se una *TM* ha un'automa a stati finiti equivalente.
 
 Sia 
@@ -332,9 +309,7 @@ Per input $<M,w>$, dove $M$ é una *TM* e $w$ una stringa, costruisco $M_1$ che 
 Quindi se $M$ accetta $w$, allora $M_2$ accetterá ogni stringa, ma poiché $M_1$ non accetta mai le due macchine non sono equivalenti.
 Viceversa, se $M$ non accetta $w$, allora neanche $M_2$ accetterá, ma in questo caso $M_1$ e $M_2$ sarebbero equivalenti. quindi $f$ riduce $A_{TM}$ a $\overline{EQ_{TM}}$. 
 
-Per dimostrare che il complemento di $EQ_{TM}$ non é decidibile positivamente mostriamo che esiste una riduzione per il complemento del problema appena citato a $A_{TM}$, ma il complemento del complemento é il linguaggio stesso
-
-## Riducibilitá
+Per dimostrare che il complemento di $EQ_{TM}$ non é decidibile positivamente mostriamo che esiste una riduzione per il complemento del problema appena citato a $A_{TM}$, ma il complemento del complemento é il linguaggio stesso## Riducibilitá
 Con riducibilita' intendiamo la possibilita' di ridurre un problema $A$ ad un problema $B$ mostrando che esiste una funzione computabile che converte le istanze del primo problema ad instanze del secondo.
 
 > Se tale conversione e' possibile diciamo che esiste una *riduzione*.
@@ -472,9 +447,7 @@ Quindi il numero **massimo** di foglie nell'albero prodotto da $N$ é $b^{t(n)}$
 La simulazione procede esplorando l'albero in ampiezza. Il numero massimo di nodi dell'albero é meno del doppio del numero massimo di foglie, ed é quindi $O(b^{t(n)})$.  
 Inoltre il tempo impiegato per attraversare l'albero fino ad un nodo arbitrario é $O(t(n))$, quindi il tempo di esecuzione di $D$ é $O(t(n)b^{t(n)})=2^{O(t(n))}$. 
 
-$D$ in questo momento ha 3 nastri, ma é possibile convertirlo in uno equivalente facendo quadrare il tempo di esecuzione, che mantiene la complessitá identica.
-
-## Problemi di classe P
+$D$ in questo momento ha 3 nastri, ma é possibile convertirlo in uno equivalente facendo quadrare il tempo di esecuzione, che mantiene la complessitá identica.## Problemi di classe P
 > Tutti i modelli computazionali deterministici ragionevolmente complessi sono **polinomialmente equivalenti**, ovvero uno puó simulare un'alto con una crerscita del tempo di esecuzione polnomiale
 
 ## Definizione
@@ -499,10 +472,72 @@ Dato un input $<G,s,t>$, dove $G$ e' un grafo e $s$ e $t$ sono vertici
 3. Se $t$ e' etichettato, $accetto$, altrimenti $rifiuto$
 
 La tappa $1$ e $3$ vengono eseguiti una sola volta, mentre la subroutine 2 viene eseguita $m$ volte, quindi la complessita' dell'algoritmo e' $2n\times n^2=2n^3$.
-> Il caso peggiore avviene se tutti i nodi sono connessi e il grafo e' indiretto 
+> Il caso peggiore avviene se tutti i nodi sono connessi e il grafo e' indiretto ## Problemi di classe NP
+#### Esempio: la traiettoia Hamiltoniana
+$$HAMPATH=\{<G,s,t>|G\;e'\;diretto\; con\;un\;cammino\;\;hamiltoniano\;tra\;se\;t\}$$
+Un cammino hamiltoniano e' un cammino che tocca tutti i punti di un grafo una sola volta.
 
+![[Pasted image 20221109091558.png]]
 
-## $P$ vs $NP$
+Un modo semplice per risolvere il problema e' provare tutti i cammini possibili e verificare che sia una cammino di hamilton, con tempo esponenziale (dato dalla forza bruta).
+
+La traiettoia hamiltoniana e' **polinomialmente verificabile**.
+In questo caso dato un cammino posso controllare che sia un cammino di hamilton in tempo polinomiale.
+
+> *Verificare* l'esistenza di un cammino di hamilton e' piu' facile di *determinarla*
+
+### Verificatori 
+Un verificatore per un linguaggio $A$ e' un algoritmo $V$, dove
+$$A=\{w\,|\,V\;accetta\;<w,c>\;per\;qualche\;stringa\;c\}$$
+Misuriamo il tempo di verifica per i soli termini di lunghezza $w$, quindi un **verificatore di tempo polinomiale** termina in tempo polinomiale per una lunghezza $w$.
+$c$ rappresenta quindi una sorta di certificato, che rappresenta le condizioni aggiuntive per appartenere ad $A$.
+
+L'algoritmo esplora inoltre $w$ un passo alla volta, come le *TM*.
+
+> Un linguaggio $A$ e' quindi **polinomialmente verificabile** se esiste un verificatore polinomiale
+
+###### Esempio di certificato per il cammino di Hamilton
+Un certificato per la stringa $<G,s,t>\in HAMPATH$ e' un cammino di hamillton da $s$ a $t$.
+
+### Definizione
+**NP** e' la classe di linguaggi che hanno un verificatore di tempo polinomiale
+
+Un linguaggio $A\in NP$ se e solo se é deciso da una *TM* polinomiale non deterministica.
+
+##### Esempio di problema NP - Clique
+> Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni due nodi sono connessi da un'arco
+
+Il problema e' determinare se un grafo contiene una *clique* di una certa dimensione
+$$CLIQUE=\{<G,k>|\,G\;e'\;un\;grafo\;indiretto\;con\;una\;k-clique\}$$
+Dimostriamo che e' un problema di classe NP.
+
+> Un modo per dimostrarlo e' definire la condizione di clique come certificato.
+
+Sia quindi $V$ il verificatore per $CLIQUE$:
+Su input $<<G,k>,c>$
+1. Vetrifichiamo che $c$ sia un sottografo di $G$ con $k$ nodi
+2. Verifichiamo che $G$ contiene tutti gli archi che collegano tutti i nodi di $c$
+3. Se $1$ e $2$ sono verificati, $accetto$, atrimenti $rifiuto$
+
+Ogni passo viene ripetuto una volta sola, e sono tutte operazioni tempo polinomiali. $V$ è termina in tmepo polinomiale, quindi $CLIQUE\in NP$.
+
+#### Esempio di problema NP
+Sia 
+$$SUBSET-SUM=\{<S,t>|S=\{x_1,\dots,x_k\}\;e\;per\;qualche \;sottotineme\;di\;S\;\Sigma y=t\}$$
+dimostriamo che il problema e' NP.
+
+> Quindi il problema e' la massimizzazione 
+> Un esempio e' $<\{4,11,21,27\},25>\in SUBSET-SUM$ poiche' $4+21=25$ e $t=25$
+
+Costruiamo quindi il verificatore $V$ per $SUBSET-SUM$
+Su input $<<S,t>,c>$
+1. Controlliamo se $c$ e' un'insieme di numeri la cui somma sia $t$
+2. Controlliamo se $S$ contiene tutti i nuemri in $c$
+3. Se entrambi $1$ e $2$ sono verificati, $accetto$, altrimenti $rifiuto$
+> Il certificato sara' quindi il sottoinsieme stesso.
+> Inoltre il problema e' NP poiche dati $k$ elementi in $S$, abbiamo $2^k$ possibilita'
+
+Ogni passo viene ripetuto una volta sola, e sono tutte operazioni tempo polinomiali. $V$ è termina in tmepo polinomiale, quindi $SUBSET-SUM\in NP$.## $P$ vs $NP$
 **P** é la classe di linguaggi decidibili in tempo polinomiale in una TM a singolo nastro deterministica, mentre **NP** é la classe di linguaggi verificabili in tempo polinomiale.
 
 Per quanto i problemi $P$ e $NP$ abbiano definizioni diverse, non e' stato ancora possibile provare che esiste un singolo linguaggio $NP$ che non sia $P$.
@@ -517,14 +552,10 @@ Rimangono quindi due possibilitá:
 - $P$ é un sottoinsieme di $NP$
 - Le due classi sono equivalenti
 
-![[Pasted image 20221114092559.png]]
-
-## NP-Complettezza
+![[Pasted image 20221114092559.png]]## NP-Complettezza
 Abbiamo mostrato prima che se fosse possibile dimostrare che un'agoritmo polinomiale esiste per un qualche problema di classe $NP$, allora tutti i problemi $NP$ sarebbero essere decidibili in tempo polinomiale.
 
 I problemi **NP-completi** sono tutti problemi decidibili in tempo polinomiale.
-
-
 
 #### Esempio di problema NP-Completo: SAT
 > E' il primo problema NP-completo trovato
@@ -551,6 +582,8 @@ $$w\in A \iff f(w)\in B$$
 Quindi un linguaggio e' $NP-completo$ se 
 1. il linguaggio e' in $NP$
 2. ogni linguaggio $NP$ e' polinomialmente riducibile ad esso
+#### Ruolo nella classificazione dei problemi
+Giocano un ruolo fondamentale nella risoluzione del problema $P=NP$, poiché se si scoprisse un algoritmo polinomiale per risolverne uno, tutti i problemi in NP potrebbero essere risolti in tempo polinomiale attraverso l’algoritmo di riduzione.
 ###### La riducibilita' polinomiale preserva l'ordine polinomiale
 Se $A\le_p B$ e $B\in B$, allora $A\in P$
 Supponiamo che $f$ riduca polinomialmente $A$ a $B$, descriviamo l'agoritmo  di tempo polinomaiale $N$ che decide $A$ come segue:
@@ -561,9 +594,7 @@ Sappiamo che $w\in A$ se $f(w)\in B$, da definizione di ridubilita', allora $M$ 
 
 Inoltre $N$ termina in tempo polinomiale.
 
-> Se $M$ risolve $B$ in tempo $O(Q(n))$, con $Q$ polinomio, allora e' possibile verificare che $N$ risolve $A$ in tempo $O(Q(P(n)))$, con $Q(P(n))$ polinomio.
-
-#### SAT e' NP-completo
+> Se $M$ risolve $B$ in tempo $O(Q(n))$, con $Q$ polinomio, allora e' possibile verificare che $N$ risolve $A$ in tempo $O(Q(P(n)))$, con $Q(P(n))$ polinomio.#### SAT e' NP-completo
 > Mostriamo che e' possibile costruire una riduzione di tempo polinomiale per ogni linguaggio a SAT.
 
 Mostriamo innazitutto che sat e' un problema di tipi NP.
@@ -638,9 +669,7 @@ $$\bigvee_{a_1,\dots ,a_6\;e'\;una\;finestra\;legale}(x_{i,j-1,a_1}\land x_{i,j,
 Innazitutto stimiamo il numero di variabili di $\phi$:
 Ogni tableau ha $n^k\times n^k$ celle, quindi $n^{2k}$, e ogni cella ha $l$ variabili associate ad essa, dove $l$ e' il numero di variabili di $C$, quindi il numero di variabili non dipende dall'input $n$ ma dalla *TM* $N$.
 
-Di conseguanza il numero di variabili e' $O(n^{2k})$.
-
-### Clique
+Di conseguanza il numero di variabili e' $O(n^{2k})$.### Clique
 > Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni due nodi sono connessi da un'arco
 
 Il problema e' determinare se un grafo contiene una *clique* di una certa dimensione é cosí definito
@@ -660,8 +689,6 @@ Se $\phi$ avesse un'assegnamento che lo soddisfa allora **ogni clausola** di $\p
 Prendiamo in considerazione quindi **un letterale vero** per **clausola**, i nodi selezionati corrisponderebbero a un **sottografo** rappresentante una $k-clique$, poiché ogni letterale appartiene a una tripla(clausola) diversa, e non avente vertici tra un letterale e il suo negato(per il punto $2$ delle eccezioni) mantenendo inoltre un'assegnamento valido.
 
 Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ ed esiste una riduzione da ogni linguaggio $NP$ a $3SAT$ e quindi a $CLIQUE$.
-
-
 ### 3SAT
 Sia 
 $$3SAT=\{<\phi>|\phi\;é\;una\;formula\;soddisfacibile\;della\;forma\;normale\;3\;congiuntiva\}$$
@@ -670,4 +697,118 @@ dove una formula é della forma normale congiuntiva se ogni clausola é connessa
 > Se l'assegnamento é soddisfatto almeno un letterale per clausola deve essere vero.
 
 ## Dimostrazione
-$3SAT\in NP$ poiché una *TM* non determinisca polinomiale puó generare un'assegnamento per una formula booleana $\phi$ e accettare se lo soddisfa.
+$3SAT\in NP$ poiché una *TM* non determinisca polinomiale puó generare un'assegnamento per una formula booleana $\phi$ e accettare se lo soddisfa.###### 1. Dare una definizione precisa di una Macchina di Turing
+Una macchina di turing é una settupla composta da:
+1. Un'insieme di stati della macchina
+2. Un'alfabeto della macchina
+3. Un'alfabeto del nastro, che contiene il carattere di padding(blank)
+4. Una funzione di transizione
+5. Uno stato iniziale
+6. Uno stato di accettazione
+7. Uno stato di rifiuto
+Lo stato di accettazione deve inoltre diverso dallo stato di rifiuto
+
+###### 2. Cos'é la computazione di una macchina di Turing per una stringa? Quando accetta e quando rifiuta?
+Una computazione per una *TM* $M$ é un'applazione passo passo della funzione di transizione di $M$ per ogni carattere della stringa $w$.
+
+$M$ usa quindi un nastro infinito a destra sul quale é rappresentata $w$ e una testina per leggere e scrivere su questo, e la testina é in grado di muoversi liberamente su di esso, un passo alla volta.
+
+Una macchina di Turing, a differenza di un'automa a stati finiti, accetta una stringa appena entra in uno stato di accettazione, e le rifiuta appena entra in uno stato di rifiuto. L'entrata in uno di questi stati termina quindi la computazione.
+
+###### 3. Che differenza c'é tra non terminazione e rifiuto di una stringa? La terminazione é garantita per il calcolo di una *TM* per una stringa?
+Definiamo come non terminazione la condizione per cui la computazione di una *TM* non termina a causa di un loop. Quando una *TM* é in un loop significa che non entrerá mai in uno stato di accettazione o rifiuto.
+
+Invece una *TM* rifiuta una stringa se determina che non appartiene al linguaggio.
+
+Inoltre la terminazione é garantita solo per i decisori, quindi quelle *TM* che sono sempre in grado di detrminare se una stringa appartiene all'alfabeto della macchina  oppure no, senza mai entrare in un loop.
+
+###### 4. Quando un linguaggio viene riconosciuto da una *TM*?
+Un linguaggio $L$ é riconosciuto da una *TM* $M$ se per ogni stringa $w$ appartenente al linguaggio di $M$, questa accetta la stringa sé e solo sé appartiene a $L$. 
+
+###### 5. Date un'esempio di *TM* secondo la vostra definizione
+Un'esempio di *TM* secondo la mia definizione é la macchina che accetta tutte le stringhe: questa macchina ha lo stato di inizio uguale allo stato di accettazione, uno stato di rifuto e una funzione di transizione che, per ogni carattere letto porta sempre allo stato di accettazione.
+
+###### Definire la Np-Completezza per un linguaggio, spiegare il suo ruolo nella classificazione dei problemi NP e le sue proprietá piú importanti
+Partiamo dalla definizione di NP.
+NP é la classe dei problemi decisionali verificabili in tempo polinomiale
+Un linguaggio appartiene a questa classe solo se é deciso da una macchina di turing polinomiale non deterministica.
+
+Ora definiamo in problema come NP-completi la classe di problemi NP per i quali esiste una riduzione di tempo polinomiale da ogni problema NP ad esso.
+
+Giocano un ruolo fondamentale nella risoluzione del problema $P=NP$ poiché se si scoprisse un algoritmo polinomiale per risolverne uno, tutti i problemi in NP potrebbero essere risolti in tempo polinomiale attraverso l’algoritmo di riduzione.
+
+### The big 3
+###### 1. Definire il problema dell'accettazione per le *TM*,enunciare la principale proprietá nota del problema e dimostrarlo.
+Definiamo il problema dell'accettazione come segue:
+$$A_{TM}=\{<M,w>|M\;é\;una\;TM\;che\;accetta\;w\}$$
+
+ovvero é il problema di verificare se una *TM* accetta o no una stringa.
+
+Sappiamo che é un noto problema indecidibile, quindi dimostriamo questa proprietá.
+
+Supponiamo per assurdo che $A_{TM}$ sia decidibile, allora deve esistere un decisore $H$ che lo decide, che su input $<M,w>$ :
+- $accetta$ se $M$ accetta
+- $rifiuta$ se $M$ rifiuta
+
+Definiamo un'altra *TM* $D$ che ha $H$ come subroutine. $D$ prendi quindi in input $M$ e prova ad eseguire $H$ per determinare cosá ritornerebbe $M$ passandogli in input la sua descrizione.
+$H$ fornirá quindi in input alla *TM* presente nella sua routine $<M,<M>>$.
+$D$ invece ritornerá l'oppoto di quanto restituito da $H$, quindi
+- accetta se $M$ non accetta la sua descrizione
+- rifiuta se $M$ accetta la sua descrizione
+
+Peró provando ad eseguire $D$ su se stesso otteniamo che
+- $D$ accetta se $D$ non accetta la sua descrizione
+- $D$ rifiuta se $D$ accetta la sua descrizione
+ma $D$ non puó non accettare la sua descrizione in quanto questo produrrebbe una contraddizione. Di conseguenza né $D$ ne $H$ possono esistere e di conseguenza $H$ non é un decisore di $A_{TM}$.
+
+###### 2. Enunciare il teorema di Post e dimostrarlo
+Il teorema di Post afferma che un linguaggio é decidibile se é sia positivamente che negativamente decidibile.
+
+Proviamo a dimostrare l'enunciato.
+
+Se un **linguaggio** $A$ fosse **decidibile**, possiamo osservare che sia il linguaggio stesso che il suo complemento sono *riconoscibili*, poiché ogni linguaggio decidibile é anche riconoscibile, e il complemento di un linguaggio decidibile é a sua volta decidibile.
+
+Se invece sia $A$ che il suo complemento $\overline A$ sono *turing-recognizable*, definiamo allora un riconoscitore $M_1$ per $A$ e un'altro $M_2$ per $\overline A$. 
+Definiamo allora un decisore per $M$ per $A$, che su input $w$:
+1. Simula sia $M_1$ che $M_2$ su $w$ in parallelo
+2. Se $M_1$ accetta, *accetta*, se $M_2$ rifiuta, *rifiuta*
+
+$M$ ha quindi due nastri per poter simulare $M_1$ e $M_2$ in parallelo, e per far ció alterna le esecuzioni, un passo ciascuno fino all'accettazione.
+
+Poiché ogni stringa é in $A$ oppure nel suo complemento, $w$ deve essere accettata da $M_1$ o $M_2$, e $M$ termina quando una delle due *TM* termina, allora é un decisore per $A$, poiché termina sempre ed é in grado di decidere se la stringa appartiene ad $A$.
+
+###### 3. Enunciare il problema Clique e dimostrare che é NP-completo
+
+Partendo dalla definizione di una clique come un'insieme di $k$ vertici di un grafo indiretto, per cui ogni nodo di questo insieme é connesso ad ogni altro da un'arco, definiamo il problema Clique come segue
+$$CLIQUE=\{<G,k>|\,G\;e'\;un\;grafo\;indiretto\;con\;una\;k-clique\}$$
+ovvero il problema di determinare se un grafo contiene una clique di dimensione $k$.
+
+Si puó dimostrare che é NP-completo mostrando un a riduzione da $3SAT$.
+
+Sia $\phi$ una formula booleana della forma normale 3-congiuntiva(ogni clausola ha esattamente 3 letterali) con $k$ clausole. La riduzione genera quindi la coppia $<G,k>$, dove $G$ é un **grafo indiretto** e $k$ é il numero di clausole, dette anche **triple**, poiché composte dai 3 vertici che ne rappresentano i letterali, e rappresentante una clausola di $\phi$.
+
+Ogni vertice del grafo ha quindi un arco verso ogni altro vertice, con alcune eccezioni:
+1. Non ci sono archi tra vertici di una stessa tripla
+2. non ci sono archi tra vertici corrispondenti ad un letterale ed al suo negato( anche se appartengono a clausole differenti)
+
+Dimostriamo ora che $\phi$ soddifa $3SAT$ sé e solo sé $<G,k>$ soddisfa $Clique$:
+Se $\phi$ avesse un'assegnamento che lo soddisfa allora **ogni clausola** di $\phi$ ha **almeno** **un** letterale **vero**.
+
+Prendiamo in considerazione quindi **un letterale vero** per **clausola**, i nodi selezionati corrisponderebbero a un **sottografo** rappresentante una $k-clique$, poiché ogni letterale appartiene a una tripla(clausola) diversa, e non avente vertici tra un letterale e il suo negato(per il punto $2$ delle eccezioni) mantenendo inoltre un'assegnamento valido.
+
+Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ e $CLIQUE$ é riducibile a $3SAT$, che é **NP-completo**.
+
+Il teorema di Post enuncia che 
+un linguaggio é **decidibile** se é sia **Decidibile Positivamente** che **Decidibile negativamente**.
+
+## Dimostrazione
+Se un **linguaggio** $A$ fosse **decidibile**, possiamo osservare che sia il linguaggio stesso che il suo complemento sono *riconoscibili*, poiché ogni linguaggio decidibile é anche riconoscibile, e il complemento di un linguaggio decidibile é a sua volta decidibile.
+
+Se invece sia $A$ che il suo complemento $\overline A$ sono *turing-recognizable*, definiamo allora un riconoscitore $M_1$ per $A$ e un'altro $M_2$ per $\overline A$. 
+Definiamo allora un decisore per $M$ per $A$, che su input $w$:
+1. Simula sia $M_1$ che $M_2$ su $w$ in parallelo
+2. Se $M_1$ accetta, *accetta*, se $M_2$ rifiuta, *rifiuta*
+
+$M$ ha quindi due nastri per poter simulare $M_1$ e $M_2$ in parallelo, e per far ció alterna le esecuzioni, un passo ciascuno fino all'accettazione.
+
+Poiché ogni stringa é in $A$ oppure nel suo complemento, $w$ deve essere accettata da $M_1$ o $M_2$, e $M$ termina quando una delle due *TM* termina, allora é un decisore per $A$, poiché termina sempre ed é in grado di decidere se $w\in A$.
