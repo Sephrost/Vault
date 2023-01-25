@@ -1,3 +1,4 @@
+# Domande di ripasso
 ###### 1. Dare una definizione precisa di una Macchina di Turing
 Una macchina di turing é una settupla composta da:
 1. Un'insieme di stati della macchina
