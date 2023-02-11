@@ -1,5 +1,5 @@
 ## Macchina di Turing multi-registro
-Una **macchina di Turing multi-registro** é una macchina di Turing con diversi nastri, ognuno dei quali ha una propria testina, e puo' essere letto e scritto.
+Una **macchina di Turing multi-registro** é una macchina di Turing con diversi nastri, ognuno dei quali ha una propria testina, e puó essere letto e scritto.
 
 ### Funzione di Transizione
 La funzione di transizione diventa la seguente
@@ -72,5 +72,23 @@ Un'**enumeratore** é una macchina di Turing a singolo nastro collegata ad una s
 
 Essa restituisce un flusso infinito di dati.
 
-L'enumerator stampa tutte le stringhe con radice intera. Puo' inoltre generare ripetizioni, e le stringhe possono essere generate in qualunque ordine.
+L'enumerator stampa tutte le stringhe con radice intera. Puó inoltre generare ripetizioni, e le stringhe possono essere generate in qualunque ordine.
 
+### Teorema
+Un linguaggio é decidibile positivamente sé e solo sé un enumeratore lo enumera
+###### Dimostrazione
+Dimostriamo che se un'enumeratore $E$ enumera un linguaggio $A$, allora una *TM* $M$ decide positivamente $A$.
+
+$M$ computa quindi come segue:
+Su input $w$:
+1. Inizio la computazione di $E$, e per ogni stringa di output la comparo con $w$.
+2. Se $w$ compare come output di $E$, accetto.
+
+Di conseguenza $M$ accetta le stringhe prodotte da $E$.
+Quindi se $M$ decide positivamente $A$, allora é possibile fare anche il contrario, ovvere costruire un'enumeratore per $A$.
+
+Sia quindi $L$ la lista di tutte le stringhe di $A$, $E$ computa come segue:
+1. Ignora l'input e per indice $i$
+	1. Esegue $M$ per $i$ passi per ogni stringa in $L$
+	2. Se **ogni** computazione accetta, stampo $L[i]$
+Dunque se $M$ accetta una stringa $s$, questa deve comparire nella lista generata da $E$, e infatti comparirá un numero infinito di volte poiché $M$ viene eseguito su $M$ ogni stringa ad ogni iterazione del primo passo $1$. Questa procedura é quindi equivalente ad eseguire $M$ in parallelo su ogni possibile stringa di input.

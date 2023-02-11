@@ -22,7 +22,7 @@ Definiamo come non terminazione la condizione per cui la computazione di una *TM
 
 Invece una *TM* rifiuta una stringa se determina che non appartiene al linguaggio.
 
-Inoltre la terminazione é garantita solo per i decisori, quindi quelle *TM* che sono sempre in grado di detrminare se una stringa appartiene all'alfabeto della macchina  oppure no, senza mai entrare in un loop.
+Inoltre la terminazione é garantita solo per i decisori, quindi quelle *TM* che sono sempre in grado di determinare se una stringa appartiene all'alfabeto della macchina  oppure no, senza mai entrare in un loop.
 
 ###### 4. Quando un linguaggio viene riconosciuto da una *TM*?
 Un linguaggio $L$ é riconosciuto da una *TM* $M$ se per ogni stringa $w$ appartenente al linguaggio di $M$, questa accetta la stringa sé e solo sé appartiene a $L$. 
@@ -50,7 +50,7 @@ Sappiamo che é un noto problema indecidibile, quindi dimostriamo questa proprie
 
 Supponiamo per assurdo che $A_{TM}$ sia decidibile, allora deve esistere un decisore $H$ che lo decide, che su input $<M,w>$ :
 - $accetta$ se $M$ accetta
-- $rifiuta$ se $M$ rifiuta
+- $rifiuta$ se $M$ non accetta
 
 Definiamo un'altra *TM* $D$ che ha $H$ come subroutine. $D$ prendi quindi in input $M$ e prova ad eseguire $H$ per determinare cosá ritornerebbe $M$ passandogli in input la sua descrizione.
 $H$ fornirá quindi in input alla *TM* presente nella sua routine $<M,<M>>$.
@@ -98,5 +98,5 @@ Se $\phi$ avesse un'assegnamento che lo soddisfa allora **ogni clausola** di $\p
 
 Prendiamo in considerazione quindi **un letterale vero** per **clausola**, i nodi selezionati corrisponderebbero a un **sottografo** rappresentante una $k-clique$, poiché ogni letterale appartiene a una tripla(clausola) diversa, e non avente vertici tra un letterale e il suo negato(per il punto $2$ delle eccezioni) mantenendo inoltre un'assegnamento valido.
 
-Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ e $CLIQUE$ é riducibile a $3SAT$, che é **NP-completo**.
+Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ e $CLIQUE$ é riducibile da $3SAT$, che é **NP-completo**.
 

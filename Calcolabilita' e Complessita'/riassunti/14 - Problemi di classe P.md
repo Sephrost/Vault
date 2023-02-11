@@ -1,5 +1,5 @@
 ## Problemi di classe P
-> Tutti i modelli computazionali deterministici ragionevolmente complessi sono **polinomialmente equivalenti**, ovvero uno puó simulare un'alto con una crerscita del tempo di esecuzione polnomiale
+> Tutti i modelli computazionali deterministici ragionevolmente complessi sono **polinomialmente equivalenti**, ovvero uno puó simulare un'alto con una crescita del tempo di esecuzione polinomiale.
 
 ## Definizione
 **P** é la classe di linguaggi decidibili in tempo polinomiale in una TM a singolo nastro deterministica.
@@ -12,7 +12,7 @@ Notiamo inoltre che:
 #### Esempio di problema di classe P - PATH
 Voglio controllare che l' esistenza di un cammino in un grafo sia polinomiale -> $Path\in P$
 
-Dato un gtafo $G$ controlliamo tutti i possibili cammini da due vertici $s$ e $t$. Un cammino possibile e' una sequenza di nodi di $G$, con lunghezza al massimo $m$(il numero di vertici). Ma il numero di possibili cammini e' $m^m$, che e' esponenziale.
+Dato un grafo $G$ controlliamo tutti i possibili cammini da due vertici $s$ e $t$. Un cammino possibile e' una sequenza di nodi di $G$, con lunghezza al massimo $m$(il numero di vertici). Ma il numero di possibili cammini e' $m^m$, che e' esponenziale.
 
 Per ottenereun tempo polinomiale dobbiamo quindi evitare la forza bruta(*bruteforce*). Per migliorare la ricerca possiamo usare la ricerca in ampizza, marchiando i nodi raggiungibili da $s$ attraverso cammini diretti di lunghezza $1,2,\dots ,m$, limitando il tmpo a polinomiale
 ##### Prova

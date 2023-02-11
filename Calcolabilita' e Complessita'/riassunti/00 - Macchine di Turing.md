@@ -23,6 +23,8 @@ dove:
 - Uno stato di rifiuto $q_{reject}\in Q$, con $q_{reject}\ne q_{accept}$
 
 Una macchina di Turing riceve in input una stringa $w=w_1w_2\dots w_n\in\Gamma^*$ nei primi $n$ spazi del nastro(il resto é costituito da caratteri vuoti). Il primo carattere di padding rappresenta quindi la fine della stringa $w$.
+#### Computazione di una macchina di Turing
+Una *TM* riceve in input una stringa $w$, appartenente all'alfabeto di input, sulle prime $n$ celle del nastro. Il resto del nastro sará quindi costituito dai caratteri di padding. La computazione inizia e prosegue seguendo le regole imposte dalla funzione di transizione. Se la *TM* prova a muovere la testina oltre il limite sinistro del nastro, la testina non si muoverá, anche se indicato dalla funzione di transizione. La computazione prosegue finché non is entra in uno stato di accettazione o rifiuto, e, se questo non accade, la *TM* continua a computare per sempre.
 
 #### Convenzione per la lettura di una configurazione
 Una **configurazione** é una combinazione di *stato corrente*, *contenuto del nastro corrente* e *posizione della testina attuale*.
@@ -48,9 +50,9 @@ Se $w\notin L$ e $M$ riconosce $L$ allora $M$ rifiuta $w$ oppure $M$ non termina
 ## Linguaggi Decidibili
 Poiché alcuni riconoscitori possono non terminare mai, rendendo difficile distinguere una macchina che sta elaborando da una in loop, introduciamo la nozione di *decisori*.
 
-> Un linguaggio é detto **Decidibile** (Turing-Decidable) se esiste una macchina di Turing che termina su ogni input $\in L(M)$ 
+> Un linguaggio é detto **Decidibile** (Turing-Decidable) se esiste una macchina di Turing che termina su ogni input $\in L(M)$, decidendo se la stringa di input appartiene o no al linguaggio.
 
-Ogni Linguaggio Decidibile é anche riconoscibile, ma non il contrario.
+Ogni Linguaggio Decidibile é anche decidibile positivamente e negativamente.
 
 > Diciamo inoltre che un linguaggio é **Decidibile** se é sia positivamente che negativamente decidibile per il **teorema di Post**
 
@@ -61,5 +63,3 @@ Per ogni $w^*\in L$
 |Decidibile|Turing Recognizable|$M$ accetta $w$|$M$ rifiuta $w$|
 |Decidibile Positivamente|Turing Decidable|$M$ accetta $w$|$M$ rifiuta $w\;\lor\;M$ non termina su $w$ |
 |Decidibile negativamente|Co-Turing Recognizable|$M$ accetta $w\;\lor\;M$ non termina su $w$ |$M$ rifiuta $w$|
-
-[[01 - Varianti delle Macchine di Turing]]

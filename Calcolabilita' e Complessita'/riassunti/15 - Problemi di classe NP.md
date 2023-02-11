@@ -26,12 +26,12 @@ L'algoritmo esplora inoltre $w$ un passo alla volta, come le *TM*.
 Un certificato per la stringa $<G,s,t>\in HAMPATH$ e' un cammino di hamillton da $s$ a $t$.
 
 ### Definizione
-**NP** e' la classe di linguaggi che hanno un verificatore di tempo polinomiale
+**NP** é la classe di linguaggi che hanno un verificatore di tempo polinomiale
 
 Un linguaggio $A\in NP$ se e solo se é deciso da una *TM* polinomiale non deterministica.
 
 ##### Esempio di problema NP - Clique
-> Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni due nodi sono connessi da un'arco
+> Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni coppia di nodi é connessa da un'arco
 
 Il problema e' determinare se un grafo contiene una *clique* di una certa dimensione
 $$CLIQUE=\{<G,k>|\,G\;e'\;un\;grafo\;indiretto\;con\;una\;k-clique\}$$
