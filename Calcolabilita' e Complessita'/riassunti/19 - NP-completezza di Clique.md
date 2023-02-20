@@ -17,4 +17,4 @@ Se $\phi$ avesse un'assegnamento che lo soddisfa allora **ogni clausola** di $\p
 
 Prendiamo in considerazione quindi **un letterale vero** per **clausola**, i nodi selezionati corrisponderebbero a un **sottografo** rappresentante una $k-clique$, poiché ogni letterale appartiene a una tripla(clausola) diversa, e non avente vertici tra un letterale e il suo negato(per il punto $2$ delle eccezioni) mantenendo inoltre un'assegnamento valido.
 
-Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ ed esiste una riduzione da ogni linguaggio $NP$ a $3SAT$ e quindi a $CLIQUE$.
+Poiché ogni clausola in questo caso é soddisfatta possiamo conscludere che $\phi$ sarebbe soddisfacibile e quindi $CLIQUE$ é **NP-completo** poiché $CLIQUE\in NP$ ed esiste una riduzione da ogni linguaggio $NP$ da $3SAT$ e quindi da $CLIQUE$.

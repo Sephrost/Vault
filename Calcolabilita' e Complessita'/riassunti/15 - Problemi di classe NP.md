@@ -1,11 +1,11 @@
 ## Problemi di classe NP
 #### Esempio: la traiettoia Hamiltoniana
 $$HAMPATH=\{<G,s,t>|G\;e'\;diretto\; con\;un\;cammino\;\;hamiltoniano\;tra\;se\;t\}$$
-Un cammino hamiltoniano e' un cammino che tocca tutti i punti di un grafo una sola volta.
+Un cammino hamiltoniano é un cammino che tocca tutti i punti di un grafo una sola volta.
 
 ![[Pasted image 20221109091558.png]]
 
-Un modo semplice per risolvere il problema e' provare tutti i cammini possibili e verificare che sia una cammino di hamilton, con tempo esponenziale (dato dalla forza bruta).
+Un modo semplice per risolvere il problema é provare tutti i cammini possibili e verificare che sia una cammino di hamilton, con tempo esponenziale (dato dalla forza bruta).
 
 La traiettoia hamiltoniana e' **polinomialmente verificabile**.
 In questo caso dato un cammino posso controllare che sia un cammino di hamilton in tempo polinomiale.
@@ -29,6 +29,8 @@ Un certificato per la stringa $<G,s,t>\in HAMPATH$ e' un cammino di hamillton da
 **NP** é la classe di linguaggi che hanno un verificatore di tempo polinomiale
 
 Un linguaggio $A\in NP$ se e solo se é deciso da una *TM* polinomiale non deterministica.
+
+> Notiamo che questa classe di problemi non é trattabile, poiché la generazione di tutti i possibili valori per il verificatore richiede tempo esponenzione(es: tutti cammini di un grafo per $Hampath$).
 
 ##### Esempio di problema NP - Clique
 > Un *clique* e' un insieme di $k$ vertici di un grafo indiretto, dove ogni coppia di nodi é connessa da un'arco
