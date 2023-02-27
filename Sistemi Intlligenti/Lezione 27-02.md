@@ -1,4 +1,4 @@
-Per dare una definizione di intelligenza dobbiamo prima forrnire una definizione di intelligenza.
+Per dare una definizione di intelligenza artificiale dobbiamo prima forrnire una definizione di intelligenza.
 
 Di questa non ne esiste una definizione univoca, alcuni la assaciaono alla **razionalita'**, altri la associano alla possbilita' di processare informazioni e ragionare.
 
