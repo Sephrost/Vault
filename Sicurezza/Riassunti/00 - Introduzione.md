@@ -13,7 +13,7 @@ Gli obiettivi principali della sicurezza sono quindi
 
 Per alcuni campi particolari della sicurezza informatica possono essere presenti obiettivi aggiuntivi come per esempio l'[**autenticitá**](Autenticitá) e la **responsabilitá**([*Accountability*](Accountability.md)).
 
-##  Architettura di sicurezza OSI 
+## Architettura di sicurezza OSI 
 Per poter valutare efficacemente i requisiti di sicurezza e scegliere che misure e politiche applicare, l'architettura di sicurezza OSI puó essere un modo efficace 
 
 ### Attacchi alla sicurezza
