@@ -109,4 +109,10 @@ Il risultato di ciascuna iterazione è un sistema eseguibile, testato e integrat
 
 > Ciascuna iterazione comprende le proprie attività di analisi dei requisiti, progettazione, implementazione e test.
 
-C
+### Vantaggi
+- Minore probabilitá di fallimento
+- Migliore produttivitá
+- Percentuale piú bassa di difetti
+- Riduzione precoce dei rischi maggiori
+- Progresso visibile sin dall'inizio
+- Feedback precoce
