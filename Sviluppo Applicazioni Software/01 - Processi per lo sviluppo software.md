@@ -109,10 +109,32 @@ Il risultato di ciascuna iterazione è un sistema eseguibile, testato e integrat
 
 > Ciascuna iterazione comprende le proprie attività di analisi dei requisiti, progettazione, implementazione e test.
 
+Questa strategia di sviluppo permette un'approccio stutturato dell'applicativo che valorizza il feedback del clienti o tester(molto importante soprattutto nelle fasi iniziali) piuttosto che una speculazione sui requisiti del progetto.
+
+Il feedback delle varie iterazioni puó venire da diverse fonti:
+- dai **programmatori**, soprattutto nelle attivitá iniziali
+- dai test
+- dal cliente
+- dal mercato
+
 ### Vantaggi
 - Minore probabilitá di fallimento
 - Migliore produttivitá
 - Percentuale piú bassa di difetti
 - Riduzione precoce dei rischi maggiori
+	- tecnici, requisiti, obiettivi, usabilità,$\dots$
 - Progresso visibile sin dall'inizio
 - Feedback precoce
+- Gestione della complessità del progetto
+	- Il team non viene sopraffatto dalla “paralisi da analisi” o da passi molto lunghi e complessi.
+
+### Durata delle iterazioni
+Molti metodi iterativi raccomandano una durata delle tirazione di **2-6 settimane**.
+
+Iterazioni piú lunghe possono essere controproducenti e aumentare il rischio del progetto.
+
+> Meno di due settimane sono insufficienti per produrre abbastanza software per avere un feedback significativo, mentre piú di 6 possono portare a una complessitá eccessiva e quindi ad un feedback ritardato.
+
+Una buona pratica é quindi quella di fissare la durata delle iterazioni, fissando delle **timebox**.
+Se sembra difficile rispettare una scadenza, si possono rimandare alcune attivitá o requisiti alle iterazioni successive, ma **non ritardare** la scadenza.
+
