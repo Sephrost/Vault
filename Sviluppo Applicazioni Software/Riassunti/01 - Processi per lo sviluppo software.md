@@ -138,3 +138,19 @@ Iterazioni piú lunghe possono essere controproducenti e aumentare il rischio de
 Una buona pratica é quindi quella di fissare la durata delle iterazioni, fissando delle **timebox**.
 Se sembra difficile rispettare una scadenza, si possono rimandare alcune attivitá o requisiti alle iterazioni successive, ma **non ritardare** la scadenza.
 
+
+### Pianificazione Iterativa
+Una fase critica dello sviluppo iterativo é la pianificazione delle iterazioni.
+
+> Poiché nello sviluppo iterativo si adatta il progetto al feedback, é inutile pianificare tutto all'inizio.
+
+Si predilige quindi la pratica della **pianificazione iterativa**, o adattiva, in cui in ciascuna iterazione viene stabilito il priano di lavoro per una singola iterazione.
+
+Lo sviluppo iterativo promuove la pianificazione guidata da due aspetti critici:
+- Pianificazione guidata al **rischio**
+	- Si identificano e attenuano i rischi maggiori
+- Pianificazione guidata al cliente
+	- Si construiscono le caratteristiche di maggior rilievo per il cliente
+
+> Lo sviluppo iterativo guidato al rischio comprende la creazione di una base architetturale solida nelle prime fasi, detto sviluppo iterativo centrato sull'architettura.
+
