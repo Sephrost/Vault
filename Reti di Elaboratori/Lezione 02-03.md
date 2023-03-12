@@ -41,5 +41,4 @@ Gli annunci OSPF sono contenuti in messaggi OSPF che vengono trasportati diretta
 
 ### Instradamento Intra-ISP
 Per determinare i percorsi tra sorgente e destinazione che interessano piú AS é necessario un protocollo di instradamento intra-ISP, che coordini piú AS.
-#### BGP - Border Gateway Protocol
-> Serve a scambiare informazioni tra AS.
+
