@@ -14,6 +14,8 @@ dove $C$ é il carattero cifrato e 3 é la chiave utilizzata.
 
 > Lo scostamento puó essere di qualunque dimensione, la formula generale é quindi $C=E(k,p)=(p+k)\mod26$, dove $k$ é un valore da 0 a 25.
 
+> La formula per decifrare é $p=D(k,C)=(C-k)\mod 26$
+
 Questo cifrario in particolare é molto facile da rompere con attacchi di forza bruta, poiché le chiavi sono solo 26, le lettere dell'alfabeto in modulo 26, e inoltre si conosce il linguaggio del messaggio.
 
 ### Cifrari monoalfabetici
