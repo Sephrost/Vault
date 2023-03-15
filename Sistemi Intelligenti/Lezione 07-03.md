@@ -1,5 +1,5 @@
 ### Ricerca a costo uniforme
-> É l'algoritmo di Dijkstra.
+> Non é l'algoritmo di Dijkstra.
 
 Se i costi delle azioni non sono uguali é meglio applicare questa strategia.
 
