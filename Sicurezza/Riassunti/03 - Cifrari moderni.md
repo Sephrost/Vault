@@ -43,7 +43,7 @@ Quindi per ogni dimensione $n$ del blocco sono possibili $2^n$ blocchi di testo 
 
 Inoltre se viene usata una dimensione dei blocchi troppo piccola, il cifrario é equivalente ad un cifrario a sostituzione classico, e vulnerabile quindi alla crittoanalisi statistica.
 
-Se invece il blocco é sufficentemente grande ed é possibile revertire una sostituzione arbitraria, allora le caratteristiche del testo in chiaro vengono masterate e le tecniche di crittoanalisi statistica diventano infattibili.
+Se invece il blocco é sufficentemente grande ed é possibile revertire una sostituzione arbitraria, allora le caratteristiche del testo in chiaro vengono mascherate e le tecniche di crittoanalisi statistica diventano infattibili.
 
 ## Cifrario di Feistel
 
@@ -61,7 +61,7 @@ Esistono due metodi per far ció.
 	- La struttura statistica del messaggio in chiaro viene dissipata lungo tutto l'alfabeto del cifrario
 	- La frequenza delle lettera sará quindi piú unifrome, come della deli digrafi.
 - **Confusione**
-	- Si cerca di rendere la relazione tra le statistiche del messaggio cifrato e il valore della chiavedi crifratura il piú difficile possibile da scoprire.
+	- Si cerca di rendere la relazione tra le statistiche del messaggio cifrato e il valore della chiave di crifratura il piú difficile possibile da scoprire.
 	- Si puó ottenere ció usando algoritmi di sostituzione complessi.
 
 ### Struttura del cifrario
@@ -74,10 +74,10 @@ Durante ogni processazione viene eseguita una sostituzione sulla parte sinistra 
 
 Dopo di che viene eseguita una permutate le due metá, scambiandole. Durante l'ultima iterazione, questa operazione viene disfatta, ripetendola.
 
-![[Pasted image 20230315130058.png]]
+![[Pasted image 20230315130058.png|600]]
 
 ### Configurazione del cifrario
-L'esatta implementazione del cifrario dipende quidni dai seguenti parametri:
+L'esatta implementazione del cifrario dipende quindi dai seguenti parametri:
 - **Dimensione del blocco**
 	- Un blocco grande incrementa la sicurezza a scapito della velocitá
 	- Un blocco di 64 bit é considerato un buon compromesso
@@ -91,12 +91,51 @@ L'esatta implementazione del cifrario dipende quidni dai seguenti parametri:
 - **Funzione di approssimazione $F$**
 	- Un'algoritmo complesso rende piú difficile la crittoanalisi
 
+#### Funzioni cifratura di Feisel
+Consideriamo $LE_i$ la porzione sinistra $i$-esima iterazione della cifratura $E$, e $LE_i$ la porzione destra alla medesima iterazione,per ogni iterazione eccetto l'ultima abbiamo:
+$$
+\begin{cases}
+LE_i=RE_{i-1}\\
+RE_i=LE_{i-1}\oplus F(RE_{i-1},K_i)
+\end{cases}
+$$
+mentre per l'ultima:
+$$
+\begin{cases}
+LE_i=RE_{i-1}\\
+RE_i=LE_{i-1}
+\end{cases}
+$$
+#### Funzione di decrittazione di Feisel
+Consideriamo $LD_i$ la porzione sinistra $i$-esima iterazione della funzione di decrittazione $D$, e $RD_i$ la porzione destra alla medesima iterazione.Per ogni iterazione eccetto l'ultima abbiamo:
+$$
+\begin{cases}
+LD_i=RD_{i-1}\\
+RD_i=LD_{i-1}\oplus F(RD_{i-1},K_i)
+\end{cases}
+$$
+dove $LD_i=RE_{n-i}$ e $RD=LE_(n-i)$, dove $n$ é il numero di iterazioni di cifratura.
+Per l'ultima iterazione si ha
+$$
+\begin{cases}
+LD_i=RD_{i-1}\\
+RD_i=LD_{i-1}
+\end{cases}
+$$
 ## Data Encryption Standard(DES)
 > Prima dell'introduzione di AES era il cifrario piú usato.
 
-Il cifrario prevede il classico input chiava/messaggio, ma in questo caso specifico il **messaggio** deve essere di **64 bit** e la **chiave** di **54**.
+Il cifrario prevede il classico input chiava/messaggio, ma in questo caso specifico il **messaggio** deve essere di **64 bit** e la **chiave** di **56**.
 
 Il messaggio viene cifrato in **3 fasi**:
-1. Il **messaggio** in chiaro viene **permutato** 
+1. Il **messaggio** in chiaro viene **permutato**, e i bit in eccesso della chiave vengono scartati.
+	1. Viene scartato il bit meno significativo di ogni byte della chiave
+2. Vengono effettuate **16 round** di cifratura, in maniera analoga al cifrario di Feistel
+	1. Ad ogni iterazione, la chiave viene divisa in **due parti** di **28 bit** ciasuna, sulle quali viene eseguito uno **shift** circolare a **sinistra**. Vengono poi **selezionati 48 bit** per essere usati come **chiave** di ciascun **round**, in modo da utilizzare una chiave diversa per ciascuno.
+	2. Il messaggio viene diviso in due metá di **32 bit** ciascuna. La metá destra $R$ viene quindi espansa attraverso una **permutation box(p-box) ad espansione**, in modo da ottenere una metá da 48 bit che combacia con la lunghezza della chiave.
+	3. Viene effettuato lo **xor logico** tra $R$ e la chiave
+	4. Il risultato viene quindi fatto elaborare da una serie di **substitution box**(*s-box*). Questo permette di struttare il principio di confusione.
+	5. Il risultato delle s-box viene permutato, ottenendo $R'$
+	6. In maniera anagola a Feistel $L_i=R_{i-1}$ e $R_i=L_{i-1}\oplus R'$
 
 ![[Pasted image 20230318164941.png]]
