@@ -139,3 +139,5 @@ Il messaggio viene cifrato in **3 fasi**:
 	6. In maniera anagola a Feistel $L_i=R_{i-1}$ e $R_i=L_{i-1}\oplus R'$
 
 ![[Pasted image 20230318164941.png]]
+
+Il cifrario DES sfrutta inoltre l'**effetto valanga**, infatti un cambiamento anche solo di un bit del messaggio o della chuave produce una variazione di diversi bit sul messaggio cifrato corrispondente.
