@@ -5,7 +5,6 @@ Per progettare in ogge ci sono fondamentalmente 3 modi:
 	- Disegnare alcuni diagrammi UML, poi passare al punto alla codifica
 - **Solo disegno**
 	- Lo strumento genera ogni cosa dai diagrammi
-
 La modellazione agile ha, tra gli altri, lo scopo di ridurre il costo aggiuntivo del disegno e modellare per comprendere e comunicare, anziché per documentare.
 Per ottenere ció comprende le seguenti pratiche:
 - Modellare insieme agli altri. 
@@ -105,6 +104,7 @@ Il **vincolo** va interpretato come una **post-condizione** dell’operazione.
 
 ###### Frame
 I **frame** sono **regioni** o frammenti dei **diagrammi** con un **operatore**(o **etichetta**) e una **guardia**(ovvero una clausola condizionale, posizionata sopra alla lifeline di valutazione).
+
 Operatore Frame|Significato
 --|--
 alt|Frammento alternativo per logica mutuamente espressa nella guardia.(if-else)

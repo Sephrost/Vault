@@ -5,6 +5,7 @@ Dopo aver identificato i requisiti e a ver creato un modello di dominio, si dovr
 > Il decidere quali metodi appartengono a chi e come devono interagire gli oggetti ha delle conseguenze, e pertanto queste scelte vanno fatte con serietà.
 
 ### Input della progettazione ad oggetti
+
 Nome|Funzione
 --|--
 Testo dei casi d’uso|definisce il comportamento visibile che gli oggetti software devono in definitiva supportare
@@ -263,7 +264,6 @@ Tra i rimedi per un controller gonfio, due sono i seguenti.
 2. **Aggiungere più controller**
 
 Si ricorda inoltre che non é respossabilitá dell'UI il portare a compimento l'operazione richiesta. Utilizzando un controller si ottiene una maggiore riusabilitá.
-
 
 > No, non mi sono dimenticato gli altri 4, non sono stati trattati
 

@@ -3,6 +3,7 @@ Un **modello di dominio** è una **rappresentazione visuale** di **classi** conc
 Può essere realizzato come **uno** o **più diagrammi delle classi** in cui non sono definite operazioni e adottando un punto di vista concettuale.
 
 > É il modello piú importante dell'analisi ad oggetti.
+> Non necessita di un grande sforzo di modellazione, bisogna evitare l'approccio a cascata.
 
 ### Elementi del modello di dominio
 Un modello di dominio può mostrare i seguenti elementi:
@@ -13,6 +14,8 @@ Un modello di dominio può mostrare i seguenti elementi:
 - **attributi** di classi concettuali.
 	- una proprietà elementare, o *valore logico*, degli oggetti di una classe.
 
+![[Pasted image 20230608230310.png|500]]
+
 ### Creare un modello di dominio
 É possibile creare un modello di dominio affrontando i seguenti passi:
 1. Trovare le classi concettuali.
@@ -20,7 +23,10 @@ Un modello di dominio può mostrare i seguenti elementi:
 3. Aggiungere associazioni e attributi.
 
 #### Trovare le classi concettuali
-Una classe concettuale rappresenta un concetto del mondo reale o nel dominio di interesse.
+Una **classe concettuale** rappresenta un **concetto** del mondo reale o nel dominio di interesse.
+
+> Le classi concettuali non sono classi software.
+
 Per individuarle é possibile usare 3 strategie.
 
 ##### Strategia 1: Riusare o modificare dei modelli esistenti
@@ -101,11 +107,19 @@ La **molteplicità** di un ruolo definisce **quante istanze** di una classe poss
 
 Queste sono correlate da un valore, che comunica quante istanze possono essere asscciato a un'altra.
 
+![[Pasted image 20230608231356.png|450]]
+
 > In un diagramma delle classi UML, è possibile che due classi siano collegate da più di un’associazione.
+
+![[Pasted image 20230608231425.png]]
 
 Talvolta è utile mostrare il **nome** dei **ruoli** di un’associazione, che identifica un’estremità di associazione e descrive idealmente il ruolo svolto dagli oggetti nell’associazione. Puó essere utile soprattutto quando il ruolo di un'oggetto non é chiaro. Questo inizia sempre con una lettera minuscola.
 
+![[Pasted image 20230608231447.png]]
+
 > Una classe può avere anche un’**associazione** con **se stessa**(*riflessiva*).
+
+![[Pasted image 20230608231502.png|300]]
 
 ##### Aggregazione e composizione
 L’**aggregazione** è, in UML, un tipo di **associazione** che suggerisce, in modo vago e approssimativo, una **relazione intero-parte**(es: automobile-ruote)

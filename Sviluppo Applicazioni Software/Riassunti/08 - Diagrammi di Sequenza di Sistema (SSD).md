@@ -22,4 +22,4 @@ Esso mostra quindi:
 	- Queste devono essere espresse a livello astratto, piuttosto che in relazione al dispositivo di input fisico
 
 ### Esempio di un SSD
-![[Pasted image 20230419162258.png]]
+![[Pasted image 20230608232021.png]]

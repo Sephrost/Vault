@@ -40,7 +40,23 @@ I casi d'uso mettono in risalto gli obiettivi degli utenti e i loro punti di vis
 Solo il 10% dei casi d'uso piú significativi viene scritto in formato dettagliato.
 
 ### Template di caso d'uso dettagliato
-![[Pasted image 20230310122232.png|500]]
+
+Sezione| Commento
+--|--
+Nome del caso d’uso | Inizia con un verbo.
+Portata |Il sistema che si sta progettando.
+Livello|“Obiettivo utente” o “sottofunzione”. 
+Attore primario |Usa direttamente il sistema; gli chiede di fornirgli i suoi servizi per raggiungere un obiettivo. 
+Parti interessate e Interessi |A chi interessa questo caso d’uso e che cosa desidera. 
+Pre-condizioni |Che cosa deve essere vero all’inizio del caso d’uso – e vale la pena di dire al lettore. 
+Garanzia di successo| Che cosa deve essere vero se il caso d’uso viene completato con successo – e vale la pena di dire al lettore. 
+Scenario principale di successo| Uno scenario comune di attraversamento del caso d’uso, di successo e incondizionato. 
+Estensioni |Scenari alternativi, di successo e di fallimento. 
+Requisiti speciali |Requisiti non funzionali correlati. 
+Elenco delle varianti tecnologiche e dei dati |Varianti nei metodi di I/O e nel formato dei dati. 
+Frequenza di ripetizione |Frequenza prevista di esecuzione del caso d’uso. 
+Varie| Altri aspetti, come per esempio i problemi aperti.
+
 ### Sezioni del caso d'uso dettagliato
 #### Preambolo
 Tutto ció che precede lo scenario princiale e le sue estensioni.
@@ -50,6 +66,8 @@ Contiene informazioni che é importante leggere prima degli scenari del caso d'u
 É caratterizzato da:
 - **Portata**
 	- Descrive i confini del sistema in via di progettazione
+	- é detta di sistema se descrive l’utilizzo di un sistema software
+	- é detta di business descrive il modo in cui un’azienda o un’organizzazione viene utilizzata dai suoi clienti e soci.
 - **Livello**
 	- Una modo per classificare i casi d'uso
 	- I possibili livelli sono:
@@ -118,7 +136,7 @@ Per facilitare la lettura dei requisiti, è opportuno scrivere i casi d’uso in
 Per esempio, è preferibile scrivere: “Il Sistema autentica l’Amministratore” anziché “L’Amministratore viene autenticato” (da chi?).
 
 ### Casi d'uso a scatola nera
-I **casi d'uso a scatola nera** sono i casi d'uso piú comuni e consigliati.
+I **casi d'uso a scatola nera**(blackbox) sono i casi d'uso piú comuni e consigliati.
 
 Descrivono i **componenti**  del **sistema** e gli aspetti relativi al suo progetto, ma **non** il loro **funzionamento**.
 

@@ -1,7 +1,7 @@
 ### Caratteristiche di un software
 Le principali caratteristiche di un prodotto software sono
 - **mantenibilitá**: il software dovrebbe essere scritto in modo da evolversi in base alle richieste del cliente
-- **fidatezza**: un doftware non dovrebbere creare danni fisici ed economici
+- **fidatezza**: un software non dovrebbere creare danni fisici ed economici
 - **efficienza**: il software non dovrebbe essere dispendioso in termini di risorse di sistema utilizzate
 - **accettabile**: il software deve essere utilizzabule da diversi dipi di utente
 
@@ -72,12 +72,9 @@ Il **processo** software con ciclo di vita **a cascata**, o *sequenziale*, è ba
 
 > Durante il processo a cascata, le seguenti attivitá vengono svolte in sequenza.
 
-All’inizio di un progetto vengono definiti in dettaglio **tutti** i **requisiti**, o almeno la maggior parte di essi.
-
-Allo stesso tempo si cerca di definire un **piano temporale** dettagliato e "*affidabile*" delle **attivitá** da svolgere.
+All’inizio di un progetto vengono definiti in dettaglio **tutti** i **requisiti**, o almeno la maggior parte di essi. Allo stesso tempo si cerca di definire un **piano temporale** dettagliato e "*affidabile*" delle **attivitá** da svolgere.
 
 Poi si prosegue con la **modellazione** e viene quindi creato un progetto completo del software.
-
 Solo a questo punto inizia la programmazione del sistema software, a cui seguiranno verifica e rilascio.
 
 ### Criticitá riscontrate
