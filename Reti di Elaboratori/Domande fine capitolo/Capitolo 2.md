@@ -55,4 +55,25 @@ Una webcache svolge il ruolo di server intermedio: le richieste vengono indirizz
 Per prima cosa lo user agent di Alice invia la mail al proprio server SMTP utilissizzando il protocollo Push SMTP, appunto. Una volta nella coda di invio del server, questo proverá ad instaurare una connesisone col server SMTP del destinatario ogni 30 minuti circa, fino a quando questa non viene recapitata, utilizzando il protocollo di trasporto TCP. Il server SMTP del destinatario salverá quindi la mail ricevuta in memoria, in particolare nella casella di destinazione di Bob. SMTP é un protocollo push e non pull, quindi lo user agent di Bob non gli consentirá di accedere alle mail in casella, per questo utilizza il semplice protollo POP3 per ottenere le mail a Bob destinate. POP3 é un protocollo stateful non persistente, quindi tiene traccia delle mail lette attraverso lo UA e al termine della sessione le cancella tutte oppure le mantiene in memoria.
 
 ###### Dal punto di vista dell’utente, qual è la differenza tra le modalità “scarica e cancella” e “scarica e mantieni” in POP3?
-Una sessione POP3 un modalitá "scarica e cancella" cancella le mail scaricate al termine della stessa, mentre in modalitá "scarica e mantieni" le mail vengono tenute in memoria anche dopo il termine della sessione. 
+Una sessione POP3 un modalitá "scarica e cancella" cancella le mail scaricate al termine della stessa, mentre in modalitá "scarica e mantieni" le mail vengono tenute in memoria anche dopo il termine della sessione. La modalitá scarica e cancella é scomoda nel caso l'utente provi ad accedere alle mail da piú user agent, poiché non vengono mantenute in memoria.
+
+###### È possibile che il web server e il mail server di un’azienda abbiano esattamente lo stesso sinonimo di un hostname (per esempio, foo.com)? Quale sarebbe il tipo di RR che contiene l’hostname del server di posta?
+Si, é possibile se il server autoritativo di foo.com contiene un record di tipo MX usato per indicizzare l'indirizzo ip del mail server a partire da un'hostname.
+
+######  Si consideri un’e-mail inviata da un utente con indirizzo e-mail che termina con .edu. Sarebbe possibile determinare dall’intestazione l’indirizzo IP dell’host da cui è stata inviata l’e-mail? E se il messaggio fosse stato inviato da un account Gmail?
+No, poiché sarebbe solo possibile recuperare l'indirizzo ip del server SMTP del mittente attraverso una query dns, non l'indirizzo dello user agent.
+> Questa domanda non si capisce, non é spiegata nel libro
+
+### Paragrafo 2.5
+###### Supponete che Alice fornisca in BitTorrent chunk di un file a Bob durante tutto un intervallo di 30 secondi. Bob ricambierà necessariamente il favore inviando ad Alice dei chunk nello stesso intervallo? Spiegate perché.
+Se Bob é in un torrent, allora potrá cottraccambiare se Alice é nella lista dei 4 host che stanno passando pacchetti a Bob a velocitá piú elevata, lista aggiornata ogni 10 secondi, mentre ogni 30 secondi sceglié un'host in piú da aggiungere casualmente alla lista.
+
+###### Considerate un nuovo peer, Alice, che entra a far parte di BitTorrent senza aver nessun chunk. Senza chunk, non può diventare uno dei quattro peer unchoked di qualcuno degli altri peer, in quanto non ha nulla da inviare. Come fa Alice a ottenere il suo primo chunk?
+Alice, appena entrata in un torrent, non possiede chunk da condividere, quindi non puó entrare nella lista degli peer unckocked a cui gli altri peer stanno inviando i chunk a meno che entri grazie alle selezione casuale dell'host "optimistically unchoked" selezionato ogni 30 secondi.
+
+### Paragrafo 2.6
+###### Le CDN adottano in generale due diversi approcci per la dislocazione dei server. Elencateli e descriveteli brevemente.
+I due approcci per la dislocazione dei CDN sono enter deep, che prevede il posizionamento il piú vicino possibile agli utenti finali: nei punti d'ingresso degli ISP al fine di ridurre i ritardi e incrementare il troughput, e bring home, che prevede il posizionamento in pochi punti strategici per ridurre i costi di manutenzione e gestione.
+
+###### Oltre alle considerazioni legate alla rete, come ritardi, perdite e prestazioni di banda, ci sono molti altri fattori importanti che intervengono nella scelta della strategia di selezione dei cluster. Quali sono?
+Principalmente una questione di costi
