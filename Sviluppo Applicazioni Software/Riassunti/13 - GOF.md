@@ -309,3 +309,21 @@ Il comportamento di un oggetto dipende da suo stato e i suoi metodi contengono l
 Crea delle classi stato per ciascuno stato, che implementano un’interfaccia comune. Delega le operazioni che dipendono dallo stato dall’oggetto contesto all’oggetto stato corrente corrispondente. Assicura che l’oggetto contesto referenzi sempre un oggetto stato che riflette il suo stato corrente.
 ###### Struttura del pattern
 ![[Pasted image 20230610001557.png|550]]
+
+#### Strategy
+###### Problema
+Come progettare per gestire un insieme di algoritmi o politiche variabili ma correlati? Come progettare per consentire di modificare questi algoritmi o politiche?
+###### Soluzione
+Definisci ciascun algoritmo/politica/strategia in una classe separata, con un’interfaccia comune.
+###### Struttura del pattern
+![[Pasted image 20230611130704.png]]
+
+### Visitor
+###### Problema
+Come separare l’operazione applicata su un contenitore complesso dalla struttura dati cui é applicata?
+###### Soluzione
+Creare un oggetto (ConcreteVisitor) che é in grado di percorrere la collezione, e di applicare un metodo proprio su ogni oggetto (Element) visitato nella collezione (avendo un riferimento a questi ultimi come parametro). 
+Ogni oggetto della collezione aderisce ad un’interfaccia (Visitable) che consente al ConcreteVisitor di essere accettato da parte di ogni Element.
+Il Visitor analizza il tipo di oggetto ricevuto, fa l’invocazione alla particolare operazione che deve eseguire.
+###### Struttura del pattern
+![[Pasted image 20230611221236.png|550]]
