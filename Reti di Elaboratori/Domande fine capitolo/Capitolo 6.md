@@ -20,8 +20,26 @@ Slotted ALOHA presenta la prima, seconda e quarta caratteristica, mentr token pa
 ###### In CSMA/CD, dopo la quinta collisione, qual è la probabilità che un nodo scelga K = 4? Il risultato K = 4 corrisponde a un ritardo di quanti secondi su una Ethernet a 10 Mbps?
 CSMA/CD utilizza l'algoritmo binary exponential backoff to determinare quanto tempo deve attendere quando si verifica una collisione. Alla quinta collisione K é compreso nel range \[0,...,15\], quindi la probabilitá che scelga k=4 é $\frac{1}{32}$. Il tempo richiesto a trasmettere un bit a 10Mbps é $10^{-7}$ secondi, quindi il tempo necessario é $512\times 4 \times 10^-7=204\mu sec$.
 
-###### Perché il protocollo token-ring risulterebbe inefficiente in una LAN con un perimetro molto esteso?
+###### Quanto è grande lo spazio degli indirizzi MAC? E quello di IPv4 e di IPv6?
+Mac: $2^{48}$
+IPv4: $2^{32}$
+IPv6: $2^{128}$
 
+###### Supponete che i nodi A, B e C siano connessi alla stessa LAN broadcast (attraverso le loro schede di rete). Se A invia migliaia di datagrammi IP a B, ciascuno incapsulato in un frame destinato all’indirizzo MAC di B, la scheda di rete di C elaborerà questi frame? E in tal caso, passerà i datagrammi IP in essi contenuti al livello di rete di C? La risposta cambierebbe se A inviasse i frame con l’indirizzo MAC broadcast?
+La scheda di rete elaborerá i frame provenienti da A, si accorgerá che l'indirizzo di destinazione non é il suo e quindi li scarterá.
+Se invece l'indirizzo di destinazione é quello brodcast allora non lo scarterá e lo passerá al proprio livello di rete.
+
+###### Perché si inviano le richieste ARP all’interno di un frame broadcast? Perché il frame contenente una risposta ARP ha uno specifico indirizzo MAC di destinazione?
+Il protocollo ARP svolge il conpito di conversione di un indirizzo a livello di rete ad uno di livello di collegamento. Per scoprire l'indirizzo MAC corrispondente ad uno IP, se questo non é presente nella tabella ARP dello switch si invia in brodcast a tutta la sottorete per interrogare tutti gli altri nodi della sottorete, e il nodo con indirizzo IP corrispondente invierá al mittente un pacchetto ARP contenente il proprio indirizzo MAC(non in broadcast poiché non é necessario, l'indirizzo del mittente é noto quando arirva il primo messaggio ARP)
+
+###### Nella rete in figura il router ha due moduli ARP, ciascuno con la propria tabella ARP. È possibile che lo stesso indirizzo MAC compaia in entrambe le tabelle?
+![[Pasted image 20230625141833.png]]
+
+
+###### In che cosa differisce la struttura dei pacchetti Ethernet 10Base-T, 100Base-T e Gigabit Ethernet?
+Hanno struttura dei frame identica.
+
+###### 
 
 
 ### Esercizi Libro
