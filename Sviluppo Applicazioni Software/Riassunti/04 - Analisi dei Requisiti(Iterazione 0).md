@@ -9,17 +9,6 @@ Questa é considerata come un'"**iterazione zero**".
 
 Lo scopo dell’ideazione è stabilire una visione iniziale comune per gli obiettivi del progetto, stabilire se questo è fattibile e decidere se vale la pena di effettuare alcune indagini serie nell’elaborazione. 
 
-### Elaborati di UP
-
-Elaborato | Commento
---|--
-Modello dei Casi d’Uso.| Un insieme di **scenari tipici** dell’utilizzo di un sistema. Usato principalmente per i requisiti funzionali (comportamento)
-Specifiche Supplementari. |Essenzialmente tutto ciò che non rientra nei casi d’uso. Questo elaborato è principalmente per tutti i requisiti non funzionali, come prestazioni o licenze. È anche il posto per registrare delle caratteristiche funzionali non espresse (o non esprimibili) come casi d’uso.
-Glossario.| Definisce i termini significativi. Esso ha anche il ruolo di dizionario dei dati, che registra i requisiti relativi ai dati, come regole di validazione, valori accettabili e così via. 
-Visione. |Riassume i requisiti ad alto livello che sono dettagliati nel Modello dei Casi d’Uso e nelle Specifiche Supplementari, nonché lo studio economico per il progetto. Un documento sintetico (una sorta di “executive summary”) per apprendere rapidamente le idee principali del progetto.
-Regole di Business. |Le Regole di Business (chiamate anche Regole di Dominio) descrivono di solito i requisiti o le politiche che trascendono un unico progetto software
-
-
 ### Requisiti
 Un **requisito** è una **capacità** o una condizione a cui il sistema, e più in generale il progetto, deve **essere conforme**.
 

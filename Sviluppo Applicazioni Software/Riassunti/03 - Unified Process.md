@@ -78,7 +78,18 @@ Un **elaborato**, o **artefatto**, é il termine generico che indica un qualsias
 
 
 ### Altro sulle discipline
+Le fasi sono sequenziali.
 Le discipline **non sono sequenziali** e si eseguono nel progetto in ogni iterazione.
 
 Le iterazioni iniziali tendono in modo naturale a dare una maggiore enfasi relativa sui requisiti e sulla progettazione, mentre quelle successive lo faranno in misura minore . Questo perché i requisiti e il progetto si stabilizzano attraverso un processo di feedback e adattamento.
+
+### Elaborati di UP
+
+Elaborato | Commento
+--|--
+Modello dei Casi d’Uso.| Un insieme di **scenari tipici** dell’utilizzo di un sistema. Usato principalmente per i requisiti funzionali (comportamento)
+Specifiche Supplementari. |Essenzialmente tutto ciò che non rientra nei casi d’uso. Questo elaborato è principalmente per tutti i requisiti non funzionali, come prestazioni o licenze. È anche il posto per registrare delle caratteristiche funzionali non espresse (o non esprimibili) come casi d’uso.
+Glossario.| Definisce i termini significativi. Esso ha anche il ruolo di dizionario dei dati, che registra i requisiti relativi ai dati, come regole di validazione, valori accettabili e così via. 
+Visione. |Riassume i requisiti ad alto livello che sono dettagliati nel Modello dei Casi d’Uso e nelle Specifiche Supplementari, nonché lo studio economico per il progetto. Un documento sintetico (una sorta di “executive summary”) per apprendere rapidamente le idee principali del progetto.
+Regole di Business. |Le Regole di Business (chiamate anche Regole di Dominio) descrivono di solito i requisiti o le politiche che trascendono un unico progetto software
 

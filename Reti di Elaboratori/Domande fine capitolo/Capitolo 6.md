@@ -55,9 +55,41 @@ Supponiamo che un bit venga corrotto nella seguente maniera
 > Con questa stringa non é possibile, peró un doppio errore su una colonna non permette di terminare la riga alla quale si é verificato un errore.
 
 ###### Considerate un codice CRC con un generatore a sette bit G =10011 e supponete che D abbia il valore 1010101010. Qual è il valore di R?
+Per calcolare il valore di R dobbiamo trovare il resto della divisione D/R, poiché \<D+R>%2=0.
+Effettuiamo quindi lo shift a sinistra di D di 4 byte poiché la lunghezza di R é la lunghezza di G-1, e calcoliamo il resto della divisione usando le operazioni di XOR
+![[Pasted image 20230625221619.png|400]]
 
+##### Considerate il problema precedente, ma supponete che D abbia valore: 
+###### (a) 1001010101
+0000
+> Non prendeva la foto
 
+##### Supponete che due nodi, A e B, siano in competizione per accedere a un canale che usa slotted ALOHA, che A abbia più dati da trasmettere di B e che la probabilità di ritrasmissione di A, $p_A$, sia più grande di quella di B, $p_B$. 
+###### (a) Calcolate l’espressione del valore medio del throughput di A. Qual è l’efficienza totale del protocollo con questi due nodi? 
+Un nodo puó trasmettere solo se nessun altro nodo sta trasmettendo.
+Il troughput medio per A é $p_A(1-p_B)$, mentre l'efficenza totale é $p_B(1-p_A)+p_B(1-p_A)$
+###### (b) Se $p_A$ = $2p_B$, il throughput medio di A è il doppio di quello di B? 
+Allora il troughput medio di A diventa $2p_B(1-p_B)\ne 2p_B(1-2p_B)$
+###### (c) Supponete di avere in generale N nodi, tra cui A con probabilità di ritrasmissione $p_A$ e gli altri con probabilità p. Calcolate l’espressione del valore medio del throughput di A e degli altri nodi.
+Il valore medio del throughput per i nodi N é $p_N(1-p)^{N-1}$
 
+##### Supponete che quattro nodi attivi A, B, C e D siano in competizione per accedere a un canale che usa slotted ALOHA. Assumete che ciascun nodo abbia un numero infinito di pacchetti da inviare. Ciascun nodo tenta di trasmettere in ogni slot con probabilità p. Il primo slot è indicato con 1, il secondo con 2 e così via.
+###### (a) Qual è la probabilità che il nodo A abbia successo al primo tentativo di trasmettere nello slot 5?
+Un nodo trasmette se tutti gli altri non trasmettono, la probabilitá che un nodo no strasmetta é $(1-p)$, quindi la probabilitá che A trasmetta é $P(A)=p(1-p)^3$
+
+###### (b) Qual è la probabilità che un nodo abbia successo per trasmettere nello slot 4?
+Tutti i nodi trasmettono con la stessa proprietá, che é quella indicata sopra
+
+###### (c) Qual è la probabilità che il primo successo si verifichi nello slot 3?
+Per far avvenire il primo successo nel terzo slot, nei primi due nessun nodo deve aver trasmesso con successo, di conseguenza due o piú nodi devono aver provato a trasmettere.
+Quidni la probabilitá che un nodo trasmetta con successo solo al terzo tentativo é la probabilitá che nessun nodo trasmetta al primo e secondo slot e che uno trasmetta la terzo.
+
+###### (d) Qual è l’efficienza di questo sistema con quattro nodi?
+$4p(1-p)^3$
+
+###### Considerate un canale broadcast con N nodi e un tasso di trasmissione di $R bps$. Supponete che: (a) il canale broadcast utilizzi il protocollo polling (con l’aggiunta di un nodo di controllo) per l’accesso multiplo; (b) il tempo da quando un nodo completa l’invio a quando quello successivo può trasmettere (cioè, il ritardo di polling), sia $d_{poll}$; (c) all’interno di un ciclo di polling, a un dato nodo sia consentita la trasmissione di un massimo di Q bit. Qual è il massimo volume di dati (throughput) del canale broadcast?
+Iniziamo calcolando la lunghezza di un rouund di polling
+(\frac{Q}{R}+d_poll)
 
 
 
@@ -103,4 +135,23 @@ Righe: 01110
 ###### For figure 2, indicate the row and column with the flipped bit (format as: x,y), assuming the top-left bit is 0,0
 12,5
 
-###### Esercizio 2(ERROR DETECTION AND CORRECTION: CYCLIC REDUNDANCY CHECK)
+##### Esercizio 5(LINK LAYER (AND NETWORK LAYER) ADDRESSING AND FORWARDING)
+Consider the figure below. The IP and MAC addresses are shown for nodes A, B, C and D, as well as for the router's interfaces.
+![[Pasted image 20230626144148.png]]
+Consider an IP datagram being sent from node B to node D.
+###### What is the source mac address at point 3?
+F2-58-84-8D-80-0D
+###### What is the destination mac address at point 3?
+DA-1E-49-65-5F-43
+###### What is the source IP address at point 3?
+128.119.186.156
+###### What is the destination IP address at point 3?
+128.119.176.93
+###### Do the source and destinaton mac addresses change at point 4?
+Sí, il source MAC diventa quello dell'interfaccia della sottorete piú a destra e il MAC di destinazione diventa l'indirizzo dell'host D
+###### What is the source mac address at point 4?
+AA-4A-27-88-F7-38
+###### What is the destination mac address at point 4?
+1E-5F-B6-C4-CE-9A
+###### Do the source and destinaton mac addresses change at point 5? Answer with yes or no.
+No, i router sono discpositivi a livello 3, quindi non utilizzano gli indirizzi MAC per effettuare le loro operazioni.
