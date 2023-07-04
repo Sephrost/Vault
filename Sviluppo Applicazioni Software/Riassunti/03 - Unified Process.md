@@ -76,7 +76,6 @@ Un **elaborato**, o **artefatto**, é il termine generico che indica un qualsias
 - diagrammi
 - modelli
 
-
 ### Altro sulle discipline
 Le fasi sono sequenziali.
 Le discipline **non sono sequenziali** e si eseguono nel progetto in ogni iterazione.

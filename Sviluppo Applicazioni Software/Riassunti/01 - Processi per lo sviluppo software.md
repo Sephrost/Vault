@@ -3,7 +3,7 @@ Le principali caratteristiche di un prodotto software sono
 - **mantenibilitá**: il software dovrebbe essere scritto in modo da evolversi in base alle richieste del cliente
 - **fidatezza**: un software non dovrebbere creare danni fisici ed economici
 - **efficienza**: il software non dovrebbe essere dispendioso in termini di risorse di sistema utilizzate
-- **accettabile**: il software deve essere utilizzabule da diversi dipi di utente
+- **accettabilità**: il software deve essere utilizzabile da diversi dipi di utente
 
 # Processi Software
 > Un processo descrive chi fa cosa, dove e quando per raggiungere un obiettivo.
@@ -141,7 +141,7 @@ Una fase critica dello sviluppo iterativo é la pianificazione delle iterazioni.
 
 > Poiché nello sviluppo iterativo si adatta il progetto al feedback, é inutile pianificare tutto all'inizio.
 
-Si predilige quindi la pratica della **pianificazione iterativa**, o adattiva, in cui in ciascuna iterazione viene stabilito il priano di lavoro per una singola iterazione.
+Si predilige quindi la pratica della **pianificazione iterativa**, o adattiva, in cui in ciascuna iterazione viene stabilito il piano di lavoro per una singola iterazione.
 
 Lo sviluppo iterativo promuove la pianificazione guidata da due aspetti critici:
 - Pianificazione guidata al **rischio**

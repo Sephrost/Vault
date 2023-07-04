@@ -106,7 +106,7 @@ Sia dato una classe creatrice B.
 
 Assegna alla classe B la responsabilità di creare un’istanza della classe A se una delle seguenti condizioni è vera (più sono vere, meglio è):
 - B “contiene” o aggrega con una composizione oggetti di tipo A.
-- B registra A. 
+- B registra A, ovvero mantiene un riferimento ad A.
 - B utilizza strettamente A.
 - B possiede i dati per l’inizializzazione di A, che saranno passati ad A al momento della sua creazione. Pertanto B è un Expert rispetto alla creazione di A.
 
