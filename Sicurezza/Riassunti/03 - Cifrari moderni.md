@@ -41,7 +41,6 @@ Inoltre se viene usata una dimensione dei blocchi troppo piccola, il cifrario é
 
 Se invece il blocco é sufficentemente grande ed é possibile revertire una sostituzione arbitraria, allora le caratteristiche del testo in chiaro vengono mascherate e le tecniche di crittoanalisi statistica diventano infattibili.
 ## Cifrario di Feistel
-
 Il cifrario di Feistel mostra come é possibile **approssimare** la **dimensione ideale** del **blocco** usando il concetto di **cifrario prodotto**.
 
 Il cifrario prodotto corrisponde all'**esecuzione** di due o **piú cifrari in sequenza** allo stesso messaggio in chiaro. In questo caso particolare vengono concatenati cifrari a sostituzione e permutazione
@@ -57,7 +56,6 @@ Esistono due metodi per far ció.
 - **Confusione**
 	- Si cerca di rendere la relazione tra le statistiche del messaggio cifrato e il valore della chiave di crifratura il piú difficile possibile da scoprire.
 	- Si puó ottenere ció usando algoritmi di sostituzione complessi.
-
 ### Struttura del cifrario
 L'input dell'algoritmo é un blocco di di testo in chiaro di $2w$ bits e una chiave $k$.
 
@@ -125,7 +123,7 @@ Il messaggio viene cifrato in **3 fasi**:
 1. Il **messaggio** in chiaro viene **permutato**, e i bit in eccesso della chiave vengono scartati.
 	1. Viene scartato il bit meno significativo di ogni byte della chiave
 2. Vengono effettuate **16 round** di cifratura, in maniera analoga al cifrario di Feistel
-	1. Ad ogni iterazione, la chiave viene divisa in **due parti** di **28 bit** ciasuna, sulle quali viene eseguito uno **shift** circolare a **sinistra**. Vengono poi **selezionati 48 bit** per essere usati come **chiave** di ciascun **round**, in modo da utilizzare una chiave diversa per ciascuno.
+	1. Ad ogni iterazione, la chiave viene divisa in **due parti** di **28 bit** ciasuna, sulle quali viene eseguito uno **shift** circolare a **sinistra**. Vengono poi **selezionati 48 bit** per essere usati come **chiave** di ciascun **round**, in modo da utilizzare una chiave diversa per ciascuno di essi.
 	2. Il messaggio viene diviso in due metá di **32 bit** ciascuna. La metá destra $R$ viene quindi espansa attraverso una **permutation box(p-box) ad espansione**, in modo da ottenere una metá da 48 bit che combacia con la lunghezza della chiave.
 	3. Viene effettuato lo **xor logico** tra $R$ e la chiave
 	4. Il risultato viene quindi fatto elaborare da una serie di **substitution box**(*s-box*). Questo permette di struttare il principio di confusione.

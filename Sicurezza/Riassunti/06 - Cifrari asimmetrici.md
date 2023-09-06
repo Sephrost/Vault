@@ -1,7 +1,7 @@
 Il dover condividere la proria chiave privata e la mancanza di una firma digitale che assicuri la non disconoscibilitá del messaggio rendono inutile la ricerca sistemi di crittografia completamente sicuri.
 
 I **cifrari asimmetrici** riescono a risolvere entrambi questi problemi.
-Essi si basao sull'utilizzo di **una chiave** per la **cifratura** e **una diversa** ma **correlata** per la **decrittazione**.
+Essi si basano sull'utilizzo di **una chiave** per la **cifratura** e **una diversa** ma **correlata** per la **decrittazione**.
 
 Questi sistemi si basano su un'importante proprietá: **non** é possibile **determinare** la **chiave** di **decrittazione** conoscendo solo l'algoritmo crittografico e la chiave di cifratura.
 

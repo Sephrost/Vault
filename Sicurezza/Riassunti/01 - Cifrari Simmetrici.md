@@ -33,10 +33,10 @@ Il successo di un attacco di forza bruta dipende solo dalla fortuna: in media bi
 ## Cifrari incondizionatamente sicuri
 Uno schema di cifratura si dice **incondizionatamete sicuro** se il **messaggio** cifrato dal cifrario **non** contiene **abbastanza informazioni** per determinare in maniera univoca il messaggio, indipendentemente dalla quantitá di messaggi cifrati a disposizione.
 
-Quindi i messaggi cifrari sono sicuri, indipendentemente dal termpo a disposizione dell'attaccante.
+Quindi i messaggi cifrari sono sicuri, indipendentemente dal tempo a disposizione dell'attaccante.
 
 > Ad eccezione dei crifrari one-time pad(OTP), esistono algoritmi di cifratura incondizionatamente sicuri.
 ## Cifrari computazionalmente sicuri
 Poiché la maggioranza dei cifrari non sono incondizionatamente sicuri, un cifrario per considerarsi utilizzabile, e quindi computazionalmente sicuro, deve rispettare **almeno uno** di questi criteri:
 - il valore del messaggio é minore del costo necessario per violare il cifrario
-- il costo richiesto per romper il cifrario eccede il tempo per cui l'informazione é considerabile utile
+- il costo richiesto per rompere il cifrario eccede il tempo per cui l'informazione é considerabile utile

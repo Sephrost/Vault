@@ -15,7 +15,6 @@ Per alcuni campi particolari della sicurezza informatica possono essere presenti
 
 ## Architettura di sicurezza OSI 
 Per poter valutare efficacemente i requisiti di sicurezza e scegliere che misure e politiche applicare, l'architettura di sicurezza OSI puó essere un modo efficace 
-
 ### Attacchi alla sicurezza
 Ogni azione volta a compromettere la sicurezza.
 

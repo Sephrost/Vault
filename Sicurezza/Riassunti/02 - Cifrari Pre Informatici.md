@@ -17,9 +17,9 @@ dove $C$ é il carattero cifrato e 3 é la chiave utilizzata.
 
 Questo cifrario in particolare é molto facile da rompere con attacchi di forza bruta, poiché le chiavi sono solo 26, le lettere dell'alfabeto in modulo 26, e inoltre si conosce il linguaggio del messaggio.
 ### Cifrari monoalfabetici
-Come abbiamo appena visto con il cifrario di cesare un dominio delle chiavi troppo piccolo puó essere un problema. 
+Come abbiamo appena visto con il cifrario di cesare un **dominio** delle chiavi **troppo piccolo** puó essere un problema. 
 
-Un modo per incrementarlo mantenendo invariato l'alfabeto puó essere **permutare l'alfabeto**, ottenendo quindi un dominio di dimensione $c!$, dove $c$ é il numero di caratteri dell'alfabeto. Questo rende fondamentalmente inutili gli attacchi di forza bruta, ma non quelli di crittoanalisi.
+Un modo per estenderlo mantenendo invariato l'alfabeto puó essere **permutare l'alfabeto**, ottenendo quindi un dominio di dimensione $c!$, dove $c$ é il numero di caratteri dell'alfabeto. Questo rende fondamentalmente inutili gli attacchi di forza bruta, ma non quelli di crittoanalisi.
 #### Crittoanalisi di cifrari monoalfabetici
 Nonostante il dominio delle chiavi sia decisamente maggiore, é possibile comunque compiere attacchi di crittoanalisi se si conosce il linguaggio del messaggio in chiaro.
 
@@ -52,7 +52,7 @@ L'algoritmo Playfair si basa su una matrice $5\times 5$ di lettere, generata a p
 ![[Pasted image 20230226114121.png|300]]
 
 La matrice viene creata come segue:
-- si scrive la parola chiave, senza lettere duplicate, da destra a sinistra e dall'alto al basso
+- si scrive la parola chiave, senza lettere duplicate, da sinistra a destra e dall'alto al basso
 - si rimpie il resto con le lettere rimanenti in ordine alfabetico e sempre senza duplicati(le lettere *i* e *j* contano come una lettera sola)
 
 Il messaggio in chiaro viene poi cifrato secondo le seguenti regole:

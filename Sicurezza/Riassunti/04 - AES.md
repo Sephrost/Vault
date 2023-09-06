@@ -3,7 +3,6 @@ Il cifrario **Advanced Encryption Standard**(*AES*) é un cifrario simmetrico a 
 Il cifrario prende in input un **messaggio** in chiaro di **128 bit** e una **chiave** di **128**,**192 o 256** **bit** per produrre un messaggio cifrato di 128 bit. Il messaggio é considerato come un **blocco unico**, rappresentato attraverso una matrice $4\times 4$ di byte.
 
 ![[Pasted image 20230511115941.png|600]]
-
 ## Struttura del cifrario
 Il cifrario consiste in $N$ round, dipendenti dalla lunghezza della chiave(10 per 128 bit, 12 per 192 e 14 per 256).
 Inizialmente il messaggio passa per una funzione di trasformazione **AddRoundKey**. I round, ad esclusione dell'ultimo, consistono in 4 funzioni di trasformazione:
