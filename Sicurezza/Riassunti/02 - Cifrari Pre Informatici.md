@@ -1,4 +1,3 @@
-## Cifraci classici(pre-informatici)
 ### Cifrari a sostituzione
 Un cifrario a sostituzione é un cifrario nel quale i caratteri del messaggio vengono sostituiti con uno o piú caratteri.
 #### Cifrari di Cesare
@@ -17,12 +16,10 @@ dove $C$ é il carattero cifrato e 3 é la chiave utilizzata.
 > La formula per decifrare é $p=D(k,C)=(C-k)\mod 26$
 
 Questo cifrario in particolare é molto facile da rompere con attacchi di forza bruta, poiché le chiavi sono solo 26, le lettere dell'alfabeto in modulo 26, e inoltre si conosce il linguaggio del messaggio.
-
 ### Cifrari monoalfabetici
 Come abbiamo appena visto con il cifrario di cesare un dominio delle chiavi troppo piccolo puó essere un problema. 
 
 Un modo per incrementarlo mantenendo invariato l'alfabeto puó essere **permutare l'alfabeto**, ottenendo quindi un dominio di dimensione $c!$, dove $c$ é il numero di caratteri dell'alfabeto. Questo rende fondamentalmente inutili gli attacchi di forza bruta, ma non quelli di crittoanalisi.
-
 #### Crittoanalisi di cifrari monoalfabetici
 Nonostante il dominio delle chiavi sia decisamente maggiore, é possibile comunque compiere attacchi di crittoanalisi se si conosce il linguaggio del messaggio in chiaro.
 
@@ -33,7 +30,6 @@ Nonostante il dominio delle chiavi sia decisamente maggiore, é possibile comunq
 Se il messaggio non é abbastanza lungo e/o non si ottene un match esatto, si puó procedere in diverse maniere:
 - possiamo provare a ipotizzare degli assegnamenti e procedere per tentativi, sostituendo i caratteri fino a quando non otteniamo una struttura delle parole accettabile
 - anziché ipotizzare gli assegnamenti per ogni singolo carattere, possiamo innanzitutto analizzare la frequenza delle coppie di parole, dette **digrammi**, e ipotizzare gli assegnamenti in base a questi(es: il digramma piú comune per la lingua inglese é *th*), e successivamente ipotizzare gli assegnamenti per i singoli caratteri.
-
 ### Mitigazione delle tecniche di crittoanalisi
 Nei cifrari monoalfabetici le regolaritá dell'alfabeto di partenza viene mantenute anche dopo la cifratura.
 
@@ -46,9 +42,7 @@ Ma poiché ogni carattere del messaggio in chiaro corrisponde ad esattamente un 
 Per mitigare questo problema esistono due metodi:
 - cifrare piú lettere alla volta(**cifrari monoalfabetici a N lettere**)
 - usare piú di un alfabeto di cifratura(**cifrari polialfabetici**)
-
 ### Cifrari monoalfabetici ad N lettere
-
 #### Cifrario Playfair
 > É il miglior cifrario monoalfabetico ad N lettere conosciuto.
 > Tratta i **digrafi**(coppie di caratteri) del testo in chiaro come un singolo carattere.
@@ -75,12 +69,10 @@ Il messaggio in chiaro viene poi cifrato secondo le seguenti regole:
 Questo cifrario rimane comunque **facile da rompere**, in quanto mantiene praticamente **intatta** la **struttura** del messaggio originale
 
 > Poche centinaia di caratteri circa sono sufficienti a compiere un'attacco di crittoanalisi con successo.
-
 ### Cifrari polialfabetici
 Per poter migliorare la sicurezza di un cifrario monoalfabetico, si possono usare diverse regole di sostituzione per un singolo alfabeto, ed é la chiave a determinare quale di queste verrá usato in fase di cifratura.
 
-Un modo per applicare uan regola diversa ogni volta é solsituire il carattere in base alla sua posizione nel testo.
-
+Un modo per applicare uan regola diversa ogni volta é sostituire il carattere in base alla sua posizione nel testo.
 #### Cifrario di Vigenère
 >É il miglior cifrario polialfabetico conosciuto.
 
@@ -97,13 +89,11 @@ $$C_i=(p_i+k_{i\mod n})\mod 26$$
 
 > Per decifrare un messaggio é possibile usare la formula $p_i=(C_i-k_{i\mod n})\mod 26$
 
-Con questo cifrario é quindi possibili avere piú lettere cifrate possibili per ogni lettera in chiaro, ma rimane comunque possibile effettuare attacchi di crittonalisi, poiché sia la chiave che il messaggio consividono la stessa distribuzione di frequenza delle lettere.
+Con questo cifrario é quindi possibili avere piú caratteri possibili(una volta cifrati) per ogni lettera in chiaro, ma rimane comunque possibile effettuare attacchi di crittonalisi, poiché sia la chiave che il messaggio condividono la stessa distribuzione di frequenza delle lettere.
 
 Inoltre é possibile notare che due sequenza identiche di messaggio in chiaro si cifrano allo stesso modo se sono separate da una sequenza di n lettere, dove n é un multiplo della lunghezza della chiave, rendendo quindi possibile determinare la lunghezza della chiave.
-
 #### Cifrario di Vernam
-
-> Il miglior modo per difendersi da attacchi di crittoanalisi é scegliere una chiave lunga come il messaggio ma senza alcuna correlazione statica.
+> Il miglior modo per difendersi da attacchi di crittoanalisi é scegliere una chiave lunga come il messaggio ma senza alcuna correlazione statistica.
 
 Questo cifrario lavora coi bit piuttosto che con le lettere, applicando l'operatore di XOR tra i bit del messaggio e quelli della chiave.
 
@@ -118,17 +108,15 @@ dove:
 > Per decifrare il messaggio $p_i=c_i\oplus k_i$.
 
 Nonostante questo cifrario sia piú resistende alle tecniche di crittoanalisi degli altri visti, non ne é immune se si fornisce abbastanza testo cifrato.
-
 #### One-Time Pad
 > É un miglioramento del cifrario di Verman.
 
 Consiste nell'usare una chiave randomica lunga quanto il messaggio, utilizzabile una sola volta.
 Questo rende il cifrario sicuro perché non é correlato statisticamente al messaggio in chiaro in alcun modo.
 
-Peró pur fonendo sicurezza assoluta, presenta due problemi:
+Peró pur fornendo sicurezza assoluta, presenta due problemi:
 - É difficile generare grandi quantitá di chiavi randomiche, soprattuto per sistemi molto usati.
 - Per ogni messaggio é necessario fornire una chiave di uguale dimensione per cifrarlo
-
 ### Cifrari a Permutazione
 Questi tipi di cifrari involvono qualche tipo di permutazione o scambio tra lettere del messaggio.
 #### Alcuni esempi
