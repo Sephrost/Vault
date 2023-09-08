@@ -29,7 +29,7 @@ Nonostante il dominio delle chiavi sia decisamente maggiore, é possibile comunq
 
 Se il messaggio non é abbastanza lungo e/o non si ottene un match esatto, si puó procedere in diverse maniere:
 - possiamo provare a ipotizzare degli assegnamenti e procedere per tentativi, sostituendo i caratteri fino a quando non otteniamo una struttura delle parole accettabile
-- anziché ipotizzare gli assegnamenti per ogni singolo carattere, possiamo innanzitutto analizzare la frequenza delle coppie di parole, dette **digrammi**, e ipotizzare gli assegnamenti in base a questi(es: il digramma piú comune per la lingua inglese é *th*), e successivamente ipotizzare gli assegnamenti per i singoli caratteri.
+- anziché ipotizzare gli assegnamenti per ogni singolo carattere, possiamo innanzitutto analizzare la frequenza delle coppie di parole, detti **digrafi**, e ipotizzare gli assegnamenti in base a questi(es: il digramma piú comune per la lingua inglese é *th*), e successivamente ipotizzare gli assegnamenti per i singoli caratteri.
 ### Mitigazione delle tecniche di crittoanalisi
 Nei cifrari monoalfabetici le regolaritá dell'alfabeto di partenza viene mantenute anche dopo la cifratura.
 

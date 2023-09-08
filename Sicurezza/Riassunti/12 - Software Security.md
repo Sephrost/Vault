@@ -1,7 +1,6 @@
 Abbiamo precentemente trattato alcune problematiche che l'esecuzione di software(arbitrario o meno) puó causare per la sicurezza.
 
 Ma possono essere presenti vulnerabilitá anche nel codice scritto senza porre troppa attenzione o nelle librerie di sistema.
-
 ## Concetti fondamentali
 ### Istruction Architecture
 La CPU é la componente principale di ogni elaboratore, che preleva ed esegue i comandi descritti nel codice.
@@ -48,7 +47,6 @@ La struttura della memoria allcoata in un processo puó essere cosí descritta:
 
 Lo stack lo tratteremo a parte.
 > Le sezioni sopra citate non sono state trattate a lezione, é solo per cultura personale.
-
 ##### Stack
 Lo stack é una struttura dati **LIFO** che cresce verso il basso, dove vengono salvati gli indirizzi di ritorno, i parametri e talvolta i puntatori del frame.
 
@@ -115,7 +113,6 @@ mov 	esp,ebp ; ripristino il vecchio base pointer
 pop     ebp
 sub 	ret
 ```
-
 #### Buffer overflow
 Un **buffer overlow** é un **bug software** che si verifica quando dei dati vengono copiati in un’area di memoria ed eccedono lo spazio riservato per quella variabile.
 

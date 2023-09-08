@@ -1,23 +1,20 @@
 É il primo esempio di tecnica crittografica a chiave pubblica presentato.
-Il suo scopo é di permettere uno scambio delle chiavi da usare per la cifratura simmetrica sicuro.
+Il suo scopo é di **permettere** uno **scambio** delle **chiavi** da usare per la cifratura simmetrica sicuro.
 
-Questa tecnica é basata su operazioni di aritmetica modulare, in particolare sulla difficoltá di calcolare i logaritmi discreti.
-
+Questa tecnica é basata su **operazioni di aritmetica modulare**, in particolare sulla **difficoltá** di **calcolare** i **logaritmi discreti**.
 ### Modulo
 Sia $a$ un intero e $n$ un intero positvo, definiamo l'operazione di **modulo** $a\mod n$ come il resto della divisione su $a$ per $n$.
 
 Due interi $a$ e $b$ sono detti **congruenti in modulo $n$** se $a\mod n=b\mod n$.Puó anche essere scritto come $a\equiv b(\mod n)$
-
 ### Operazioni in aritmetica modulare
 Dato l'operatore modulo ($\mod n$), é possibile definire delle operazioni con esso.
-
 #### Proprietá dell'aritmetica modulare
 L'aritmetica modulare gode delle seguenti proprietá:
 1. $(a+b) \mod n=[(a\mod n)+(b\mod n)]\mod n$
 2. $(a-b) \mod n=[(a\mod n)-(b\mod n)]\mod n$
 3. $(a\times b) \mod n=[(a\mod n)\times(b\mod n)]\mod n$
 ###### Dimostrazione della somma
-Siano $(a\mod n)=x$ e $b\mod b = y$, entrambi($x$ e $y$) minori di $M$.
+Siano $(a\mod n)=x$ e $b\mod n = y$, entrambi($x$ e $y$) minori di $M$.
 Allora esiste una coppia di valori $j$ e $k$ per cui $a=x+j\times n$ e $b=y+k\times n$.
 
 Quindi
@@ -31,6 +28,7 @@ $$
 \end{split}
 \end{equation}
 $$
+> $(a\times b)\mod b=0$
 ###### Dimostrazione della moltiplicazione
 Siano $(a\mod n)=x$ e $b\mod b = y$, entrambi($x$ e $y$) minori di $M$.
 Allora esiste una coppia di valori $j$ e $k$ per cui $a=x+j\times n$ e $b=y+k\times n$.
@@ -41,11 +39,23 @@ $$
 \begin{split}
 (ab) \mod n &=[(x + jn)(y + kn)] \mod n \\
 &=(xy+xkn+ykn+n^2jk)\mod n\\
-&=(x+y)\mod n\\
+&=(xy)\mod n\\
 &=[(a\mod n)(b\mod n)]\mod n
 \end{split}
 \end{equation}
 $$
+poiché $z\times n\mod n=0$.
+### La radice primitiva(generatore)
+Viene detta **radice primitiva** di $n$ un intero le cui potenze modulo $n$ sono congruienti con i numeri coprimi ad $n$. In formule, $\alpha$ é una radice primitiva di $q$ se
+$$\forall b<q\;\exists i\; |\;\alpha^i\mod q=b $$
+La radice primitiva **genera** tutti i numeri dell'aritmetica modulo $n$.
+> Esempio: **2 é la radice primitiva di 5**
+> $2^0\equiv 1=1(\mod 5)$
+> $2^1\equiv 2=2(\mod 5)$
+> $2^2\equiv 4=4(\mod 5)$
+> $2^3\equiv 8=3(\mod 5)$
+> $2^4\equiv 16=1(\mod 5)$
+> $\dots$
 ## L'algoritmo
 Per utilizzare l'algoritmo sono note alcune informazioni:
 - un intero primo $q$
@@ -76,7 +86,6 @@ K &= (Y_B)^{X_A} \mod q\\
 \end{equation}
 $$
 Il valore segreto $K$ viene solitamente usato per condividere una chiave simmetrica segreta.
-
 ### Sicurezza di Diffie-Hellman
 Un avversario vuole conoscre il valore segreto $K$, e le informazioni a sua disposizione sono
 - la chiavi pubbliche $Y_A$ e $Y_B$
@@ -89,8 +98,7 @@ L'avversario é quindi costretto a calcolare il **logaritmo discreto** per deter
 $$X_B=dlog_{q,a}(Y_B)$$
 per poi poter calcolare la chiave segreta $K$ nella stessa maniera di B
 $$K=(Y_A)^{X_B}\mod q$$
-La sicurezza di D-H sta nela fatto che é molto **economico** calcolare il **logarimo esponenziale** di un numero primo, mentre é molto difficile calcolare il logaritmo discreto, in quanto é un'operazione che richiede **forza bruta**, rendendo l'operazione impraticabile per numeri molto grandi.
-
+La sicurezza di D-H sta nel fatto che é molto **economico** calcolare il **logarimo esponenziale** di un numero primo, mentre é molto difficile calcolare il logaritmo discreto, in quanto é un'operazione che richiede **forza bruta**, rendendo l'operazione impratica per numeri molto grandi.
 ### Requisiti di implementazione di Diffie-Hellman
 Per poter rendere pratica l'implementazione di DH occorrono 3 requisiti fondamentali:
 - Algoritmo efficiente per calcolare l'esponente modulare ($a^b\mod q$)
@@ -98,7 +106,6 @@ Per poter rendere pratica l'implementazione di DH occorrono 3 requisiti fondamen
 - Algoritmo efficiente per generare una radice primitiva di $q$
 
 > Per efficente intendiamo un problema polinomiale (in $P$)
-
 #### Algoritmo per il calcolo dell'esponente modulare
 Per poter ottenere un algoritmo polinomiale e veloce per il calcolo dell'esponente modulare una soluzione semplice come la seguente non andrebbe bene
 ```python
@@ -110,7 +117,6 @@ end
 return s%q
 ```
 non andrebbe bene poiché avrebbe complessitá $O(b-1)$, che con $b$ avente $n$ bit porterebbe la complessitá a $O(2^{n-1})$, ovvero $NP$.
-
 ##### Algoritmo per il calcolo dell'esponente modulare ricorsivo
 Possiamo peró effettuare delle osservazioni:
 $$
@@ -134,13 +140,10 @@ function expmod(a,b,q):
 end
 ```
 > É possibile dimezzare l'esponente applicando il divide-et-impera all'algoritmo: $(a^b)\mod c$ é uguale a $(a^{b/2}\times a^{b/2})\mod c$
-
 ##### Algoritmo per il calcolo dell'esponente modulare iterativo
 Gli algoritmi ricorsivi possono essere molto dispendiosi a livello di spazio, presentiamo quindi una versione iterativa:
 
 Con questo approccio rappresentiamo $b$ come una sequenza di $k+1$ bit($b=b_j\dots b_2b_1b_0$).
-
- 
  ```python
 function expmod(a,b,q):
 	d=1
@@ -150,8 +153,8 @@ function expmod(a,b,q):
 			d = (d*a)%q
 		end
 	end
-end
-```
+	return d
+end```
 #### Algoritmo efficiente per generare un numero primo grande
 Per evitare che il calcolo del logaritmo discreto sia facile per un'avversario, il valore del numero primo generato $q$ deve essere abbastanza grande da rendere il calcolo infattibile.
 
@@ -161,18 +164,18 @@ Un primo approccio é sempre del tipo deterministico:
 	1. Se ne trovo uno il numero non é primo, e torno al passo 1
 	2. Altrimenti é primo
 
-Questo algoritmo presenta peró complessitá proibitiva($O(2^{\frac{k}{2}})$), ed é quidni troppo lento.
-
+Questo algoritmo presenta peró complessitá proibitiva($O(2^{\frac{k}{2}})$), ed é quindi troppo lento.
 ###### Dimostrazione dell'infinitá dei numeri primi(Euclide)
 Supponiamo che i numeri primi siano finiti, allora $p$ é l'ultimo numero primo.
-Sia quindi $q$ il prodotto dei numeri primi fino a $p$.
+Sia quindi $q$ il prodotto dei numeri primi fino a $p$($\prod_{i=2}^pi$).
 Allora:
 - Se $q+1$ é primo, $p$ non era l'ultimo
 - Se $q+1$ non é primo, allora é divisibile per un qualche numero primo $r>p$, in quanto non era divisibile per alcun numero minore di $p$.
 
 $p$ non puó essere quindi l'ultimo numero primo.
-
 ###### Teorema dei numeri primi
+Sappiamo quindi che ci sono infiniti numeri primi, ma quanto é facile trovarne uno in un tempo utile? 
+
 Sia $\pi(x)$ il numero di primi minori dell'intero $x$.
 Allora $\pi(x)\sim \frac{x}{\ln x}$, ovvero $\lim_{x\to \infty}\frac{\pi(x)}{x/\ln(x)}=1$ 
 
@@ -188,6 +191,7 @@ $$
 $$
 I numeri di 100 cifre sono $10^{100}$, quindi avermo in media un numero primo ogni $\frac{10^{100}}{3,9\times10^{97}}=256$ tentativi.
 
+É un buon risultato, ma puó essere uteriormente rimuovendo dal dominio  di ricerca i numeri che certamente non sono primi, come i multipli di 2,3,5 e 7.
 ##### Approccio probabilistico
 Osserviamo ora l'approccio probabilistico, ovvero utilizziamo un test di probabilitá non sempre accurato:
 1. genero un numero casuale $M$ di $k$ bit
@@ -200,19 +204,33 @@ Osserviamo ora l'approccio probabilistico, ovvero utilizziamo un test di probabi
 Con questo approccio sappiamo che la probabilitá che $M$ si primo é maggiore di $1-2^{-T}$, quindi basta impostare un $T$ molto grande per ridurre la probabilitá ché $M$ non sia primo.
 
 > Per esempio con $T=100$ la probabilità che un numero sia primo é $>0,999999999999999999999999999999211$
-
 ##### Test di Miller-Rabin
 Per verificare che un grande numero sia primo si utilizza solitamente il **Test di Miller-Rabin**.
 
+Questo ha probabilitá di successo di almeno un quarto per ogni tentativo.
 ###### Proprietá dei numeri primi
-Per poter utilizzare Miller-Rabin ci avvaliamo di due proprietá fondamentali dei numeri primi.
+Per poter utilizzare Miller-Rabin ci avvaliamo di due **proprietá fondamentali** dei **numeri primi**:
+- Se $M$ é un numero primo e $a<M$, allora $a^{M-1}\mod M=1$(Piccolo teorema di Fermant)
+- Se $M$ é primo e $x^2\mod M=1$, allora $x=1$ oppure $x=M-1$
+Andiamo a dimostrare quese proprietá.
+###### Dimostrazione principio fondamentale
+Per dimostrare la seconda ci avvaliamo di questo principio fondamentale.
 
-La prima é la seguente: 
-Sé $p$ é un numero primo e $a<p$ é un intero, allora $a^2\mod p = 1$ sé e solo sé 
+Se esistono $x$ e $y$ tali per cui $x^2\equiv y^2(\mod n)$ e $x\not\equiv\pm y (\mod n)$ allora $n$ non é primo.
 
+Prendiamo quindi $d= MCD(x-y,n)$, allora:
+- se $d=n$, allora $x\equiv y(\mod n)$, e quindi $d\ne n$
+- se $d=1$, allora $n|x^2-y^2=n|(x-y)\times(x+y)$ come scritto nella premessa,ma n non puó dividere $x-y$ e deve quindi poter dividere $x+y$. 
+Ció contraddice peró la premessa, quindi $d$ non puó essere né 1 né $n$, quindi $n$ non é primo poiché possiede sicuramente un'altro divisore.
+
+
+#### Algoritmo efficiente per generare una radice primitiva $\alpha$ di $q$
+Per ottenere una radice primitiva si utilizza un metodo probabilistico, genereremo $a<q$ e verificheremo se non é un radice primitiva
+
+### Algoritmop
 
 #### Attacco man in the middle(MITM)
-Il rpotocollo di Diffie-Hellman é peró debole all'attacco **man in the middle**.
+Il protocollo di Diffie-Hellman é peró debole all'attacco **man in the middle**.
 
 Supponiamo che un'utente Alice voglia inviare un messaggio a Bob, e che l'avversario si Darth, allora
 1. Alice e Bob generano ciascuno una coppia di chiavi privata/pubblica ($<X_a,Y_a>$,$<X_b,Y_b>$).

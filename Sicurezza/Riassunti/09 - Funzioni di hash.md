@@ -12,7 +12,6 @@ Il sottoinsieme di funzioni di hash utilizzabili in sicurezza sono le **funzioni
 Queste proprietá permettono di capire se un dato é cambiato.
 
 > Un funzione di hash resistente alle collisisoni soddisfa per forza anche gli altri due prerequisiti.
-
 ### Attacco del compleanno ad una funzione di hash
 Proviamo ad immaginare come un avversario potrebbe attaccare una funzione di hash resistente ale collisioni. Vuole quindi trovare $x$ e $y$ che producono la stessa funzione di hash: $H(x)=H(y)$.
 
@@ -65,7 +64,6 @@ Osserviamo ora l'attacco del compleanno:
 6. L'avversario é riuscito quindi ad inviare il proprio messaggio a Bob, il quale non sospetta nulla, senza conoscere la chiave di cifratura
 
 Tutto questo funziona poiché l'avversario é certo di trovare una collisione tra $x'$ e $y'$ con probabilitá maggiore di $1/2$.
-
 ### Codici CRC
 Un **controllo di ridondanza ciclica**, o crc, é un metodo di checksum che prevede l'aggiunta di un bit aggiuntivo ad una sequenza di bit di lunghezza arbitraria che serve a rendere il numero di bit impostati ad 1 pari. Questo viene calcolato effettuando lo XOR logico tra tutti i bit della sequenza.
 
@@ -73,12 +71,10 @@ Un **controllo di ridondanza ciclica**, o crc, é un metodo di checksum che prev
 
 Questo meccanismo permette di rilevare un numero di errori dispari, ma se questo é pari non é in grado di rilevarlo.
 Per ovviare al problema possiamo suddividere la sequenza in $n$ sequenze di pari lunghezza e calcolare il bit di paritá per ciascuna di esse, ottenendo quindi un **vettore di paritá**.
-
 #### Requisiti funzioni di hash sicure
 Una funzione di hash sicura deve quindi:
 - produrre digest sufficentemeente lunghi
 - non permettere metodi semplici per generare collisioni
-
 ### Funzioni di hash attualmente usabili
 Le funzioni di hash usate attualmente funzionano in maniera simile ai cifrari in modalitá cyper block chaining, ma codificando invece che cifrando, infatti non é presente alcuna chiave.
 

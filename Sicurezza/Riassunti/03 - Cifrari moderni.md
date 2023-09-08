@@ -13,7 +13,7 @@ Prendiamo come esempio una macchina ad un cilindro.
 
 Dopo aver ricevuto una chiave in input, il cilindro ruota di una posizione, quindi le connessioni vengono spostate di conseguenza.
 
-Quindi viene usato una soltituzione monoalfabetica ogni volta, ma dopo 26 iterazioni il cilindro tornerá nella configurazione iniziale.
+Quindi viene usato una sostituzione monoalfabetica ogni volta, ma dopo 26 iterazioni il cilindro tornerá nella configurazione iniziale.
 ### Livello di sicurezza
 La sicurezza di questo sistema é racchiusa nel fatto che é possibile usare pú cilindri in sequenza, collegando il pin di output di un cilindro al pin di input di un'altro.
 

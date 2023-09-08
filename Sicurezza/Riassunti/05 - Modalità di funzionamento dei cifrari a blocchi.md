@@ -11,9 +11,9 @@ $$C=E(K_2,E(K_1,P))$$
 L'utilizzo di una cifratura a piú fasi assicura inoltre una mappatura $P\to C$ che non é equivalente a DES a singola fase(quindi non esiste una coppia di valori $K_1$ e $K_2$ tale per cui $E(K_2,E(K_1,P))=E(K_3,P)$).
 
 #### Attacco Meet-in-the-middle
-Nonostante possa sembrare piú resistende di sf-DES, in realtá non lo é: rimane infatti possibile una tipologia di attacco basato sulla forza bruta che funziona su ogni cifrario a blocchi.
+Nonostante possa sembrare piú resistende di single phase-DES, in realtá non lo é: rimane infatti possibile una tipologia di attacco basato sulla forza bruta che funziona su ogni cifrario a blocchi.
 
-Questo algoritmo, chiamato **meet-in-the-middle**, si basa su una seplice osservazione: se il messaggio viene cifrato in due fasi, allora il risultato della cifratura della prima fase $X$ é uguale alla decrittazione della seconda($X=E(K_1,P)=D(K_2,C)$).
+Questo attacco, chiamato **meet-in-the-middle**, si basa su una semplice osservazione: se il messaggio viene cifrato in due fasi, allora il risultato della cifratura della prima fase $X$ é uguale alla decrittazione della seconda($X=E(K_1,P)=D(K_2,C)$).
 
 Data una coppia di messaggio in chiaro e il corrispondente cifrato ($P,C$), l'attacco avviene nella seguente maniera:
 1. si cifra $P$ con tutte le $2^{56}$ possibili chiavi $K_1$, salvando i risultati $X$ in una tabella ordinata
@@ -21,22 +21,18 @@ Data una coppia di messaggio in chiaro e il corrispondente cifrato ($P,C$), l'at
 3. se é presente una corrispondenza, allora provo le chiavi su una nuova coppia $(P',C')$
 4. se producono il messaggio cifrato nascosto, allora le chiavi sono corrette
 
-Poiché per ogni possibile messaggio $P$ ci sono $2^{64}$ possibili messaggi cifrati, e $2^{112}$ chaivi possibili, visto che double DES usa effetivamente una chiave da $112$ bit, allora il numero massimo di chiavi $C$ che possono produrre un determinato messaggio cifrato é $2^{112}/2^{64}=2^{48}$, che é anche il numero di chiavi da provare prima di trovare quella corretta nel caso peggiore.
-
-
+Poiché per ogni possibile messaggio $P$ ci sono $2^{64}$ possibili messaggi cifrati, e $2^{112}$ chiavi possibili, visto che double DES usa effetivamente una chiave da $112$ bit, allora il numero massimo di chiavi $C$ che possono produrre un determinato messaggio cifrato é $2^{112}/2^{64}=2^{48}$, che é anche il numero di chiavi da provare prima di trovare quella corretta nel caso peggiore.
 ### DES a 3 fasi
-Una soluzione ovvia agli attacchi meet-in-the-middle é l'utilizzo di 3 stage, al posto di 2. Ci s riferisce di solito a DES a tre fasi con il nome 3DES, o Tripole Data Encryption Algorithm(*TDEA*).
+Una soluzione ovvia agli attacchi meet-in-the-middle é l'utilizzo di 3 stage, al posto di 2. Ci si riferisce di solito a DES a tre fasi con il nome 3DES, o Triple Data Encryption Algorithm(*TDEA*).
 
-É un'alternativa molto popolare a DES, infatti attualemnte non sono conosciuti attacchi di crittoanalisi efficaci, visto il costo esponenzialmente crescente, e il costo di un'attacco di forza bruta é dell'ordine di $2^{112}$
+É un'alternativa molto popolare a DES, infatti attualmente non sono conosciuti attacchi di crittoanalisi efficaci, visto il costo esponenzialmente crescente, e il costo di un'attacco di forza bruta é dell'ordine di $2^{112}$
 
 Solitamente si usano due chiavi, avendo quindi $K_1=K_3$, ma é possibile anche aggiungere una terza chiave, garantendo comunque una conmpatibilitá con DES tradizionale.
-
 ### Modalità di cifratura dei cifrari a blocchi
 Un cifrario a blocchi prende un blocco di testo di lunghezza fissa($b$ bits) e una chiave come input e produce messaggio cifrato sempre di $b$ bit.
 Se é necessario aumentare la lunghezza del messaggio é possibile quindi dividerlo in piú blocchi di $b$ bit e cifrarli uno ad uno. MA questo provoca una serie di problemi di sicurezza.
 
 Per applicare i cifrari a clocchi per piú applicazioni sono state definite quindi 5 **modalitá di cifratura**, ovvero delle **tecniche** per **migliorare** gli effetti dell'algoritmo crittografico o **adattarlo** a piú casi d'uso.
-
 #### Electronic Codebook
 La modalitá di cifratura piú semplice é l'**Electronic Codebook**(*ECB*), nella quale il **messaggio** in chiaro viene gestito **un blocco** alla **volta**, cifrandoli con la **stessa chiave**.
 
@@ -44,10 +40,6 @@ Se il messaggio é **piú lungo** dei $b$ bit che compongono un blocco, questo v
 
 Questa modalitá presenta peró alcuni problemi, soprattuto per messaggi piú lugnghi. 
 Innanzitutto se uno stesso blocco di messaggio in chiaro si ripete in $P$, allora produce lo stesso risultato. lasciando trasparire informazioni sul messaggio originale. Inoltre se il messaggio é abbastanza strutturato, é possibile la crittoanalisi dello stesso sfruttando le regolaritá del messaggio.
-
-Per messaggio piú lunghi si richiede quindi che le modalitá superiori a ECB soddisfino alcuni criteri:
-- 
-
 #### Chiper Block Chaining
 In questa modalitá, detta anche **CBC**, l'input della funzione di cifratura dell'algoritmo é lo **XOR logico** fra il blocco di **messaggio** in **chiaro** e il **messaggio** **cifrato** prodotto dal blocco precedente. Per il primo blocco si utilizza invece un **vettore di inizializzazione IV** per l'operazione di XOR.
 Questo permette di ottenere blocchi cifrati diversi da uno stesso blocco di input.

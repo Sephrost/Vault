@@ -76,7 +76,6 @@ In formule $HMAC(K,M)=H[(K^+\oplus opad)||H[K^+\oplus ipad||M]]$.
 #### Sicurezza di HMAC
 La sicurezza di HMAC dipende da quella della funzione di hash che implementa.
 Per opportune scelte di H, HMAC è ritenuto sicuro contro attacchi con scelta dei messaggi autenticati "chosen message attacks": anche se l’avversario può scegliere molti messaggi e vederne il corrispondente valore di HMAC, non riesce a fornire un nuovo messaggio autenticato.
-
 ## Firma elettronica
 La **firma elettronica** é un modo per garantire l'autenticitá del messaggio.
 

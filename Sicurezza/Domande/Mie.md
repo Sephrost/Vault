@@ -37,3 +37,25 @@ Un avversario puó attaccere un cifrario in due modi:
 - provando ad indovinare la chiave, attraverso un'attacco di forza bruta
 	- richiede solitamente di provare almeno la metá del dominio delle chiavi
 - analizzando il messaggio cifrato e provando a dedurrre  sfruttando le regolaritá del linguaggio di partenza e quello che si conosce del messaggio in hciaro e dell'algoritmo di cifratura
+###### Qual'é il primo cifrario simmetrico conosciuto? Descrivere brevemente il suo funzionamento, problematiche e soluzioni
+Il piú antico cifrario conosciuto é sicuramente quello di cesare, che prevede la sostituzione di ogni lettera del messaggio in chiaro con la n-esima lettera successiva dell'alfabeto(ciclico).
+
+Il dominio delle chiavi é uguale al numero di lettere dell'alfabeto $n$, quindi se questo é piccolo(come nel caso dell'alfabeto italiano) si possono effettuare degli attacchi di forza bruta molto semplicemente. Per risolvere questa falla si puó aumentare il dominio delle chiavi, per esempio, permutando l'alfabeto, incrementando cosí il dominio a $n!$.
+
+Inoltre poiché si utilizza sempre la stessa regola di sostituzione e il linguaggio di partenza é regolare, e ció si rifflette sul messaggio cifrato, si é comunque vulnerabili ad attacchi di crittoanalisi statistica neanche troppo sofisticati, anche dopo l'espansione del dominio.
+###### Descrivere brevemente il cifrario di Vigenére, il suo funzionamento e le sue falle.
+Il cifrario di Vigenére é un cifrario a sostituzione polialfabetico, utilizza quindi piú regole di sostituzione, decise dalla chiave.
+
+Avendo quindi una chiave $K=k_0,\dots,K_{n-1}$ e un messaggio in chiaro $P=p_0,\dots,p_{m-1}$ come una sequenza di lettere, su un alfabeto di $a$ lettere e considerando questi 3 elementi una lista di lettere, il messaggio viene cifrato secondo la seguente regola $c_i=(p_i+k_i\mod n)\mod a$.
+
+
+## Cifrari Asimmetrici
+###### Fornire una definizione di cifrario asimettrico
+Un cifrario asimettrico é un cifrario nel quale si utilizzano una coppia di chiavi, diverse ma correlate, per le operazioni di cifratura e decrittazione.
+
+Esso é composto da sei elementi:
+- Un messaggio in chiaro
+- un corrispettivo cifrato
+- Una coppia di chiavi, una per la cifratura e l'altra per la decrittazione
+- un algoritmo di cifratura e uno di decrittazione
+###### Quali sono le caratteristiche di un cifrario asimmetrico sicuro?

