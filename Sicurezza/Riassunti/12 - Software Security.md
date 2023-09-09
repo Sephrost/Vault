@@ -111,7 +111,7 @@ e termina con un **prologo**:
 ```assembly
 mov 	esp,ebp ; ripristino il vecchio base pointer
 pop     ebp
-sub 	ret
+ret
 ```
 #### Buffer overflow
 Un **buffer overlow** é un **bug software** che si verifica quando dei dati vengono copiati in un’area di memoria ed eccedono lo spazio riservato per quella variabile.
@@ -158,5 +158,6 @@ Questo esempio é molto semplice, ma i buffer overflow possono essere utilizzati
 Negli anni sono stati presentati delle contromisure, piú o meno efficaci:
 - **Canarino**: un valore noto scritto sullo stack tra il buffer e levariabili locali per rilevare i buffer overflow. Esso viene inserito durante la compilazione con l'idea che, in caso di bof, sarebbe il primo valore ad essere sovrascritto, e in caso di alterazione, l'esecuzione verrebbe bloccata.
 - **Address Space Layout Randomization (ASLR)**: un meccanismo di sicurezza che randomizza gli indirizzi di memoria usati dal sistema operativo quando alloca la memoria del programma. in questa maniera evita che l'intera memoria sia contigua, rendendo piú difficili gli attacchi.
+![[Pasted image 20230909145858.png|300]]
 - Separare lo spazio di Memoria del codice dai dati
 - stack non eseguibile

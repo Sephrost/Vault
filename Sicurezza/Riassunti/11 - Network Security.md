@@ -37,12 +37,11 @@ Le reti moderno non sono peró collegate unicamente da un bus: sono composte anc
 
 L'**APR poisoning** é una tecnica di sniffing per la quale un **dispositivo**, vedendo arrivare una richiesta ARP che dovrebbe risolvere un'altro indirizzo, **risponde** con il proprio, "**avvelenando**" la **cache** dello switch.
 
-Questo permette di **reindirizzare** il **traffico** verso un'altro dispositivo a se. Successivamente il dispositivo malevole reindirizzerá i pacchetti al destinatario originale, effettuando l'arp poisoning anche sulla cache del destinatario.
+Questo permette di **reindirizzare** il **traffico** verso un'altro dispositivo a se. Successivamente il dispositivo malevolo reindirizzerá i pacchetti al destinatario originale, effettuando l'arp poisoning anche sulla cache del destinatario.
 
 Il dispositivo malevole agisce quindi come uno switch.
 
 Per evitare che tutto questo accada è possibile effettuare dei controlli sui calcolatori ma anche sugli switch in modo da impedire che uno stesso MAC sia associato a più IP.
-
 ### Contromisure allo sniffing su LAN
 - Usare reti con **switch** (non hub)
 - **Cifrare** a livello **applicativo**
@@ -57,7 +56,6 @@ Per evitare che tutto questo accada è possibile effettuare dei controlli sui ca
 - Cifrare a livello di trasporto
 - Cifrare a livello IP su router o firewall 
 - Impedire collegamento diretto da rete non controllata
-
 ### Spoofing
 Lo **spoofing** é la falsificazione di un indirizzo.
 In base all'indirizzo specificato, gli attacchi si spoofing si dividono in:
@@ -72,7 +70,6 @@ In base all'indirizzo specificato, gli attacchi si spoofing si dividono in:
 	-  inserendo contenuti arbitrari per la URL che è possibile controllare
 
 > Possiamo dire che lo spoofing é necessario per lo sniffing
-
 ## Attacchi DOS - Denial of Service
 Una applicazione dell’IP spoofng molto usata sono gli attacchi DoS.
 
@@ -83,7 +80,6 @@ Esso puó essere effettuato:
 - **saturando** le **risorse** della **rete**
 
 L'attacco DOS non é di per sé particolarmente pericoloso: lo é se sotto attacco sono servici critici che dovrebbero essere sempre disponibili.
-
 #### DDos - Dos distribuito
 In generale, il Dos non é in grado di effettuare grossi danni, poiché il numero di richieste eseguibili é collegato alle risorse a disposizione del dispositivo dell'attaccante.
 
@@ -94,23 +90,17 @@ Solitamente prevedono l'utilizzo di dispositivi zombies, ovvero macchine infetta
 Ne esistono **due tipi**:
 - **diretto**: l'attaccante usa una botnet sotto il suo controllo per inviare richieste alla vittima attraverso gli zombie
 - **con reflector**: l'attaccante usa una botnet sotto il suo controllo per inviare richieste a una componente di terze parti che amplifica le richieste inviate tramite esso
-
 #### Syn flooding
 É una **variante** di attacco **Dos** che sfrutta il protocollo TPC e in particolare il **three-way handshake**. Esso prevede l'invio di 3 pacchetti TCP con cit SYN posto ad uno.
-
 ![[Pasted image 20230903125506.png]]
-
 Ma se il terzo passo dell'handshake non viene portato a termine, il server ha allocato le risorse ma é in attesa di risposta dal client. Facendo molte richieste di connessione TCP al server facendo IP spoofing si é infatti in grado di saturare le risorse del server.
-
 #### ICMP echo request
 É un'altra **variante** dell'attacco **Dos** che mira a **saturare** le **risorse di rete** di un host.
 
 Si basa sull'invio di un gran  numero di **echo request** verso un host **reflector**, con un indirizzo IP sorgente falsificato e uguale a quello della vittima. 
 Il reflector invierá l'enorme mole di risposte ICMP alla vittima, saturnandone le risorse di rete.
-
 ##### Smurf attack
 É un caso particolare dell'attacco sopra trattato. 
 
-Consiste nell'invio di una richiesta ICMP echo alla sottorete di A, impostando come indirizzo di origine l'indirizzo spoof della vittima.
+Consiste nell'**invio** di una **richiesta ICMP echo** alla **sottorete** della vittima, impostando come indirizzo di origine l'indirizzo spoof della vittima.
 In questa maniera tutti gli host nella sottorete invieranno la risposta alla vittima, staurandone le risorse di rete.
-

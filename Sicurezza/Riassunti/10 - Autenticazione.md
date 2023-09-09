@@ -1,11 +1,10 @@
-L'**autenticazione di messaggi** é la **procedura** utilizzata per verificare che un messaggio ricevuto proviene dalla fonte corretta e non é stato alterato.
+L'**autenticazione di messaggi** é la **procedura** utilizzata per **verificare** che un **messaggio** ricevuto proviene dalla **fonte corretta** e **non** é stato **alterato**.
 
 Questo é necessario perché, nonostante il sistema di cifratura sia sicuro, il canale su cui viene trasmessa una chiave puó non esserlo, come nel caso del man in the middle.
 
-L'autenticazione puó avvenire in diverse maniere a seconda del sistema di ciratura utilizzato:
+L'autenticazione puó avvenire in **diverse maniere** a seconda del **sistema** di **ciratura utilizzato**:
 - **Autenticazione simmetrica**: basata su cifrari simmetrici
 - **Firma digitale**: basata su cifrari asimmetrici 
-
 ### Funzione di autenticazione simmetrica
 Ogni autenticazione di messaggi o firma digitale ha due livelli di funzionalitá:
 - a basso livello, ha una funzione che produce un **autenticatore** usato per autenticare il messaggio
@@ -27,23 +26,21 @@ Consideriamo di nuovo lo scenario dove **A** invia un messaggio **M** a **B**.
 B sà che se riceve un messaggio da A, è autentico in quanto solo A possiede la chiave. Ma se qualcun altro inviasse a B una **sequenza casuale**, B non avrebbe modo di determinare automaticamente se il testo cifrato in arrivo sia autentico o meno
 
 La soluzione è quella di mettere in coda un codice, il **MAC** - Message Authentication Code, in modo da autenticare il mittente.
-
 ### MAC
 É una **tecnica alternativa di autenticazione** che utilizza una **chiave sergreta**, oltre al messaggio, per generare una **checksum crittografica** di lunghezza fissa, che viene aggiunto alla fine del messaggio.
 
-Questa tecnica assume che $A$ e $B$ condividano uan chiave segreta comune. Quando il messaggio deve essere inviato viene calcolato $MAC=C(K,M)$, dove:
+Questa tecnica assume che $A$ e $B$ condividano una chiave segreta comune. Quando il messaggio deve essere inviato viene calcolato $MAC=C(K,M)$, dove:
 - $M$ é il messaggio
 - $C$ é la funzione di MAC
 - $K$ é la chiave segreta consivisa
 
-Vengono quindi trasmessi il messaggio puú il MAC. Il destinatario applicherá la stessa funzione al messaggio e confronterá il MAC ottenuto con quello ricevuto. 
+Vengono quindi trasmessi il messaggio piú il MAC. Il destinatario applicherá la stessa funzione al messaggio e confronterá il MAC ottenuto con quello ricevuto. 
 Assumendo che la chiave sia conoscuta solo da mittente e destinatario, e i MAC ottenuti sono uguali, allora
 - Il **messaggio** **non** é stato **alterato**, poiché un'attaccante dovrebbe alterare anche il MAC, ma questo non é possibile poiché non conosce la chiave
 - Il messaggio é stato mandato dal mittente, poiché nessun'altro conosce la chiave
 	- Questo rende il MAC **resistente all'attacco del compleanno**, in quanto non é possibile treovare una collisione senza la chiave
 
-Il MAC funziona quidni in maniera simile alla cifratura, con la differenza che la prima deve essere **non invertibile**.
-
+Il MAC funziona quindi in maniera simile alla cifratura, con la differenza che la prima deve essere **non invertibile**.
 ##### MAC DES-CBC
 Consiste nell’usare un cifrario DES a chiave simmetrica nella modalità CBC.
 
@@ -52,12 +49,10 @@ Il messaggio originale viene fatto diventare di lunghezza multipla di 64 tramite
 Il MAC prodotto equivale all’ultimo blocco(o parte dell’ultimo blocco, dai 16 a 64 bit) prodotto dal cifrario. Il vettore di inizializzazione(IV) di solito è posto a 0.
 
 ![[Pasted image 20230831180609.png]]
-
 ### HMAC - MAC con funzione di hash
 Negli ultimi anni, la creazione di un MAC derivato da una funzione di hash crittografica ha destato sempre piú interesse per due motivazioni:
-1. le funzioni di hash crittografiche come MD5 vengono **eseguite piú velocemente** in osftware di un cifrario a blocchi simmetrico come DES
+1. le funzioni di hash crittografiche come MD5 vengono **eseguite piú velocemente** in software di un cifrario a blocchi simmetrico come DES
 2. Le **librerie** contenenti funzioni di hash crittografiche sono **ampiamente diffuse**
-
 #### Struttura di HMAC
 Dato una messaggio $M$ e un chiave $K$, di ottiene l'HMAC nella seguente maniera:
 1. Se la chiave é meno lungha di $b$(il numero di bit in un blocco)Si aggiunge un padding alla chiave $K$ finchè non diventa lunga $b$ bit, dove $b$ è la dimensione dei blocchi,generando così $K^+$
@@ -72,7 +67,6 @@ Dato una messaggio $M$ e un chiave $K$, di ottiene l'HMAC nella seguente maniera
 In formule $HMAC(K,M)=H[(K^+\oplus opad)||H[K^+\oplus ipad||M]]$.
  
 ![[Pasted image 20230901164421.png]]
-
 #### Sicurezza di HMAC
 La sicurezza di HMAC dipende da quella della funzione di hash che implementa.
 Per opportune scelte di H, HMAC è ritenuto sicuro contro attacchi con scelta dei messaggi autenticati "chosen message attacks": anche se l’avversario può scegliere molti messaggi e vederne il corrispondente valore di HMAC, non riesce a fornire un nuovo messaggio autenticato.
@@ -100,7 +94,6 @@ Se i due valori coincidono la firma é autentica.
 Notiamo inoltre che per verificare la firma, B deve conoscere la chiave pubblica di A in modo certo, altrimenti è possibile fare accettare firme false, come nel caso del man in the middle.
 
 Per cui è buona norma accertarsi che la chiave pubblica in suo possesso sia veritiera.
-
 ### Problema della distribuzione di chiavi
 Il ricevente dovrà, in qualche modo, rendere nota la propria chiave pubblica, associando ad essa la propria identità. Occorre quindi una distribuzione sicura(autenticata) della corrispondenza utente-chiave pubblica.
 

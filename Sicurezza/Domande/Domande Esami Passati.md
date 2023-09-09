@@ -19,12 +19,12 @@
 ###### Un cifrario a chiave pubblica:
 - [ ] Prevede l’utilizzo di una chiave condivisa tra ogni coppia di utenti
 - [ ] Prevede l’utilizzo di due chiavi condivise tra ogni coppia di utenti (una privata e una pubblica)
-- [ ] Prevede l’utilizzo di una chiave privata e una pubblica per ogni utente  
+- [x] Prevede l’utilizzo di una chiave privata e una pubblica per ogni utente  
 - [ ] Prevede l’utilizzo di una chiave pubblica distribuita a tutti, e di una chiave privata condivisa con un solo altro soggetto
 - [ ] Prevede uno scambio di chiavi sicuro, ma non permette di cifrare direttamente un testo
 ###### Il principio di Kerckhoffs:
 - [ ] Richiede di ottenere sicurezza nascondendo chiavi e algoritmi  
-- [ ] Richiede di ottenere sicurezza nascondendo chiavi, ma mantenendo pubblici gli algoritmi  
+- [x] Richiede di ottenere sicurezza nascondendo chiavi, ma mantenendo pubblici gli algoritmi  
 - [ ] Richiede di ottenere sicurezza nascondendo gli algoritmi, ma mantenendo pubbliche le chiavi
 - [ ] Richiede di oscurare il contenuto dei dati personali secondo la normativa GDPR  
 - [ ] Suppone di ottenere sicurezza nascondendo indirizzi IP
@@ -32,7 +32,7 @@
 - [ ] Si basa sul riempimento di un buffer oltre il suo limite, andando a sovrascrivere la memoria adiacente
 - [ ] Si basa sul riempimento di un buffer oltre il suo limite, andando a sovrascrivere il program counter  
 - [ ] Si basa sull’invio di input malevolo, che sarà eseguito sul back-end di un Web server
-- [ ] Si basa sull’invio di input malevolo, che sarà eseguito nel Browser  
+- [x] Si basa sull’invio di input malevolo, che sarà eseguito nel Browser  
 - [ ] Si basa sullo scambio di due siti con javascript, uno corretto e uno malevolo con una URL simile
 ###### Il sequence number utilizzato in IPSEC serve per contare
 - [ ] i byte al fine di eliminare pacchetti ripetuti

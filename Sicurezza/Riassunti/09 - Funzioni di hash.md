@@ -1,20 +1,19 @@
-Una funzione di Hash accetta in input un blocco di lunghezza variabile $M$ in input e restituisce un blocco di lunghezza fissa $h=H(B)$.
+Una **funzione di Hash** accetta in **input** un **blocco** di l**unghezza variabile** $M$ e **restituisce** un **blocco di lunghezza fissa** $h=H(B)$.
 
 ![[Pasted image 20230825174036.png]]
 
 > Una buona funzione di hash ha proprietá che, applicando ad essa un gran numero di input, gli output risultano distribuiti e apparentemente casuali.
 
-Il sottoinsieme di funzioni di hash utilizzabili in sicurezza sono le **funzioni di hash crittografiche**, ovvero le funzioni per le qualié computazionalmente impossibile trovare 
+Il sottoinsieme di funzioni di hash utilizzabili in sicurezza sono le **funzioni di hash crittografiche**, ovvero le funzioni per le quali é computazionalmente impossibile trovare:
 1. l'input di partenza dato l'output(**non invertibilitá**)
 	1. Dato $C$ é computuazionalmente difficile calcolare $H^{-1}(C)$
-2. un messaggio $m_2$ tale per cui $H(m_1)=H_{m2}$(**non invertibilitá forte**)
+2. un messaggio $m_2$ tale per cui $H(m_1)=H(m_2)$, dato $m_1$(**non invertibilitá forte**)
 3. due input che producono lo stesso output(**resistente alle collisioni**)
 Queste proprietá permettono di capire se un dato é cambiato.
 
 > Un funzione di hash resistente alle collisisoni soddisfa per forza anche gli altri due prerequisiti.
 ### Attacco del compleanno ad una funzione di hash
 Proviamo ad immaginare come un avversario potrebbe attaccare una funzione di hash resistente ale collisioni. Vuole quindi trovare $x$ e $y$ che producono la stessa funzione di hash: $H(x)=H(y)$.
-
 #### Paradosso del compleanno
 Immaginiamo di avere in un stanza un gruppo di 23 persone. La probabilitá che due di questi abbiano lo stesso compleanno é maggiore di $1/2$. 
 
@@ -28,14 +27,13 @@ Osserviamo ora il comportamento di un avversario:
 Supponiamo che $|H(M)| =c$ e $H(M)=h$, é quindi possibile ottenere $2^c=n$ codici hash diversi da $H$.
 L'avversario creerá invece codici hash di dimensione $|H'(M')| =m$, potendo creare quindi $2^m=k$ codici differenti da $H'$.
 
-Vogliamo ora calcolare il limite per la quale ala probabilitá di una collisione é maggiore di un mezzo. 
+Vogliamo ora calcolare il limite per la quale la probabilitá di una collisione é maggiore di un mezzo. 
 
 Sappiamo che questo vale se $k>1,18\times \sqrt n\to 2^m>1,18\sqrt{2^c}\to 2^m>2^{\frac{c}{2}}\to m>\frac{c}{2}$.
 
 Quindi per generare una collisione per codici di 64 bit, basta provare $2^{64/2}=2^{32}$ messaggi.
 
 Questo ci serve a trovare una correlazione tra il messaggio $M$ e quello $M'$, ma non ci fornisce informazioni su $M$.
-
 #### Paradosso del compleanno: altra applicazione
 Riprendiamo l'esempio di prima, ma questa volta supponiamo di prendere due insiemi separati $X$ e $Y$, ognuno di $k$ elementi con $n$ possibili valori. In ciascun insieme i valori sono diversi.
 Abbiamo quindi:
@@ -47,25 +45,24 @@ Sappiamo che:
 - la probabilitá che il primo elemento di X sia uguale ad un'altro di Y é $P(x_1=y_1)=\frac{1}{n}$
 -  la probabilitá che un elemento di X sia diverso ad un'altro di Y é $P(x_i\ne y_i)=1-\frac{1}{n}$
 - La probabilità che il primo elemento di x non sia il primo elemento o il secondo in y è $P(x_1\ne y_1\lor x_1\ne y_2)=(1-\frac{1}{n})^2$ 
-- La probanilitá che ogni elemento di $X$ non sia in $Y$ é $P(x_1\not \in Y)=1-P(x_1\in Y)=(1-\frac{1}{n})^k$
+- La probabilitá che il primo elemento di $X$ non sia in $Y$ é $P(x_1\not \in Y)=1-P(x_1\in Y)=(1-\frac{1}{n})^k$
 - La probabilitá che $X$ e $Y$ siano disgiunti é $P(X\cap Y=\emptyset)=[(1-\frac{1}{n})^k]^k$ 
 
 Per calcolare la probabilitá che ci sia almeno un elemento in comune é quindi $P(X\cap Y\ne \emptyset)=1-(1-\frac{1}{n})^{k^2}>1-e^{-\frac{1}{n}k^2}$ ottenendo $k>0,83\times \sqrt n$.
 
 Questo risultato ci serve a studiare l'attacco del compleanno.
-
 #### L'attacco del compleanno(infine)
 Osserviamo ora l'attacco del compleanno:
 1. Alice é pronta a firmare il suo messaggio $x$ appendendo l'hashcode di $m$ bit cifrato con la propria chiave privata
 2. L'avversario genera $2^{m/2}$ varianti $x'$ di $x$, aggiungendo padding o parti vuote al messaggio ma che mantiene identico il significato, salvando i messaggi e i corrispettivi valori di hash
 3. Prepara inoltre un messaggio fraudolento $y$ che vorrebbe firmare con la chiave di Alice, allora fa la stessa cosa del passo precedente anche per $y$. Controlla quindi se c'é qualche corrispondenza tra i valori di $x'$ e $y'$
-4. L'avversario ha quindi trovato un messaggio con singificato diverso ma con hashcode uguale a $x$, e chiede quindi ad Alice di inoltrarlo al posto del messaggio originale
+4. L'avversario ha quindi trovato un messaggio con singificato diverso ma del tutto uguale a $x$, e chiede quindi ad Alice di inoltrarlo al posto del messaggio originale
 5. Alice lo inoltra a Bob poiché i messaggi sono identici dal punto di vista del valore di hash
 6. L'avversario é riuscito quindi ad inviare il proprio messaggio a Bob, il quale non sospetta nulla, senza conoscere la chiave di cifratura
 
 Tutto questo funziona poiché l'avversario é certo di trovare una collisione tra $x'$ e $y'$ con probabilitá maggiore di $1/2$.
 ### Codici CRC
-Un **controllo di ridondanza ciclica**, o crc, é un metodo di checksum che prevede l'aggiunta di un bit aggiuntivo ad una sequenza di bit di lunghezza arbitraria che serve a rendere il numero di bit impostati ad 1 pari. Questo viene calcolato effettuando lo XOR logico tra tutti i bit della sequenza.
+Un **controllo di ridondanza ciclica**, o crc, é un **metodo di checksum** che prevede l'aggiunta di un **bit aggiuntivo** ad una sequenza di bit di lunghezza arbitraria che serve a **rendere** il **numero di bit impostati ad 1 pari**. Questo viene calcolato effettuando lo XOR logico tra tutti i bit della sequenza.
 
 > Per esempio la sequenza $01001$ avrá bit di paritá impostato a $0$, mentre la sequenza $01000$ avrá bit di paritá impostato ad $1$.
 

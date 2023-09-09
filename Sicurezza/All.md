@@ -6,6 +6,7 @@
 ![[05 - Modalità di funzionamento dei cifrari a blocchi]]
 ![[06 - Cifrari asimmetrici]]
 ![[07 - Scambio di chiavi di Diffie-Hellmann]]
+![[08 - RSA]]
 ![[09 - Funzioni di hash]]
 ![[10 - Autenticazione]]
 ![[11 - Network Security]]
