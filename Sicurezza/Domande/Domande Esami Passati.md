@@ -2,13 +2,13 @@
 ###### Un MAC (message authentication code):
 - [ ] associa un messaggio ad una chiave pubblica
 - [ ] associa un messaggio ad una chiave pubblica e ad una chiave privata
-- [ ] permette di verificare integrità e origine di un messaggio
+- [x] permette di verificare integrità e origine di un messaggio
 - [ ] permette di verificare integrità e origine di una chiave simmetrica associata ad un messaggio
 - [ ] permette di verificare integrità e origine di una chiave asimmetrica associata ad un messaggio
 ###### Una firma elettronica:
 - [ ] associa un messaggio ad coppia di chiavi asimmetriche
-- [ ] associa un messaggio ad una coppia di chiavi simmetriche
-- [ ] permette di verificare integrità e origine di un messaggio, ma non ne impedisce il disconoscimento permette di verificare integrità e origine di un messaggio, e ne impedisce il disconoscimento
+- [x] associa un messaggio ad una coppia di chiavi simmetriche
+- [x] permette di verificare integrità e origine di un messaggio, ma non ne impedisce il disconoscimento permette di verificare integrità e origine di un messaggio, e ne impedisce il disconoscimento
 - [ ] permette di verificare l’integrità di un messaggio, ma non la sua origine
 ###### Un firewall applicativo:
 - [ ] É stateless e valuta se bloccare un pacchetto IP in base al solo contenuto del suo header IP  
@@ -45,7 +45,7 @@
 - [ ] è un cifrario asimmetrico completamente sicuro  
 - [ ] usa chiavi asimmetriche della stessa lunghezza  
 - [ ] usa chiavi asimmetriche lunghe quanto il testo da cifrare  
-- [ ] usa chiavi simmetriche lunghe quanto il testo da cifrare  
+- [x] usa chiavi simmetriche lunghe quanto il testo da cifrare  
 - [ ] usa chiavi simmetriche di qualsiasi lunghezza e da utilizzarsi una volta sola
 ###### Una certificate revocation list (CRL) elenca:
 - [ ] i fingerprint dei certificati che sono stati revocati fino alla data attuale
@@ -55,7 +55,7 @@
 - [ ] i fingerprint dei certificati che sono stati revocati fino alla data della prossima modifica
 ###### lo standard ISO 27001 prevede un ciclo con 4 fasi:
 - [ ] Plan, Act, Check, Do
-- [ ] Plan, Do, Check, Act
+- [x] Plan, Do, Check, Act
 - [ ] Plan, Verify, Check, Do
 - [ ] Plan, Verify, Do, Check
 - [ ] Plan, Verify, Do, Act
@@ -63,7 +63,7 @@
 - [ ] sulla difficoltà di moltiplicare due numeri primi
 - [ ] sulla difficoltà di fattorizzare un numero primo
 - [ ] sulla difficoltà di fattorizzare il prodotto di due numeri primi
-- [ ] sulla difficoltà di calcolare il logaritmo discreto
+- [x] sulla difficoltà di calcolare il logaritmo discreto
 - [ ] sulla difficoltà di calcolare l’inverso moltiplicativo di un numero
 ###### Nello standard ISO 27001 i “controlli” sono:
 - [ ] Verifiche periodiche da fare sui firewall  
@@ -75,17 +75,17 @@
 - [ ] Permette di autenticare gli utenti  
 - [ ] Permette di autenticare i messaggi
 - [ ] Permette di scambiare chiavi simmetriche cifrandole
-- [ ] Permette di condividere chiavi simmetriche in modo sicuro
+- [x] Permette di condividere chiavi simmetriche in modo sicuro
 - [ ] Permette di scambiare chiavi simmetriche utilizzando un MAC
 ###### Un firewall con HA (High Availability):
 - [ ] È normalmente realizzato in una configurazione con load-balancing  
 - [ ] È normalmente realizzato in una configurazione con DNS round-robin
-- [ ] È normalmente realizzato in una configurazione con fail-over  
+- [x] È normalmente realizzato in una configurazione con fail-over 
 - [ ] È un firewall application-aware  
 - [ ] È un firewall di tipo packet-filter che evita la perdita di pacchetti
 ###### Per effettuare un’analisi del rischio secondo la metodologia OWASP, si utilizza la formula:
 - [ ] Probabilità = f(gravità del rischio, vulnerabilità)  
-- [ ] Gravità del rischio = f(probabilità,impatto)  
+- [x] Gravità del rischio = f(probabilità,impatto)  
 - [ ] Probabilità = f(agente della minaccia, impatto)  
 - [ ] Impatto = f(impatto tecnologico, probabilità)  
 - [ ] Gravità del rischio = f(impatto tecnologico, impatto di business)
@@ -133,11 +133,39 @@ vogliamo quindi creare una chiave condivisa tra i due utenti A e B:
 ###### Scrivere le ACL di un firewall che protegge la rete locale 212.32.11/24 in modo che:
 1. siano permessi la navigazione web e l’accesso alla posta elettronica
 2. sia raggiungibile dall’esterno il Web server 212.32.11.220
+
+Azione|Protocol|Source-addr|Dest-Addr|Source-port|Dest-port|Flag
+--|--|--|--|--|--|--
+allow|TCP|\*|212.32.11.220|\*|80|/
+allow|TCP|212.32.11.220|\*|80|\*|ACK
+allow|TCP|212.32.11.\*|\*|\*|80|/
+allow|TCP|\*|212.32.11.\*|80|\*|ACK
+allow|TCP|212.32.11.\*|\*|\*|POP3-port|/
+allow|TCP|\*|212.32.11.\*|POP3-port|\*|ACK
+deny|\*|\*|\*|\*|\*|\*
 ###### Scrivere le ACL di un firewall che protegge la rete locale 135.32.10/24 in modo che:
 1. siano permessa la navigazione web sia su http che su https
 2. sia raggiungibile dall’esterno il Web server 135.32.10.220 sia su http che su https
+
+Azione|Protocol|Source-addr|Dest-Addr|Source-port|Dest-port|Flag
+--|--|--|--|--|--|--
+allow|TCP|135.32.10.\*|\*|\*|80|\*
+allow|TCP|\*|135.32.10.\*|80|\*|ACK
+allow|TCP|135.32.10.\*|\*|\*|443|\*
+allow|TCP|\*|135.32.10.\*|443|\*|ACK
+allow|TCP|\*|135.32.10.220|\*|80|\*
+allow|TCP|135.32.10.220|\*|80|\*|ACK
+allow|TCP|\*|135.32.10.220|\*|443|\*
+allow|TCP|135.32.10.220|\*|443|\*|ACK
+deny|\*|\*|\*|\*|\*|\*
 ###### Scrivere le ACL per un firewall packet filter necessarie per permettere il traffico web (http, porta 80) e pop3 (porta 110), solo se generato da richieste originate da un client interno alla LAN 130.192.0.0/16, e per permettere l’accesso anche dall’esterno a 2 web server interni con IP address 130.192.157.128 e 130.192.157.158.
 ###### A che cosa serve un firewall?
+Un firewall  é un dispositivo hardware installato su una rete al fine di filtrare i pacchetti in ingresso e in uscita su una rete in modo da fornire un ulteriore grado di protezione. Svolge inoltre la funzione di log delle azioni degli utenti e del traffico di rete.
+
+Di questo ne esistono due tipologie: 
+- packet filter: filtra i pacchetti a livello di rete
+- application filter: filtra i pacchetti a livello applicativo
+entrambi con i propri limiti e le propri vantaggi.
 ###### Discutere i limiti di un firewall di tipo packet filter
 ## VPN
 ###### Descrivere il protocollo ESP di IPSEC, illustrando anche graficamente il formato del suo Header

@@ -38,7 +38,7 @@ Vengono quindi trasmessi il messaggio piú il MAC. Il destinatario applicherá l
 Assumendo che la chiave sia conoscuta solo da mittente e destinatario, e i MAC ottenuti sono uguali, allora
 - Il **messaggio** **non** é stato **alterato**, poiché un'attaccante dovrebbe alterare anche il MAC, ma questo non é possibile poiché non conosce la chiave
 - Il messaggio é stato mandato dal mittente, poiché nessun'altro conosce la chiave
-	- Questo rende il MAC **resistente all'attacco del compleanno**, in quanto non é possibile treovare una collisione senza la chiave
+	- Questo rende il MAC **resistente all'attacco del compleanno**, in quanto non é possibile trovare una collisione senza la chiave
 
 Il MAC funziona quindi in maniera simile alla cifratura, con la differenza che la prima deve essere **non invertibile**.
 ##### MAC DES-CBC
@@ -55,7 +55,7 @@ Negli ultimi anni, la creazione di un MAC derivato da una funzione di hash critt
 2. Le **librerie** contenenti funzioni di hash crittografiche sono **ampiamente diffuse**
 #### Struttura di HMAC
 Dato una messaggio $M$ e un chiave $K$, di ottiene l'HMAC nella seguente maniera:
-1. Se la chiave é meno lungha di $b$(il numero di bit in un blocco)Si aggiunge un padding alla chiave $K$ finchè non diventa lunga $b$ bit, dove $b$ è la dimensione dei blocchi,generando così $K^+$
+1. Se la chiave é meno lungha di $b$(il numero di bit in un blocco),si aggiunge un padding alla chiave $K$ finchè non diventa lunga $b$ bit, dove $b$ è la dimensione dei blocchi,generando così $K^+$
 	1. Se invece é piú lungha si effettua l'hash della chiave per ridurlo a $b$ bit
 	2. Altrimenti la si usa cosí com'é
 2. Si effettua lo XOR tra $K^+$ e una costante($0x36$ ,chiamata ipad) moltiplicata per $b/8$,producendo un blocco $S_i$ di $b$ bit
