@@ -5,7 +5,8 @@ Questa tecnica é basata su **operazioni di aritmetica modulare**, in particolar
 ### Modulo
 Sia $a$ un intero e $n$ un intero positvo, definiamo l'operazione di **modulo** $a\mod n$ come il resto della divisione su $a$ per $n$.
 
-Due interi $a$ e $b$ sono detti **congruenti in modulo $n$** se $a\mod n=b\mod n$.Puó anche essere scritto come $a\equiv b(\mod n)$
+Due interi $a$ e $b$ sono detti **congruenti in modulo $n$** se $a\mod n=b\mod n$.
+Puó anche essere scritto come $a\equiv b(\mod n)$
 ### Operazioni in aritmetica modulare
 Dato l'operatore modulo ($\mod n$), é possibile definire delle operazioni con esso.
 #### Proprietá dell'aritmetica modulare
@@ -46,8 +47,8 @@ $$
 $$
 poiché $z\times n\mod n=0$.
 ### La radice primitiva(generatore)
-Viene detta **radice primitiva** di $n$ un intero le cui potenze modulo $n$ sono congruienti con i numeri coprimi ad $n$. In formule, $\alpha$ é una radice primitiva di $q$ se
-$$\forall b<q\;\exists i\; |\;\alpha^i\mod q=b $$
+Viene detta **radice primitiva** di $n$ un intero le cui potenze modulo $n$ sono congruenti con i numeri coprimi ad $n$. In formule, $\alpha$ é una radice primitiva di $q$ se
+$$\forall b<n\;\exists i\; |\;\alpha^i\mod n=b $$
 La radice primitiva **genera** tutti i numeri dell'aritmetica modulo $n$.
 > Esempio: **2 é la radice primitiva di 5**
 > $2^0\equiv 1=1(\mod 5)$
@@ -98,7 +99,7 @@ L'avversario é quindi costretto a calcolare il **logaritmo discreto** per deter
 $$X_B=dlog_{q,a}(Y_B)$$
 per poi poter calcolare la chiave segreta $K$ nella stessa maniera di B
 $$K=(Y_A)^{X_B}\mod q$$
-La sicurezza di D-H sta nel fatto che é molto **economico** calcolare il **logarimo esponenziale** di un numero primo, mentre é molto difficile calcolare il logaritmo discreto, in quanto é un'operazione che richiede **forza bruta**, rendendo l'operazione impratica per numeri molto grandi.
+La sicurezza di D-H sta nel fatto che é molto **economico** calcolare l'**esponente modulare** di un numero primo, mentre é molto difficile calcolare il logaritmo discreto, in quanto é un'operazione che richiede **forza bruta**, rendendo l'operazione impratica per numeri molto grandi.
 ### Requisiti di implementazione di Diffie-Hellman
 Per poter rendere pratica l'implementazione di DH occorrono 3 requisiti fondamentali:
 - Algoritmo efficiente per calcolare l'esponente modulare ($a^b\mod q$)

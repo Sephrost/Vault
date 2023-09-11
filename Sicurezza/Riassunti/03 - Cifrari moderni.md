@@ -45,7 +45,7 @@ Il cifrario di Feistel mostra come é possibile **approssimare** la **dimensione
 
 Il cifrario prodotto corrisponde all'**esecuzione** di due o **piú cifrari in sequenza** allo stesso messaggio in chiaro. In questo caso particolare vengono concatenati cifrari a sostituzione e permutazione
 ### Diffusione e confusione
-Durante gli attacchi di crittoanalisi statistica viene utilizzata una qualche conoscenza del messaggio in chiaro per dedurne la chiave. Questo é possibile perché una qualche informazione sul messaggio viene manteuta dopo la cifratura, come la distribuzione di frequenza dei caratteri.
+Durante gli attacchi di crittoanalisi statistica viene utilizzata una qualche conoscenza del messaggio in chiaro per dedurne la chiave. Questo é possibile perché una qualche informazione sul messaggio viene mantenuta dopo la cifratura, come la distribuzione di frequenza dei caratteri.
 
 Poiché il cifrario a sostituzione arbitraria non é molto pratico, soprattuto dal punto di vista delle performance, una soluzione accettabile é rendere piú difficile la crittoanalisi.
 

@@ -212,7 +212,7 @@ La struttura dell'input malevolo che forniremo all'uitente sará quindi:
 Possiamo sovrascrivere quindi l'istruction pointer ad un indirizzo della nop-slead per eseguire la nostra shell.
 ##### Contromisure
 Negli anni sono stati presentati delle contromisure, piú o meno efficaci:
-- **Canarino**: un valore noto scritto sullo stack tra il buffer e levariabili locali per rilevare i buffer overflow. Esso viene inserito durante la compilazione con l'idea che, in caso di bof, sarebbe il primo valore ad essere sovrascritto, e in caso di alterazione, l'esecuzione verrebbe bloccata.
+- **Canarino**: un valore noto scritto sullo stack tra il buffer e le variabili locali per rilevare i buffer overflow. Esso viene inserito durante la compilazione con l'idea che, in caso di bof, sarebbe il primo valore ad essere sovrascritto, e in caso di alterazione, l'esecuzione verrebbe bloccata.
 - **Address Space Layout Randomization (ASLR)**: un meccanismo di sicurezza che randomizza gli indirizzi di memoria usati dal sistema operativo quando alloca la memoria del programma. in questa maniera evita che l'intera memoria sia contigua, rendendo piú difficili gli attacchi.
 ![[Pasted image 20230909145858.png|300]]
 - Separare lo spazio di Memoria del codice dai dati

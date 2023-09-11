@@ -72,7 +72,7 @@ Questo cifrario rimane comunque **facile da rompere**, in quanto mantiene pratic
 ### Cifrari polialfabetici
 Per poter migliorare la sicurezza di un cifrario monoalfabetico, si possono usare diverse regole di sostituzione per un singolo alfabeto, ed é la chiave a determinare quale di queste verrá usato in fase di cifratura.
 
-Un modo per applicare uan regola diversa ogni volta é sostituire il carattere in base alla sua posizione nel testo.
+Un modo per applicare una regola diversa ogni volta é sostituire il carattere in base alla sua posizione nel testo.
 #### Cifrario di Vigenère
 >É il miglior cifrario polialfabetico conosciuto.
 

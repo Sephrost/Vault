@@ -38,7 +38,7 @@ Riassumendo:
 - Necessario per traffico da postazione mobile
 ## IPsec
 **IPsec** é è uno **standard** per le reti con l'obiettivo di ottenere **connessioni sicure** su **reti IP**.
-L'**header** ipsec viene aggiunto **dopo** quello **IP**, mantenendo il pacchetto IP perfettamente valido nonnostante la payload(PDU) sia stata cifrata e/o autenticata
+L'**header** ipsec viene aggiunto **dopo** quello **IP**, mantenendo il pacchetto IP perfettamente valido nonostante la payload(PDU) sia stata cifrata e/o autenticata.
 
 Esso permette di aggiungere le funzionalitá(servizi) di **cifratura** e **autenticazione** ad un traffico di rete(in questo caso della VPN).
 L'autenticazione viene effettuata tramite un **Authentication Header** mentre la cifratura tramite un sistema chiamato **ESP**.

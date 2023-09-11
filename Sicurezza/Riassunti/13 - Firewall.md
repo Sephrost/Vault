@@ -61,7 +61,7 @@ Non abbiamo un tipo unico di firewall ma a seconda delle esigenze ne abbiamo di 
 Esso **filtra** i **paccheti** in base a:
 - **Direzione** del **pacchetto** 
 - **Direzione** della **connessione TCP** 
-- Indirizzo **IP sorgente e destinazione **
+- Indirizzo **IP sorgente e destinazione**
 - **Porta** sorgente e destinzazione(servizio)
 
 Il **packet filter** è **stateless**, ovvero **non ha memoria** dei pacchetti precedenti, in quanto analizza soltanto l’header IP e TCP.
