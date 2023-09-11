@@ -19,7 +19,7 @@ Immaginiamo di avere in un stanza un gruppo di 23 persone. La probabilitá che d
 
 Possiamo osservare che la probabilitá che nessuno abbia un compleanno in comune é $P(n,c)=1-P(compleanni\; diversi)=1-\frac{365\times 364\times \dots\times (365-22)}{365^{23}}=0.4927$.
 
-Possiamo quindi definire la formula generale che definisce la probabilitá che ci sia almeno una ripetizione in un insieme di $k$ elementi scelti tra $n$: $P(n,k)=1-(n\times (n-1)\times \dots(n-k+1))/\times n^k =1-e^{-k\times (k-1)/2n}\approx 1- e^{-k^2/2n}$
+Possiamo quindi definire la formula generale che definisce la probabilitá che ci sia almeno una ripetizione in un insieme di $k$ elementi scelti tra $n$: $P(n,k)=1-(\frac{n\times (n-1)\times \dots(n-k+1)}{n^k}) >1-e^{-k\times (k-1)/2n}\approx 1- e^{-k^2/2n}$
 
 La probabilità che due persone compiano gli anni lo stesso giorno è maggiore di 1/2 quando le persone sono almeno 23, che é tantissimo.
 #### Conseguenze per le funzioni di hash
@@ -56,7 +56,7 @@ Osserviamo ora l'attacco del compleanno:
 1. Alice é pronta a firmare il suo messaggio $x$ appendendo l'hashcode di $m$ bit cifrato con la propria chiave privata
 2. L'avversario genera $2^{m/2}$ varianti $x'$ di $x$, aggiungendo padding o parti vuote al messaggio ma che mantiene identico il significato, salvando i messaggi e i corrispettivi valori di hash
 3. Prepara inoltre un messaggio fraudolento $y$ che vorrebbe firmare con la chiave di Alice, allora fa la stessa cosa del passo precedente anche per $y$. Controlla quindi se c'é qualche corrispondenza tra i valori di $x'$ e $y'$
-4. L'avversario ha quindi trovato un messaggio con singificato diverso ma del tutto uguale a $x$, e chiede quindi ad Alice di inoltrarlo al posto del messaggio originale
+4. L'avversario ha quindi trovato un messaggio con significato diverso ma del tutto uguale a $x$, e chiede quindi ad Alice di inoltrarlo al posto del messaggio originale
 5. Alice lo inoltra a Bob poiché i messaggi sono identici dal punto di vista del valore di hash
 6. L'avversario é riuscito quindi ad inviare il proprio messaggio a Bob, il quale non sospetta nulla, senza conoscere la chiave di cifratura
 

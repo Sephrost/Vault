@@ -28,7 +28,7 @@ Uno script può essere eseguito sul Browser della vittima, facendo in modo che i
 
 Si dividono in due categorie: 
 - **reflected XSS**: quello sopra descritto
-- **stored XSS**: quando un'applicazione riceve un'input malevolo e lo include nelle risposte HTTP future in una faniera non sicura[1](https://portswigger.net/web-security/cross-site-scripting/stored)
+- **stored XSS**: quando un'applicazione riceve un'input malevolo e lo include nelle risposte HTTP future in una maniera non sicura[1](https://portswigger.net/web-security/cross-site-scripting/stored)
 ### Esempio: Reflected XSS - Cookie stealer con phising
 Immaginiamo che un sito abbia una form per i contatti, dove é possibile inserire il link al proprio sito.
 

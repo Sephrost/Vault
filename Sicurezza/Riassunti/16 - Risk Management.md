@@ -11,7 +11,7 @@ $$Gravità\;del\;rischio = Probabilità(evento)\times Peso(impact)$$
 L'**ISO 27001** è lo **standard** e la **certificazione** per la gestione della sicurezza delle informazioni. Esso **Indirizza** le **gestione** del **rischio informatico** nel **contesto** generale della gestione dei **rischi aziendali**. Mira perciò alla **creazione** di **sistema di gestione** come già in altri standard(es: qualitá(ISO 9001)).
 
 
-Nel caso dell’ISO 27001 parliamo di un **ISMS** - **Information Security Management System** del quale lo standard si prefigge l’obiettivo di dare i requisiti e le tecniche per mantenerlo secondo un accproccio per processi.
+Nel caso dell’ISO 27001 parliamo di un **ISMS** - **Information Security Management System** del quale lo standard si prefigge l’obiettivo di dare i requisiti e le tecniche per mantenerlo secondo un approccio per processi.
 ## ISMS - Information Security Management System
 É un sistema di gestione della sicurezza mirato a implementare controlli di sicurezza adeguati all’organizzazione e al perimetro individuato.
 
@@ -85,7 +85,7 @@ Sulla base di quanto scoperto nel check si apportano i miglioramenti necessari a
 
 Dopo qualche anno si renderà necessario ripetere da capo tutte le fasi poiché i sistemi cambiano così come il mondo dell’informatica.
 ### Ottenere la certificazione
-Una volta sviluppato il proprio ISMS bisogna comunicare con un organismo di certificazione, fornire il proprio statement of applicability ed illustrare l’ISMS e solo a questo punto si potrà ottenere la certi"cazione.
+Una volta sviluppato il proprio ISMS bisogna comunicare con un organismo di certificazione, fornire il proprio statement of applicability ed illustrare l’ISMS e solo a questo punto si potrà ottenere la certificazione.
 
 Gli organismi di certificazione sono a loro volta governati da un ente unico: **Accredia**.
 La certificazione è a pagamento.

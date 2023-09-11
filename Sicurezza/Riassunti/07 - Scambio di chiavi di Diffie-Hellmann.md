@@ -201,7 +201,7 @@ Osserviamo ora l'approccio probabilistico, ovvero utilizziamo un test di probabi
 		1. Se la condizione é verificata, torno ad 1
 3. Restituisco $M$
 
-Con questo approccio sappiamo che la probabilitá che $M$ si primo é maggiore di $1-2^{-T}$, quindi basta impostare un $T$ molto grande per ridurre la probabilitá ché $M$ non sia primo.
+Con questo approccio sappiamo che la probabilitá che $M$ sia primo é maggiore di $1-2^{-T}$, quindi basta impostare un $T$ molto grande per ridurre la probabilitá ché $M$ non sia primo.
 
 > Per esempio con $T=100$ la probabilità che un numero sia primo é $>0,999999999999999999999999999999211$
 ##### Test di Miller-Rabin
@@ -223,12 +223,45 @@ Prendiamo quindi $d= MCD(x-y,n)$, allora:
 - se $d=1$, allora $n|x^2-y^2=n|(x-y)\times(x+y)$ come scritto nella premessa,ma n non puó dividere $x-y$ e deve quindi poter dividere $x+y$. 
 Ció contraddice peró la premessa, quindi $d$ non puó essere né 1 né $n$, quindi $n$ non é primo poiché possiede sicuramente un'altro divisore.
 
+Perció sé $M$ é primo e $x^2\mod M=1$ se ne deduce che $x=1$ oppure $x=M-1$, e abbiamo dimostrato la seconda premessa.
+###### Dimostrazione teorema di eulero
+Per dimostrare il piccolo teorema di Fermant dimostreremo prima il **teorema di Eulero**
 
+Definiamo come $\Phi(n)$ è il **numero** di **interi minori** di $n$ che sono **relativamente primi** con $n$.
+
+Se $M$ e $a$ sono relativamente primi($MCD(a,M)=1$), allora $a^{\Phi(M)}\mod M=1$.
+
+Sia $R=\{x_1 , x_2 ,\dots, x_{ \Phi(M)}\}$ l’insieme dei numeri minori di $M$ relativamente primi con $M$, e sia $S$ l'insieme degli elementi ottenuti moltiplicando ogni elemento di $R$ per $a\mod M$:$\{ax_1 \mod M, ax_2 \mod M, \dots, ax_{\Phi(M)} \mod M\}$.
+Dimostriamo ora che $S=R$, mostrando che 
+- $R\subseteq S$, sappiamo che $ax_i\mod M$ è relativamente primo con $M$, poiché sia a sia $x_i$ sono relativamente primi con $M$
+- R $\supseteq$ S, poiché in $S$ ci sono $\Phi(n)$ elementi primi con $M$, che é la definizione di $R$. Inoltre non ci sono ripetizioni, infatti dati $ax_i\mod M$ e $ax_j\mod M$ allora $x_i=x_j$.
+
+Quindi abbiamo ottenuto due insiemi equivalenti
+$$R=\{x_1 , x_2 ,\dots , x_{\Phi(M)}\}= S=\{ax_1 \mod M, ax_2 \mod M,\dots , ax_{\Phi(M)} \mod M\} $$
+e moltiplicandi questi insiemi uguali, la moltiplicazione fornirá lo stesso risultato
+$$\{x_1 , x_2 ,\dots , x_{\Phi(M)}\mod M\}=(ax_1)(ax_2)\dots(ax_{\Phi(M)})\mod M=a^{\Phi(M)}(x_1x_2\dots x_{\Phi(M)})$$
+siccome $x_1,x_2 ,\dots ,x_{\Phi(M)}$ è relativamente primo con $M$, in quanto prodotto di fattori primi con M, posso semplificare, ottenendo $1\mod M =a^{\Phi(M)} \mod M$, dimostrando quindi il teorema.
+###### L'algoritmo
+Andiamo ora a osservare l'algoritmo per il test di Miller-Rabin:
+```
+d = 1;
+for (i=k; i>=0; i--) {
+	x = d; 
+	d = (d*d)%M;
+	if (d == 1 && x != 1 && x != M-1)
+		return(TRUE);
+	if (bi == 1) 
+		d = (d*a)%M;
+}
+if (d != 1) 
+	return TRUE; 
+else 
+	return (FALSE);
+```
 #### Algoritmo efficiente per generare una radice primitiva $\alpha$ di $q$
-Per ottenere una radice primitiva si utilizza un metodo probabilistico, genereremo $a<q$ e verificheremo se non é un radice primitiva
+Per ottenere una radice primitiva si utilizza un metodo probabilistico, genereremo $a<q$ e verificheremo se non é un radice primitiva.
 
-### Algoritmop
-
+> Non é stato spiegato.
 #### Attacco man in the middle(MITM)
 Il protocollo di Diffie-Hellman é peró debole all'attacco **man in the middle**.
 
